@@ -32,7 +32,7 @@ const { theme, problems } = makeColors({
 
 const LOOK: ThemeSetArgs = {
   colors: theme,
-  backdrop: { scene: 'cove', glass: { blur: 14, opacity: 0.6 } },
+  backdrop: { scene: 'cove', glass: { blur: 20, opacity: 0.45, tint: '#1d2d52' } },
 }
 
 const REFRESH_MS = 10 * 60 * 1000
