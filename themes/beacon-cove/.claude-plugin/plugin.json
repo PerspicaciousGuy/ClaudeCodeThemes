@@ -1,0 +1,8 @@
+{
+  "name": "beacon-cove",
+  "version": "0.1.0",
+  "description": "An animated pixel-art theme that follows your clock: a lighthouse cape and sea from night through dawn, day and dusk, with a moving sun and moon, drifting clouds, a small boat and fireflies.",
+  "author": { "name": "Perspicacious Guy" },
+  "license": "MIT",
+  "keywords": ["claude-code", "theme", "pixel-art", "animated"]
+}

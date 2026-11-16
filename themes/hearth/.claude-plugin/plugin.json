@@ -1,0 +1,8 @@
+{
+  "name": "hearth",
+  "version": "0.1.0",
+  "description": "A warm theme: espresso and cream surfaces, terracotta accents, and a slow dusk backdrop with embers drifting up.",
+  "author": { "name": "Perspicacious Guy" },
+  "license": "MIT",
+  "keywords": ["claude-code", "theme", "warm", "animated"]
+}

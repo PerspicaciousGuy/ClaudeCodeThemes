@@ -1,0 +1,19 @@
+{
+  "name": "claude-code-themes",
+  "owner": { "name": "Perspicacious Guy" },
+  "metadata": {
+    "description": "Themes for the Claude Code desktop app: colors and animated backdrops."
+  },
+  "plugins": [
+    {
+      "name": "beacon-cove",
+      "source": "./themes/beacon-cove",
+      "description": "Animated pixel-art lighthouse that follows your clock, night through dawn, day and dusk."
+    },
+    {
+      "name": "hearth",
+      "source": "./themes/hearth",
+      "description": "Warm espresso and cream with terracotta accents and a slow dusk of drifting embers."
+    }
+  ]
+}

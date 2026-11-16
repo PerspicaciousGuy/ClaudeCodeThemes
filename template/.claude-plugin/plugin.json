@@ -1,0 +1,8 @@
+{
+  "name": "my-theme",
+  "version": "0.1.0",
+  "description": "One line about your theme.",
+  "author": { "name": "Your Name" },
+  "license": "MIT",
+  "keywords": ["claude-code", "theme"]
+}
