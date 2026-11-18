@@ -1,0 +1,17 @@
+{
+  "name": "reading-room",
+  "version": "0.1.0",
+  "description": "A cozy library at night: tall shelves of books, a floor lamp with dust turning in its light, a candle, a cup of tea and a sleeping cat. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "library",
+    "cozy",
+    "dark"
+  ]
+}

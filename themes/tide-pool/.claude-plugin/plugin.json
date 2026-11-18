@@ -1,0 +1,17 @@
+{
+  "name": "tide-pool",
+  "version": "0.1.0",
+  "description": "Looking straight down into a rock pool: breathing anemones, starfish, rippling light, drops making rings and small fish. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "ocean",
+    "tide pool",
+    "dark"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "night-train",
+  "version": "0.1.0",
+  "description": "A night run seen from a carriage window: hills, town lights and telegraph poles sliding past under a thin moon. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "train",
+    "night",
+    "dark"
+  ]
+}

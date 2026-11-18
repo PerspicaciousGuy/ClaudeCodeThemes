@@ -43,6 +43,16 @@
       "description": "The topographic survey in pale ink on blue-black paper, with the contours drawing themselves. Dark."
     },
     {
+      "name": "desert-noon",
+      "source": "./themes/desert-noon",
+      "description": "A bright desert at midday: red mesas, a pale sun, saguaros, heat shimmer, drifting dust and a tumbleweed. Light."
+    },
+    {
+      "name": "fog-valley",
+      "source": "./themes/fog-valley",
+      "description": "A misty mountain morning: blue ridges with fog drifting between them, low sun rays, a flock of birds and a far balloon. Light."
+    },
+    {
       "name": "halftone-harbor",
       "source": "./themes/halftone-harbor",
       "description": "A two-ink halftone print of a harbor at sunset: a coral sun and its wake, blue water, a headland with a lighthouse, two boats. Light."
@@ -68,6 +78,11 @@
       "description": "A pixel-art city at night in the rain: towers with lit windows, buzzing neon signs, a wet street and a passing car. Dark."
     },
     {
+      "name": "night-train",
+      "source": "./themes/night-train",
+      "description": "A night run seen from a carriage window: hills, town lights and telegraph poles sliding past under a thin moon. Dark."
+    },
+    {
       "name": "papercut-peaks",
       "source": "./themes/papercut-peaks",
       "description": "Five sheets of colored paper layered into mountains, each casting a soft shadow, with paper clouds and birds. Light."
@@ -83,6 +98,11 @@
       "description": "A night city seen through a rain-streaked window: soft bokeh lights, drops sliding down the glass, a warm lamp and a steaming mug. Dark."
     },
     {
+      "name": "reading-room",
+      "source": "./themes/reading-room",
+      "description": "A cozy library at night: tall shelves of books, a floor lamp with dust turning in its light, a candle, a cup of tea and a sleeping cat. Dark."
+    },
+    {
       "name": "retro-grid",
       "source": "./themes/retro-grid",
       "description": "A neon horizon: a slatted sun, wireframe mountains and a perspective grid that rolls toward you. Dark."
@@ -91,6 +111,16 @@
       "name": "sakura-drift",
       "source": "./themes/sakura-drift",
       "description": "A spring dusk of pastel sky, misty hills and a blossoming tree, with petals drifting down. Light and dark."
+    },
+    {
+      "name": "snow-cabin",
+      "source": "./themes/snow-cabin",
+      "description": "A winter night: a log cabin with a lit window, smoke curling from the chimney, snowy pines and snow falling in three layers. Dark."
+    },
+    {
+      "name": "tide-pool",
+      "source": "./themes/tide-pool",
+      "description": "Looking straight down into a rock pool: breathing anemones, starfish, rippling light, drops making rings and small fish. Dark."
     }
   ]
 }

@@ -5,16 +5,22 @@ import * as s2 from './scenes/beacon-cove.js'
 import * as s3 from './scenes/code-rain.js'
 import * as s4 from './scenes/contour-map.js'
 import * as s5 from './scenes/contour-map-night.js'
-import * as s6 from './scenes/halftone-harbor.js'
-import * as s7 from './scenes/halftone-harbor-night.js'
-import * as s8 from './scenes/hearth.js'
-import * as s9 from './scenes/low-orbit.js'
-import * as s10 from './scenes/neon-rain.js'
-import * as s11 from './scenes/papercut-peaks.js'
-import * as s12 from './scenes/papercut-peaks-night.js'
-import * as s13 from './scenes/rainy-window.js'
-import * as s14 from './scenes/retro-grid.js'
-import * as s15 from './scenes/sakura-drift.js'
+import * as s6 from './scenes/desert-noon.js'
+import * as s7 from './scenes/fog-valley.js'
+import * as s8 from './scenes/halftone-harbor.js'
+import * as s9 from './scenes/halftone-harbor-night.js'
+import * as s10 from './scenes/hearth.js'
+import * as s11 from './scenes/low-orbit.js'
+import * as s12 from './scenes/neon-rain.js'
+import * as s13 from './scenes/night-train.js'
+import * as s14 from './scenes/papercut-peaks.js'
+import * as s15 from './scenes/papercut-peaks-night.js'
+import * as s16 from './scenes/rainy-window.js'
+import * as s17 from './scenes/reading-room.js'
+import * as s18 from './scenes/retro-grid.js'
+import * as s19 from './scenes/sakura-drift.js'
+import * as s20 from './scenes/snow-cabin.js'
+import * as s21 from './scenes/tide-pool.js'
 
 const data = [
   {
@@ -227,6 +233,74 @@ const data = [
     }
   },
   {
+    "id": "desert-noon",
+    "title": "Desert Noon",
+    "blurb": "A bright desert at midday: red mesas, a pale sun, saguaros, heat shimmer, drifting dust and a tumbleweed. Light.",
+    "mode": "light",
+    "glass": {
+      "blur": 8,
+      "opacity": 0.5,
+      "tint": "#f6ead0"
+    },
+    "colors": {
+      "label": "Desert Noon",
+      "only": "light",
+      "roles": {
+        "accent": "#1f8a8a",
+        "danger": "#b83a3a",
+        "success": "#4f7a4a",
+        "warning": "#a87414",
+        "pro": "#7a5aa8"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#f0e2c6",
+            "surface-1": "#f6ebd3",
+            "surface-2": "#fbf3e0",
+            "text-primary": "#2a1d12",
+            "text-secondary": "#5a4630",
+            "text-muted": "#6e5a40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "fog-valley",
+    "title": "Fog Valley",
+    "blurb": "A misty mountain morning: blue ridges with fog drifting between them, low sun rays, a flock of birds and a far balloon. Light.",
+    "mode": "light",
+    "glass": {
+      "blur": 10,
+      "opacity": 0.5,
+      "tint": "#e8eff2"
+    },
+    "colors": {
+      "label": "Fog Valley",
+      "only": "light",
+      "roles": {
+        "accent": "#3a7d6e",
+        "danger": "#b83a3a",
+        "success": "#4f7a4a",
+        "warning": "#a87414",
+        "pro": "#6a63b0"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#dfe8ec",
+            "surface-1": "#e8eff2",
+            "surface-2": "#f1f6f8",
+            "text-primary": "#1c2a33",
+            "text-secondary": "#41545f",
+            "text-muted": "#556a77"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "halftone-harbor",
     "title": "Halftone Harbor",
     "blurb": "A two-ink halftone print of a harbor at sunset: a coral sun and its wake, blue water, a headland with a lighthouse, two boats. Light.",
@@ -411,6 +485,41 @@ const data = [
     }
   },
   {
+    "id": "night-train",
+    "title": "Night Train",
+    "blurb": "A night run seen from a carriage window: hills, town lights and telegraph poles sliding past under a thin moon. Dark.",
+    "mode": "dark",
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#0c1024"
+    },
+    "colors": {
+      "label": "Night Train",
+      "only": "dark",
+      "roles": {
+        "accent": "#ffb86b",
+        "danger": "#f07178",
+        "success": "#6fcf97",
+        "warning": "#e6c05a",
+        "pro": "#9aa5ff"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#080a18",
+            "surface-1": "#0e1124",
+            "surface-2": "#151a30",
+            "surface-3": "#1c223c",
+            "text-primary": "#ebeefa",
+            "text-secondary": "#c0c6e2",
+            "text-muted": "#8f98c0"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "papercut-peaks",
     "title": "Papercut Peaks",
     "blurb": "Five sheets of colored paper layered into mountains, each casting a soft shadow, with paper clouds and birds. Light.",
@@ -515,6 +624,41 @@ const data = [
     }
   },
   {
+    "id": "reading-room",
+    "title": "Reading Room",
+    "blurb": "A cozy library at night: tall shelves of books, a floor lamp with dust turning in its light, a candle, a cup of tea and a sleeping cat. Dark.",
+    "mode": "dark",
+    "glass": {
+      "blur": 14,
+      "opacity": 0.5,
+      "tint": "#1c120c"
+    },
+    "colors": {
+      "label": "Reading Room",
+      "only": "dark",
+      "roles": {
+        "accent": "#d98e4a",
+        "danger": "#e0605a",
+        "success": "#7fb069",
+        "warning": "#e6c05a",
+        "pro": "#b48cc8"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#140d09",
+            "surface-1": "#1c130d",
+            "surface-2": "#261a12",
+            "surface-3": "#30221a",
+            "text-primary": "#f5ead9",
+            "text-secondary": "#d6c3a8",
+            "text-muted": "#a8957a"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "retro-grid",
     "title": "Retro Grid",
     "blurb": "A neon horizon: a slatted sun, wireframe mountains and a perspective grid that rolls toward you. Dark.",
@@ -593,8 +737,78 @@ const data = [
         }
       }
     }
+  },
+  {
+    "id": "snow-cabin",
+    "title": "Snow Cabin",
+    "blurb": "A winter night: a log cabin with a lit window, smoke curling from the chimney, snowy pines and snow falling in three layers. Dark.",
+    "mode": "dark",
+    "glass": {
+      "blur": 12,
+      "opacity": 0.45,
+      "tint": "#0f1a33"
+    },
+    "colors": {
+      "label": "Snow Cabin",
+      "only": "dark",
+      "roles": {
+        "accent": "#ffb457",
+        "danger": "#f07178",
+        "success": "#6fcf97",
+        "warning": "#e8c15a",
+        "pro": "#8fa6ff"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#0a1122",
+            "surface-1": "#101a30",
+            "surface-2": "#17233f",
+            "surface-3": "#1e2d4e",
+            "text-primary": "#eaf2fc",
+            "text-secondary": "#bccce6",
+            "text-muted": "#8ea3c6"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "tide-pool",
+    "title": "Tide Pool",
+    "blurb": "Looking straight down into a rock pool: breathing anemones, starfish, rippling light, drops making rings and small fish. Dark.",
+    "mode": "dark",
+    "glass": {
+      "blur": 10,
+      "opacity": 0.45,
+      "tint": "#06232a"
+    },
+    "colors": {
+      "label": "Tide Pool",
+      "only": "dark",
+      "roles": {
+        "accent": "#ff7f66",
+        "danger": "#f0606a",
+        "success": "#5fd39a",
+        "warning": "#e8bd5a",
+        "pro": "#9d8cf0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#04161b",
+            "surface-1": "#082027",
+            "surface-2": "#0d2b33",
+            "surface-3": "#13363f",
+            "text-primary": "#e2f6f3",
+            "text-secondary": "#b3d6d2",
+            "text-muted": "#86adaa"
+          }
+        }
+      }
+    }
   }
 ]
-const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15]
+const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21]
 
 export const THEMES = data.map((d, i) => ({ ...d, build: scenes[i].buildScene }))

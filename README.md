@@ -9,10 +9,12 @@ Themes for the **Claude Code desktop app**: custom colors, and animated backdrop
 | --- | --- | --- |
 [<img src="docs/previews/abyss-lantern.png" width="300" alt="abyss-lantern"><br>**abyss-lantern**](themes/abyss-lantern) | [<img src="docs/previews/aurora-field.png" width="300" alt="aurora-field"><br>**aurora-field**](themes/aurora-field) | [<img src="docs/previews/beacon-cove.png" width="300" alt="beacon-cove"><br>**beacon-cove**](themes/beacon-cove)
 [<img src="docs/previews/code-rain.png" width="300" alt="code-rain"><br>**code-rain**](themes/code-rain) | [<img src="docs/previews/contour-map.png" width="300" alt="contour-map"><br>**contour-map**](themes/contour-map) | [<img src="docs/previews/contour-map-night.png" width="300" alt="contour-map-night"><br>**contour-map-night**](themes/contour-map-night)
-[<img src="docs/previews/halftone-harbor.png" width="300" alt="halftone-harbor"><br>**halftone-harbor**](themes/halftone-harbor) | [<img src="docs/previews/halftone-harbor-night.png" width="300" alt="halftone-harbor-night"><br>**halftone-harbor-night**](themes/halftone-harbor-night) | [<img src="docs/previews/hearth.png" width="300" alt="hearth"><br>**hearth**](themes/hearth)
-[<img src="docs/previews/low-orbit.png" width="300" alt="low-orbit"><br>**low-orbit**](themes/low-orbit) | [<img src="docs/previews/neon-rain.png" width="300" alt="neon-rain"><br>**neon-rain**](themes/neon-rain) | [<img src="docs/previews/papercut-peaks.png" width="300" alt="papercut-peaks"><br>**papercut-peaks**](themes/papercut-peaks)
-[<img src="docs/previews/papercut-peaks-night.png" width="300" alt="papercut-peaks-night"><br>**papercut-peaks-night**](themes/papercut-peaks-night) | [<img src="docs/previews/rainy-window.png" width="300" alt="rainy-window"><br>**rainy-window**](themes/rainy-window) | [<img src="docs/previews/retro-grid.png" width="300" alt="retro-grid"><br>**retro-grid**](themes/retro-grid)
-[<img src="docs/previews/sakura-drift.png" width="300" alt="sakura-drift"><br>**sakura-drift**](themes/sakura-drift) | |
+[<img src="docs/previews/desert-noon.png" width="300" alt="desert-noon"><br>**desert-noon**](themes/desert-noon) | [<img src="docs/previews/fog-valley.png" width="300" alt="fog-valley"><br>**fog-valley**](themes/fog-valley) | [<img src="docs/previews/halftone-harbor.png" width="300" alt="halftone-harbor"><br>**halftone-harbor**](themes/halftone-harbor)
+[<img src="docs/previews/halftone-harbor-night.png" width="300" alt="halftone-harbor-night"><br>**halftone-harbor-night**](themes/halftone-harbor-night) | [<img src="docs/previews/hearth.png" width="300" alt="hearth"><br>**hearth**](themes/hearth) | [<img src="docs/previews/low-orbit.png" width="300" alt="low-orbit"><br>**low-orbit**](themes/low-orbit)
+[<img src="docs/previews/neon-rain.png" width="300" alt="neon-rain"><br>**neon-rain**](themes/neon-rain) | [<img src="docs/previews/night-train.png" width="300" alt="night-train"><br>**night-train**](themes/night-train) | [<img src="docs/previews/papercut-peaks.png" width="300" alt="papercut-peaks"><br>**papercut-peaks**](themes/papercut-peaks)
+[<img src="docs/previews/papercut-peaks-night.png" width="300" alt="papercut-peaks-night"><br>**papercut-peaks-night**](themes/papercut-peaks-night) | [<img src="docs/previews/rainy-window.png" width="300" alt="rainy-window"><br>**rainy-window**](themes/rainy-window) | [<img src="docs/previews/reading-room.png" width="300" alt="reading-room"><br>**reading-room**](themes/reading-room)
+[<img src="docs/previews/retro-grid.png" width="300" alt="retro-grid"><br>**retro-grid**](themes/retro-grid) | [<img src="docs/previews/sakura-drift.png" width="300" alt="sakura-drift"><br>**sakura-drift**](themes/sakura-drift) | [<img src="docs/previews/snow-cabin.png" width="300" alt="snow-cabin"><br>**snow-cabin**](themes/snow-cabin)
+[<img src="docs/previews/tide-pool.png" width="300" alt="tide-pool"><br>**tide-pool**](themes/tide-pool) | |
 <!-- previews:end -->
 
 *Previews show each theme's backdrop alone, not the app. [`docs/gallery.html`](docs/gallery.html) shows every backdrop animated: open it in a browser after cloning.*
@@ -26,16 +28,22 @@ Themes for the **Claude Code desktop app**: custom colors, and animated backdrop
 | [**code-rain**](themes/code-rain) | Columns of falling glyphs in phosphor green, bright at the head and fading behind, dimmer under the chat. Dark. |
 | [**contour-map**](themes/contour-map) | A topographic survey on warm paper: elevation lines draw themselves one height at a time around a flat basin. Light. |
 | [**contour-map-night**](themes/contour-map-night) | The topographic survey in pale ink on blue-black paper, with the contours drawing themselves. Dark. |
+| [**desert-noon**](themes/desert-noon) | A bright desert at midday: red mesas, a pale sun, saguaros, heat shimmer, drifting dust and a tumbleweed. Light. |
+| [**fog-valley**](themes/fog-valley) | A misty mountain morning: blue ridges with fog drifting between them, low sun rays, a flock of birds and a far balloon. Light. |
 | [**halftone-harbor**](themes/halftone-harbor) | A two-ink halftone print of a harbor at sunset: a coral sun and its wake, blue water, a headland with a lighthouse, two boats. Light. |
 | [**halftone-harbor-night**](themes/halftone-harbor-night) | The halftone harbor printed on night-blue stock: an ember sun and pale-blue water in breathing dots. Dark. |
 | [**hearth**](themes/hearth) | A warm theme: espresso and cream surfaces, terracotta accents, and a slow dusk backdrop with embers drifting up. |
 | [**low-orbit**](themes/low-orbit) | A pixel-art view of space: a ringed gas giant, a small moon, a nebula, parallax stars, a passing ship and shooting stars. Dark. |
 | [**neon-rain**](themes/neon-rain) | A pixel-art city at night in the rain: towers with lit windows, buzzing neon signs, a wet street and a passing car. Dark. |
+| [**night-train**](themes/night-train) | A night run seen from a carriage window: hills, town lights and telegraph poles sliding past under a thin moon. Dark. |
 | [**papercut-peaks**](themes/papercut-peaks) | Five sheets of colored paper layered into mountains, each casting a soft shadow, with paper clouds and birds. Light. |
 | [**papercut-peaks-night**](themes/papercut-peaks-night) | The paper-cut mountains in deep indigo under a paper moon and cut-out stars. Dark. |
 | [**rainy-window**](themes/rainy-window) | A night city seen through a rain-streaked window: soft bokeh lights, drops sliding down the glass, a warm lamp and a steaming mug. Dark. |
+| [**reading-room**](themes/reading-room) | A cozy library at night: tall shelves of books, a floor lamp with dust turning in its light, a candle, a cup of tea and a sleeping cat. Dark. |
 | [**retro-grid**](themes/retro-grid) | A neon horizon: a slatted sun, wireframe mountains and a perspective grid that rolls toward you. Dark. |
 | [**sakura-drift**](themes/sakura-drift) | A spring dusk of pastel sky, misty hills and a blossoming tree, with petals drifting down. Light and dark. |
+| [**snow-cabin**](themes/snow-cabin) | A winter night: a log cabin with a lit window, smoke curling from the chimney, snowy pines and snow falling in three layers. Dark. |
+| [**tide-pool**](themes/tide-pool) | Looking straight down into a rock pool: breathing anemones, starfish, rippling light, drops making rings and small fish. Dark. |
 <!-- themes:end -->
 
 ## Install

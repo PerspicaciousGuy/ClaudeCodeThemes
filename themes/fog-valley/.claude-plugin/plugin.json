@@ -1,0 +1,17 @@
+{
+  "name": "fog-valley",
+  "version": "0.1.0",
+  "description": "A misty mountain morning: blue ridges with fog drifting between them, low sun rays, a flock of birds and a far balloon. Light.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "fog",
+    "mountains",
+    "light"
+  ]
+}
