@@ -1,0 +1,17 @@
+{
+  "name": "torch-dungeon",
+  "version": "0.1.0",
+  "description": "A pixel-art dungeon wall: two flickering torches, a dark doorway with watching eyes, bats, a hopping slime and a treasure chest. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "dungeon",
+    "dark"
+  ]
+}

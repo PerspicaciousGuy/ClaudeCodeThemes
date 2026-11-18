@@ -1,0 +1,17 @@
+{
+  "name": "sunny-shore",
+  "version": "0.1.0",
+  "description": "A pixel-art beach on a bright day: a pulsing sun, drifting clouds, a sparkling sea, rolling foam, palms, gulls and a crab. Light.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "beach",
+    "light"
+  ]
+}

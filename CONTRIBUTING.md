@@ -96,7 +96,7 @@ The library has a small script that does the bookkeeping. It needs Node 18+ and,
 
 ## Ideas wanted
 
-The aim is a big, varied library. Themes that aren't here yet: a retro arcade (pixel art), a rooftop garden, a lighthouse-free harbor at dawn, a night market, a greenhouse in the rain, a desert at night, a space station window, a high-contrast theme, a colorblind-safe one. Light-mode themes and still-image themes are welcome too.
+The aim is a big, varied library. Themes that aren't here yet: a pixel-art night market, a pixel-art train station in the snow, a harbor at dawn, a night market, a greenhouse in the rain, a desert at night, a space station window, a high-contrast theme, a colorblind-safe one. Light-mode themes and still-image themes are welcome too.
 
 ## Notes
 

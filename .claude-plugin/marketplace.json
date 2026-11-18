@@ -18,6 +18,11 @@
       "description": "The deep sea: sun shafts fading into the dark, glowing jellyfish, swaying kelp, bubbles and a passing school of fish. Dark."
     },
     {
+      "name": "arcade-hall",
+      "source": "./themes/arcade-hall",
+      "description": "A pixel-art arcade at night: rows of cabinets playing their own little games, neon tubes and a patterned carpet. Dark."
+    },
+    {
       "name": "aurora-field",
       "source": "./themes/aurora-field",
       "description": "Northern lights over a frozen lake ringed by pines, with twinkling stars and the odd shooting star. Dark."
@@ -108,6 +113,11 @@
       "description": "A neon horizon: a slatted sun, wireframe mountains and a perspective grid that rolls toward you. Dark."
     },
     {
+      "name": "rooftop-garden",
+      "source": "./themes/rooftop-garden",
+      "description": "A pixel-art rooftop at golden hour: a pastel skyline, planters of sunflowers and tomatoes, string lights, birds on a wire and a kite. Light."
+    },
+    {
       "name": "sakura-drift",
       "source": "./themes/sakura-drift",
       "description": "A spring dusk of pastel sky, misty hills and a blossoming tree, with petals drifting down. Light and dark."
@@ -118,9 +128,19 @@
       "description": "A winter night: a log cabin with a lit window, smoke curling from the chimney, snowy pines and snow falling in three layers. Dark."
     },
     {
+      "name": "sunny-shore",
+      "source": "./themes/sunny-shore",
+      "description": "A pixel-art beach on a bright day: a pulsing sun, drifting clouds, a sparkling sea, rolling foam, palms, gulls and a crab. Light."
+    },
+    {
       "name": "tide-pool",
       "source": "./themes/tide-pool",
       "description": "Looking straight down into a rock pool: breathing anemones, starfish, rippling light, drops making rings and small fish. Dark."
+    },
+    {
+      "name": "torch-dungeon",
+      "source": "./themes/torch-dungeon",
+      "description": "A pixel-art dungeon wall: two flickering torches, a dark doorway with watching eyes, bats, a hopping slime and a treasure chest. Dark."
     }
   ]
 }

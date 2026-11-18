@@ -1,0 +1,17 @@
+{
+  "name": "rooftop-garden",
+  "version": "0.1.0",
+  "description": "A pixel-art rooftop at golden hour: a pastel skyline, planters of sunflowers and tomatoes, string lights, birds on a wire and a kite. Light.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "garden",
+    "light"
+  ]
+}

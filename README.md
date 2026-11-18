@@ -7,14 +7,15 @@ Themes for the **Claude Code desktop app**: custom colors, and animated backdrop
 <!-- previews:start -->
 |   |   |   |
 | --- | --- | --- |
-[<img src="docs/previews/abyss-lantern.png" width="300" alt="abyss-lantern"><br>**abyss-lantern**](themes/abyss-lantern) | [<img src="docs/previews/aurora-field.png" width="300" alt="aurora-field"><br>**aurora-field**](themes/aurora-field) | [<img src="docs/previews/beacon-cove.png" width="300" alt="beacon-cove"><br>**beacon-cove**](themes/beacon-cove)
-[<img src="docs/previews/code-rain.png" width="300" alt="code-rain"><br>**code-rain**](themes/code-rain) | [<img src="docs/previews/contour-map.png" width="300" alt="contour-map"><br>**contour-map**](themes/contour-map) | [<img src="docs/previews/contour-map-night.png" width="300" alt="contour-map-night"><br>**contour-map-night**](themes/contour-map-night)
-[<img src="docs/previews/desert-noon.png" width="300" alt="desert-noon"><br>**desert-noon**](themes/desert-noon) | [<img src="docs/previews/fog-valley.png" width="300" alt="fog-valley"><br>**fog-valley**](themes/fog-valley) | [<img src="docs/previews/halftone-harbor.png" width="300" alt="halftone-harbor"><br>**halftone-harbor**](themes/halftone-harbor)
-[<img src="docs/previews/halftone-harbor-night.png" width="300" alt="halftone-harbor-night"><br>**halftone-harbor-night**](themes/halftone-harbor-night) | [<img src="docs/previews/hearth.png" width="300" alt="hearth"><br>**hearth**](themes/hearth) | [<img src="docs/previews/low-orbit.png" width="300" alt="low-orbit"><br>**low-orbit**](themes/low-orbit)
-[<img src="docs/previews/neon-rain.png" width="300" alt="neon-rain"><br>**neon-rain**](themes/neon-rain) | [<img src="docs/previews/night-train.png" width="300" alt="night-train"><br>**night-train**](themes/night-train) | [<img src="docs/previews/papercut-peaks.png" width="300" alt="papercut-peaks"><br>**papercut-peaks**](themes/papercut-peaks)
-[<img src="docs/previews/papercut-peaks-night.png" width="300" alt="papercut-peaks-night"><br>**papercut-peaks-night**](themes/papercut-peaks-night) | [<img src="docs/previews/rainy-window.png" width="300" alt="rainy-window"><br>**rainy-window**](themes/rainy-window) | [<img src="docs/previews/reading-room.png" width="300" alt="reading-room"><br>**reading-room**](themes/reading-room)
-[<img src="docs/previews/retro-grid.png" width="300" alt="retro-grid"><br>**retro-grid**](themes/retro-grid) | [<img src="docs/previews/sakura-drift.png" width="300" alt="sakura-drift"><br>**sakura-drift**](themes/sakura-drift) | [<img src="docs/previews/snow-cabin.png" width="300" alt="snow-cabin"><br>**snow-cabin**](themes/snow-cabin)
-[<img src="docs/previews/tide-pool.png" width="300" alt="tide-pool"><br>**tide-pool**](themes/tide-pool) | |
+[<img src="docs/previews/abyss-lantern.png" width="300" alt="abyss-lantern"><br>**abyss-lantern**](themes/abyss-lantern) | [<img src="docs/previews/arcade-hall.png" width="300" alt="arcade-hall"><br>**arcade-hall**](themes/arcade-hall) | [<img src="docs/previews/aurora-field.png" width="300" alt="aurora-field"><br>**aurora-field**](themes/aurora-field)
+[<img src="docs/previews/beacon-cove.png" width="300" alt="beacon-cove"><br>**beacon-cove**](themes/beacon-cove) | [<img src="docs/previews/code-rain.png" width="300" alt="code-rain"><br>**code-rain**](themes/code-rain) | [<img src="docs/previews/contour-map.png" width="300" alt="contour-map"><br>**contour-map**](themes/contour-map)
+[<img src="docs/previews/contour-map-night.png" width="300" alt="contour-map-night"><br>**contour-map-night**](themes/contour-map-night) | [<img src="docs/previews/desert-noon.png" width="300" alt="desert-noon"><br>**desert-noon**](themes/desert-noon) | [<img src="docs/previews/fog-valley.png" width="300" alt="fog-valley"><br>**fog-valley**](themes/fog-valley)
+[<img src="docs/previews/halftone-harbor.png" width="300" alt="halftone-harbor"><br>**halftone-harbor**](themes/halftone-harbor) | [<img src="docs/previews/halftone-harbor-night.png" width="300" alt="halftone-harbor-night"><br>**halftone-harbor-night**](themes/halftone-harbor-night) | [<img src="docs/previews/hearth.png" width="300" alt="hearth"><br>**hearth**](themes/hearth)
+[<img src="docs/previews/low-orbit.png" width="300" alt="low-orbit"><br>**low-orbit**](themes/low-orbit) | [<img src="docs/previews/neon-rain.png" width="300" alt="neon-rain"><br>**neon-rain**](themes/neon-rain) | [<img src="docs/previews/night-train.png" width="300" alt="night-train"><br>**night-train**](themes/night-train)
+[<img src="docs/previews/papercut-peaks.png" width="300" alt="papercut-peaks"><br>**papercut-peaks**](themes/papercut-peaks) | [<img src="docs/previews/papercut-peaks-night.png" width="300" alt="papercut-peaks-night"><br>**papercut-peaks-night**](themes/papercut-peaks-night) | [<img src="docs/previews/rainy-window.png" width="300" alt="rainy-window"><br>**rainy-window**](themes/rainy-window)
+[<img src="docs/previews/reading-room.png" width="300" alt="reading-room"><br>**reading-room**](themes/reading-room) | [<img src="docs/previews/retro-grid.png" width="300" alt="retro-grid"><br>**retro-grid**](themes/retro-grid) | [<img src="docs/previews/rooftop-garden.png" width="300" alt="rooftop-garden"><br>**rooftop-garden**](themes/rooftop-garden)
+[<img src="docs/previews/sakura-drift.png" width="300" alt="sakura-drift"><br>**sakura-drift**](themes/sakura-drift) | [<img src="docs/previews/snow-cabin.png" width="300" alt="snow-cabin"><br>**snow-cabin**](themes/snow-cabin) | [<img src="docs/previews/sunny-shore.png" width="300" alt="sunny-shore"><br>**sunny-shore**](themes/sunny-shore)
+[<img src="docs/previews/tide-pool.png" width="300" alt="tide-pool"><br>**tide-pool**](themes/tide-pool) | [<img src="docs/previews/torch-dungeon.png" width="300" alt="torch-dungeon"><br>**torch-dungeon**](themes/torch-dungeon) |
 <!-- previews:end -->
 
 *Previews show each theme's backdrop alone, not the app. [`docs/gallery.html`](docs/gallery.html) shows every backdrop animated: open it in a browser after cloning.*
@@ -23,6 +24,7 @@ Themes for the **Claude Code desktop app**: custom colors, and animated backdrop
 | Theme | What it is |
 | --- | --- |
 | [**abyss-lantern**](themes/abyss-lantern) | The deep sea: sun shafts fading into the dark, glowing jellyfish, swaying kelp, bubbles and a passing school of fish. Dark. |
+| [**arcade-hall**](themes/arcade-hall) | A pixel-art arcade at night: rows of cabinets playing their own little games, neon tubes and a patterned carpet. Dark. |
 | [**aurora-field**](themes/aurora-field) | Northern lights over a frozen lake ringed by pines, with twinkling stars and the odd shooting star. Dark. |
 | [**beacon-cove**](themes/beacon-cove) | An animated pixel-art theme that follows your clock: a lighthouse cape and sea from night through dawn, day and dusk, with a moving sun and moon, drifting clouds, a small boat and fireflies. |
 | [**code-rain**](themes/code-rain) | Columns of falling glyphs in phosphor green, bright at the head and fading behind, dimmer under the chat. Dark. |
@@ -41,9 +43,12 @@ Themes for the **Claude Code desktop app**: custom colors, and animated backdrop
 | [**rainy-window**](themes/rainy-window) | A night city seen through a rain-streaked window: soft bokeh lights, drops sliding down the glass, a warm lamp and a steaming mug. Dark. |
 | [**reading-room**](themes/reading-room) | A cozy library at night: tall shelves of books, a floor lamp with dust turning in its light, a candle, a cup of tea and a sleeping cat. Dark. |
 | [**retro-grid**](themes/retro-grid) | A neon horizon: a slatted sun, wireframe mountains and a perspective grid that rolls toward you. Dark. |
+| [**rooftop-garden**](themes/rooftop-garden) | A pixel-art rooftop at golden hour: a pastel skyline, planters of sunflowers and tomatoes, string lights, birds on a wire and a kite. Light. |
 | [**sakura-drift**](themes/sakura-drift) | A spring dusk of pastel sky, misty hills and a blossoming tree, with petals drifting down. Light and dark. |
 | [**snow-cabin**](themes/snow-cabin) | A winter night: a log cabin with a lit window, smoke curling from the chimney, snowy pines and snow falling in three layers. Dark. |
+| [**sunny-shore**](themes/sunny-shore) | A pixel-art beach on a bright day: a pulsing sun, drifting clouds, a sparkling sea, rolling foam, palms, gulls and a crab. Light. |
 | [**tide-pool**](themes/tide-pool) | Looking straight down into a rock pool: breathing anemones, starfish, rippling light, drops making rings and small fish. Dark. |
+| [**torch-dungeon**](themes/torch-dungeon) | A pixel-art dungeon wall: two flickering torches, a dark doorway with watching eyes, bats, a hopping slime and a treasure chest. Dark. |
 <!-- themes:end -->
 
 ## Install
