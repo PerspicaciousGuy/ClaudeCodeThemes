@@ -23,6 +23,31 @@
       "description": "An animated pixel-art theme that follows your clock: a lighthouse cape and sea from night through dawn, day and dusk, with a moving sun and moon, drifting clouds, a small boat and fireflies."
     },
     {
+      "name": "code-rain",
+      "source": "./themes/code-rain",
+      "description": "Columns of falling glyphs in phosphor green, bright at the head and fading behind, dimmer under the chat. Dark."
+    },
+    {
+      "name": "contour-map",
+      "source": "./themes/contour-map",
+      "description": "A topographic survey on warm paper: elevation lines draw themselves one height at a time around a flat basin. Light."
+    },
+    {
+      "name": "contour-map-night",
+      "source": "./themes/contour-map-night",
+      "description": "The topographic survey in pale ink on blue-black paper, with the contours drawing themselves. Dark."
+    },
+    {
+      "name": "halftone-harbor",
+      "source": "./themes/halftone-harbor",
+      "description": "A two-ink halftone print of a harbor at sunset: a coral sun and its wake, blue water, a headland with a lighthouse, two boats. Light."
+    },
+    {
+      "name": "halftone-harbor-night",
+      "source": "./themes/halftone-harbor-night",
+      "description": "The halftone harbor printed on night-blue stock: an ember sun and pale-blue water in breathing dots. Dark."
+    },
+    {
       "name": "hearth",
       "source": "./themes/hearth",
       "description": "A warm theme: espresso and cream surfaces, terracotta accents, and a slow dusk backdrop with embers drifting up."
@@ -38,9 +63,24 @@
       "description": "A pixel-art city at night in the rain: towers with lit windows, buzzing neon signs, a wet street and a passing car. Dark."
     },
     {
+      "name": "papercut-peaks",
+      "source": "./themes/papercut-peaks",
+      "description": "Five sheets of colored paper layered into mountains, each casting a soft shadow, with paper clouds and birds. Light."
+    },
+    {
+      "name": "papercut-peaks-night",
+      "source": "./themes/papercut-peaks-night",
+      "description": "The paper-cut mountains in deep indigo under a paper moon and cut-out stars. Dark."
+    },
+    {
       "name": "rainy-window",
       "source": "./themes/rainy-window",
       "description": "A night city seen through a rain-streaked window: soft bokeh lights, drops sliding down the glass, a warm lamp and a steaming mug. Dark."
+    },
+    {
+      "name": "retro-grid",
+      "source": "./themes/retro-grid",
+      "description": "A neon horizon: a slatted sun, wireframe mountains and a perspective grid that rolls toward you. Dark."
     },
     {
       "name": "sakura-drift",

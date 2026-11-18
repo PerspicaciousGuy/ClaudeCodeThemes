@@ -1,0 +1,17 @@
+{
+  "name": "halftone-harbor-night",
+  "version": "0.1.0",
+  "description": "The halftone harbor printed on night-blue stock: an ember sun and pale-blue water in breathing dots. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "halftone",
+    "print",
+    "dark"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "contour-map",
+  "version": "0.1.0",
+  "description": "A topographic survey on warm paper: elevation lines draw themselves one height at a time around a flat basin. Light.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "map",
+    "lines",
+    "light"
+  ]
+}

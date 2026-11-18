@@ -1,0 +1,17 @@
+{
+  "name": "contour-map-night",
+  "version": "0.1.0",
+  "description": "The topographic survey in pale ink on blue-black paper, with the contours drawing themselves. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "map",
+    "lines",
+    "dark"
+  ]
+}

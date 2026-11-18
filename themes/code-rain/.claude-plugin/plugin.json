@@ -1,0 +1,17 @@
+{
+  "name": "code-rain",
+  "version": "0.1.0",
+  "description": "Columns of falling glyphs in phosphor green, bright at the head and fading behind, dimmer under the chat. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "terminal",
+    "matrix",
+    "dark"
+  ]
+}

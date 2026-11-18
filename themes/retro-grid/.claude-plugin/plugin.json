@@ -1,0 +1,17 @@
+{
+  "name": "retro-grid",
+  "version": "0.1.0",
+  "description": "A neon horizon: a slatted sun, wireframe mountains and a perspective grid that rolls toward you. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "retro",
+    "neon",
+    "dark"
+  ]
+}
