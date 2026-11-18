@@ -42,33 +42,53 @@ Themes for the **Claude Code desktop app**: custom colors, and animated backdrop
 
 You need the Claude Code desktop app. Themes draw there (and in the mobile app); the terminal and editor extensions don't draw themes.
 
-### In the desktop app
+There are two ways to install: **the whole library as one plugin** (recommended), or **one theme at a time**.
 
-1. Click **+** next to the prompt box, then **Plugins**.
-2. Choose **Add marketplace** and enter `PerspicaciousGuy/ClaudeCodeThemes`.
-3. Choose **Add plugin** and pick a theme.
+### The whole library: `theme-library`
 
-### From a terminal
+One plugin holds every theme and a switcher, so you install once and change themes whenever you like.
 
-At the prompt of a terminal Claude Code session:
+In the desktop app: click **+** next to the prompt box, then **Plugins**, choose **Add marketplace** and enter `PerspicaciousGuy/ClaudeCodeThemes`, then **Add plugin** and pick `theme-library`.
+
+Or at the prompt of a terminal Claude Code session:
 
 ```
-/plugin install beacon-cove --marketplace PerspicaciousGuy/ClaudeCodeThemes
+/plugin install theme-library --marketplace PerspicaciousGuy/ClaudeCodeThemes
 ```
 
 Or from a shell:
 
 ```bash
+claude plugin install theme-library --marketplace PerspicaciousGuy/ClaudeCodeThemes
+```
+
+Then, in a session:
+
+| Command | What it does |
+| --- | --- |
+| `/ccthemes` | Opens a card with every theme: Apply, Preview (20 seconds, not kept) and No theme |
+| `/ccthemes <name>` | Applies a theme, such as `/ccthemes neon-rain` (a unique start of the name works) |
+| `/ccthemes list` | Names every theme |
+| `/ccthemes random` / `next` | Applies a random or the next theme |
+| `/ccthemes off` | Clears the theme |
+
+The theme you apply is kept for later sessions, in every project. In a new session no theme shows until you send a first message.
+
+### One theme at a time
+
+Install a single theme instead of the library:
+
+```
+/plugin install beacon-cove --marketplace PerspicaciousGuy/ClaudeCodeThemes
+```
+
+```bash
 claude plugin install beacon-cove --marketplace PerspicaciousGuy/ClaudeCodeThemes
 ```
 
-Replace `beacon-cove` with `hearth`, or any other theme's name from the table above. The first time, Claude Code asks `Add marketplace?`: answer `y`, then choose a scope (the user scope applies to every session). A theme installed from a terminal at the user scope also loads in your desktop app's local sessions.
+Replace `beacon-cove` with any theme's name from the table above. The first time, Claude Code asks `Add marketplace?`: answer `y`, then choose a scope (the user scope applies to every session). A theme installed from a terminal at the user scope also loads in your desktop app's local sessions. The theme applies at the start of a session: if it doesn't show, start a new session.
 
-The theme applies at the start of a session. If it doesn't show, start a new session.
-
-### Using one theme at a time
-
-A session has one theme, so if two are installed they overwrite each other. To switch, disable the one you don't want and enable the one you do:
+A session has one theme, so if two single themes (or one and the library) are installed they overwrite each other. Use one route or the other, or switch with:
 
 ```bash
 claude plugin disable hearth
@@ -78,6 +98,8 @@ claude plugin enable beacon-cove
 To remove a theme: `claude plugin uninstall <theme>`.
 
 ## Good to know
+
+- **If the backdrop doesn't show.** The colors can apply while the scene stays hidden. On Windows, turn on Settings, Personalization, Colors, Transparency effects. Then start a new session and send a message.
 
 - **Light and dark.** Hearth follows your app's light or dark mode. Beacon Cove is a dark theme and keeps the app dark.
 - **Reduced motion.** Animated backdrops stop moving when your system asks for reduced motion.

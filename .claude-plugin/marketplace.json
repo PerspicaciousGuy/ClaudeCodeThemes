@@ -8,6 +8,11 @@
   },
   "plugins": [
     {
+      "name": "theme-library",
+      "source": "./theme-library",
+      "description": "Every theme in this library in one plugin, with /ccthemes to switch between them: a card to pick from, preview, apply, random, off. Install this instead of several single themes."
+    },
+    {
       "name": "abyss-lantern",
       "source": "./themes/abyss-lantern",
       "description": "The deep sea: sun shafts fading into the dark, glowing jellyfish, swaying kelp, bubbles and a passing school of fish. Dark."

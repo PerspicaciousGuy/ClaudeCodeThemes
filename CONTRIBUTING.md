@@ -88,7 +88,7 @@ The library has a small script that does the bookkeeping. It needs Node 18+ and,
 
 1. Put your theme in `themes/<name>/`. If it draws a scene, export `buildScene()` from `hooks/scene.js` (a function returning the SVG string) and import it from `register.tsx`, as the existing themes do: the preview and gallery tools call it.
 2. Render the preview: `node scripts/library.mjs previews <name>` (writes `docs/previews/<name>.png`). Look at it.
-3. Rebuild the index, gallery and README table, and run the checks: `node scripts/library.mjs all`.
+3. Rebuild everything and run the checks: `node scripts/library.mjs all`. That regenerates `theme-library/` (the all-in-one plugin: it copies your `hooks/scene.js` and reads your colors and glass from `register.tsx`), the marketplace file, the gallery and the README tables.
 4. Validate: `claude plugin validate ./themes/<name>` and `claude plugin validate .`.
 5. Open a pull request. Say what the idea is and which of the checks above you did.
 

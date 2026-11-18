@@ -1,0 +1,8 @@
+{
+  "name": "theme-library",
+  "version": "0.1.0",
+  "description": "Every theme in this library in one plugin, with /ccthemes to switch between them: a card to pick from, preview, apply, random, off. Install this instead of several single themes.",
+  "author": { "name": "Perspicacious Guy" },
+  "license": "MIT",
+  "keywords": ["claude-code", "theme", "picker", "animated"]
+}

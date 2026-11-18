@@ -4,3 +4,4 @@ themes/*/.claude-plugin/types/
 template/.claude-plugin/types/
 .DS_Store
 *.log
+theme-library/.claude-plugin/types/
