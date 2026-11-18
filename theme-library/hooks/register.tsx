@@ -7,19 +7,42 @@ import type { Theme } from './registry.js'
 const PLUGIN = 'theme-library'
 const COMMAND = 'ccthemes'
 const CARD = 'theme-card'
-// Kept across sessions, for every project: the id of the theme the person applied.
+// Kept across sessions, for every project: the id of the theme the person applied,
+// and whether day and night is on ('on' or 'off').
 const CHOICE_KEY = 'choice'
+const AUTO_KEY = 'auto'
 const PREVIEW_MS = 20_000
-// A scene that follows the clock is redrawn this often.
+// A scene that follows the clock, and day and night, are looked at this often.
 const REFRESH_MS = 10 * 60 * 1000
+// With day and night on, a theme with a twin shows its light twin from 7:00 to 19:00.
+const DAY_START = 7
+const DAY_END = 19
+const PAGE_SIZE = 6
 const NOT_DRAWN = 'If no theme shows, this window may not draw themes yet.'
+
+type FilterId = 'all' | 'dark' | 'light' | 'pixel' | 'vector' | 'clock'
+
+const FILTERS: readonly (readonly [FilterId, string])[] = [
+  ['all', 'All'],
+  ['dark', 'Dark'],
+  ['light', 'Light'],
+  ['pixel', 'Pixel'],
+  ['vector', 'Vector'],
+  ['clock', 'Clock'],
+]
 
 // The module's own variables start over on a reload, which is fine for all of these.
 let current: string | undefined
+// What is drawn now: the applied theme, or its twin under day and night, or a preview.
+let shown: string | undefined
+let auto = false
 let previewing: string | undefined
 let previewEnding: Timer | undefined
 let cardOpen = false
 let cardInBand = false
+let filter: FilterId = 'all'
+let query = ''
+let page = 0
 
 const colorsOf = new Map<string, ReturnType<typeof makeColors>['theme']>()
 const sceneOf = new Map<string, string>()
@@ -32,18 +55,23 @@ function keyOf(text: string): string {
     .replace(/^-|-$/g, '')
 }
 
-/** The theme a person named: an id or title, else the one theme an id starts with, else the one it contains. */
-function themeNamed(text: string): Theme | undefined {
+function isFilter(text: string): text is FilterId {
+  return FILTERS.some(([id]) => id === text)
+}
+
+/** The theme a person named exactly: an id or a title. */
+function exactTheme(text: string): Theme | undefined {
+  const key = keyOf(text)
+
+  return key === '' ? undefined : THEMES.find(theme => theme.id === key || keyOf(theme.title) === key)
+}
+
+/** The one theme an id starts with, else the one an id contains. */
+function fuzzyTheme(text: string): Theme | undefined {
   const key = keyOf(text)
 
   if (key === '') {
     return undefined
-  }
-
-  const exact = THEMES.find(theme => theme.id === key || keyOf(theme.title) === key)
-
-  if (exact !== undefined) {
-    return exact
   }
 
   const starts = THEMES.filter(theme => theme.id.startsWith(key))
@@ -55,6 +83,38 @@ function themeNamed(text: string): Theme | undefined {
   const has = THEMES.filter(theme => theme.id.includes(key))
 
   return has.length === 1 ? has[0] : undefined
+}
+
+function isClock(theme: Theme): boolean {
+  return theme.build.length > 0
+}
+
+function matchesFilter(theme: Theme, id: FilterId): boolean {
+  switch (id) {
+    case 'dark':
+      return theme.mode !== 'light'
+    case 'light':
+      return theme.mode !== 'dark'
+    case 'pixel':
+    case 'vector':
+      return theme.style === id
+    case 'clock':
+      return isClock(theme)
+    default:
+      return true
+  }
+}
+
+/** Every word of a search is somewhere in the theme's name, tags or description. */
+function matchesQuery(theme: Theme, text: string): boolean {
+  const words = text.toLowerCase().split(/\s+/).filter(Boolean)
+  const hay = `${theme.id} ${theme.title} ${theme.tags.join(' ')} ${theme.blurb} ${theme.mode} ${theme.style}`.toLowerCase()
+
+  return words.every(word => hay.includes(word))
+}
+
+function visibleThemes(id: FilterId = filter, text: string = query): Theme[] {
+  return THEMES.filter(theme => matchesFilter(theme, id) && matchesQuery(theme, text))
 }
 
 function reasonOf(error: unknown): string {
@@ -81,6 +141,17 @@ async function localHour($: EngineInterface): Promise<number> {
   return date.getHours() + Math.floor(date.getMinutes() / 10) / 6
 }
 
+/** With day and night on, a theme with a twin shows its light half by day and its dark half by night. */
+function forTheHour(theme: Theme, hour: number): Theme {
+  const twin = auto && theme.twin !== undefined ? THEMES.find(one => one.id === theme.twin) : undefined
+
+  if (twin === undefined) {
+    return theme
+  }
+
+  return theme.mode === (hour >= DAY_START && hour < DAY_END ? 'light' : 'dark') ? theme : twin
+}
+
 /** Draws a theme's colors and backdrop. Answers whether a window said it draws them. */
 async function setTheme($: EngineInterface, theme: Theme): Promise<boolean> {
   let colors = colorsOf.get(theme.id)
@@ -92,7 +163,22 @@ async function setTheme($: EngineInterface, theme: Theme): Promise<boolean> {
 
   const set = await $.theme.set({ colors, backdrop: { scene: theme.id, glass: theme.glass } })
 
+  shown = theme.id
+
   return set.isDrawn
+}
+
+/** Draws the applied theme as the hour asks. Does nothing where it is already drawn, unless forced. */
+async function showApplied($: EngineInterface, force = false): Promise<boolean | undefined> {
+  const chosen = THEMES.find(theme => theme.id === current)
+
+  if (chosen === undefined) {
+    return undefined
+  }
+
+  const target = forTheHour(chosen, await localHour($))
+
+  return !force && shown === target.id ? true : setTheme($, target)
 }
 
 /** Applies a theme (or none) and keeps the choice for later sessions. Answers one plain sentence. */
@@ -104,19 +190,44 @@ async function apply($: EngineInterface, theme: Theme | undefined): Promise<stri
   if (theme === undefined) {
     await $.theme.clear()
     current = undefined
+    shown = undefined
     await $.store.delete(CHOICE_KEY)
     $.ui.invalidate('ui.render')
 
     return 'Theme cleared.'
   }
 
-  const isDrawn = await setTheme($, theme)
-
   current = theme.id
   await $.store.set(CHOICE_KEY, theme.id)
+
+  const isDrawn = await showApplied($, true)
+  const drawn = THEMES.find(one => one.id === shown)
+  const twinNote = drawn !== undefined && drawn.id !== theme.id ? ` Showing ${drawn.title} for this time of day.` : ''
+
   $.ui.invalidate('ui.render')
 
-  return isDrawn ? `${theme.title} applied.` : `${theme.title} applied. ${NOT_DRAWN}`
+  return isDrawn === false ? `${theme.title} applied. ${NOT_DRAWN}` : `${theme.title} applied.${twinNote}`
+}
+
+/** Turns day and night on or off, keeps it, and redraws. */
+async function setAuto($: EngineInterface, on: boolean): Promise<string> {
+  auto = on
+  await $.store.set(AUTO_KEY, on ? 'on' : 'off')
+  if (previewing === undefined) {
+    await showApplied($, true)
+  }
+  $.ui.invalidate('ui.render')
+
+  const chosen = THEMES.find(theme => theme.id === current)
+  const twins = THEMES.filter(theme => theme.twin !== undefined).length
+
+  if (!on) {
+    return 'Day and night is off: your theme stays as you applied it.'
+  }
+
+  return chosen !== undefined && chosen.twin === undefined
+    ? `Day and night is on, but ${chosen.title} has no twin, so it stays as it is. ${twins} themes have one: /${COMMAND} list shows them.`
+    : `Day and night is on: a theme with a twin shows its light half from ${DAY_START}:00 to ${DAY_END}:00 and its dark half after.`
 }
 
 /** Back to the applied theme, or none. */
@@ -124,12 +235,11 @@ async function endPreview($: EngineInterface): Promise<void> {
   previewEnding = undefined
   previewing = undefined
 
-  const back = THEMES.find(theme => theme.id === current)
-
-  if (back === undefined) {
-    await $.theme.clear()
+  if (THEMES.some(theme => theme.id === current)) {
+    await showApplied($, true)
   } else {
-    await setTheme($, back)
+    await $.theme.clear()
+    shown = undefined
   }
   $.ui.invalidate('ui.render')
 }
@@ -153,15 +263,36 @@ const KINDS = [
   ['both', 'Light and dark'],
 ] as const
 
-function themeList(): string {
+function describe(theme: Theme): string {
+  const twin = theme.twin === undefined ? undefined : THEMES.find(one => one.id === theme.twin)
+  const parts = [theme.mode === 'both' ? 'light and dark' : theme.mode, theme.style]
+
+  if (isClock(theme)) {
+    parts.push('follows your clock')
+  }
+  if (twin !== undefined) {
+    parts.push(`twin: ${twin.id}`)
+  }
+
+  return parts.join(' · ')
+}
+
+function themeList(id: FilterId, text: string): string {
+  const shownList = visibleThemes(id, text)
+  const what = [id === 'all' ? '' : id, text === '' ? '' : `"${text}"`].filter(Boolean).join(' ')
+
+  if (shownList.length === 0) {
+    return `No themes match${what === '' ? '' : ` ${what}`}. /${COMMAND} list names all ${THEMES.length}.`
+  }
+
   return [
-    `Theme library (${THEMES.length}):`,
+    `Theme library (${shownList.length}${what === '' ? '' : `, ${what}`}):`,
     ...KINDS.flatMap(([mode, title]) => {
-      const rows = THEMES.filter(theme => theme.mode === mode).map(theme => `  ${theme.id}: ${theme.title}${theme.id === current ? ' (applied)' : ''}`)
+      const rows = shownList.filter(theme => theme.mode === mode).map(theme => `  ${theme.id}: ${theme.title}${theme.id === current ? ' (applied)' : ''}${theme.twin === undefined ? '' : ` [twin: ${theme.twin}]`}`)
 
       return rows.length === 0 ? [] : [`${title}:`, ...rows]
     }),
-    `Use /${COMMAND} <name> to apply one, /${COMMAND} to open the card, /${COMMAND} random, /${COMMAND} next, /${COMMAND} off.`,
+    `/${COMMAND} <name> applies one; /${COMMAND} dark, light, pixel, vector or clock filters the card; /${COMMAND} find <words> searches; /${COMMAND} auto turns day and night on or off; /${COMMAND} random, next, prev, off.`,
   ].join('\n')
 }
 
@@ -173,12 +304,46 @@ function closeCard($: EngineInterface): void {
   $.ui.invalidate('ui.render')
 }
 
-/** The picker: every theme under the kind of window it is made for, each with Apply and Preview. */
+/** Opens the picker, with a filter and a search if given. A surface that draws placed rows gets it in the transcript; another gets it above the prompt. */
+async function openCard($: EngineInterface, id: FilterId, text: string): Promise<string> {
+  filter = id
+  query = text
+  page = 0
+
+  const placed = await $.ui.place({ id: CARD })
+
+  cardOpen = true
+  cardInBand = !placed.isPlaced
+  $.ui.invalidate('ui.render')
+
+  return visibleThemes().length === 0 ? `No themes match, so the card is empty. /${COMMAND} list names all ${THEMES.length}.` : 'Pick a theme on the card.'
+}
+
+/** The picker: filters, a page of themes each with Apply and Preview, and day and night. */
 function card($: EngineInterface, { Box, Text, Button }: CardElements) {
+  const list = visibleThemes()
+  const pages = Math.max(1, Math.ceil(list.length / PAGE_SIZE))
+  const at = Math.min(page, pages - 1)
+  const rows = list.slice(at * PAGE_SIZE, (at + 1) * PAGE_SIZE)
+  const redraw = () => $.ui.invalidate('ui.render')
+
   return (
     <Box flexDirection="column" borderStyle="round" paddingX={1} gap="md">
-      <Box flexDirection="row" gap={1}>
+      <Box flexDirection="row" flexWrap="wrap" gap={1}>
         <Text bold>Theme library</Text>
+        <Button
+          key="auto"
+          label={auto ? 'Day and night: on' : 'Day and night: off'}
+          onPress={async () => {
+            try {
+              void $.ui.toast(await setAuto($, !auto))
+            } catch (error) {
+              void $.ui.toast(`Day and night could not change: ${reasonOf(error)}`)
+            }
+          }}
+        >
+          {auto ? 'Day and night: on' : 'Day and night: off'}
+        </Button>
         <Button
           key="off"
           label="No theme"
@@ -197,69 +362,146 @@ function card($: EngineInterface, { Box, Text, Button }: CardElements) {
           Close
         </Button>
       </Box>
-      {KINDS.map(([mode, title]) => {
-        const themes = THEMES.filter(theme => theme.mode === mode)
+      <Box flexDirection="row" flexWrap="wrap" gap={1}>
+        {FILTERS.map(([id, title]) => {
+          const label = filter === id ? `• ${title}` : title
 
-        if (themes.length === 0) {
-          return []
-        }
+          return (
+            <Button
+              key={`filter-${id}`}
+              label={label}
+              onPress={() => {
+                filter = id
+                page = 0
+                redraw()
+              }}
+            >
+              {label}
+            </Button>
+          )
+        })}
+      </Box>
+      <Box flexDirection="row" flexWrap="wrap" gap={1}>
+        <Text dimColor>
+          {list.length} {list.length === 1 ? 'theme' : 'themes'}
+          {query === '' ? '' : ` matching "${query}"`}
+          {pages > 1 ? ` · page ${at + 1} of ${pages}` : ''}
+        </Text>
+        {query === '' ? null : (
+          <Button
+            key="clear-search"
+            label="Clear search"
+            onPress={() => {
+              query = ''
+              page = 0
+              redraw()
+            }}
+          >
+            Clear search
+          </Button>
+        )}
+      </Box>
+      {auto ? <Text dimColor>{`Day and night: a theme with a twin shows its light half from ${DAY_START}:00 to ${DAY_END}:00 and its dark half after.`}</Text> : null}
+      {rows.length === 0 ? <Text dimColor>{`Nothing matches. Try another filter, or /${COMMAND} find <words>.`}</Text> : null}
+      {rows.map(theme => {
+        const applyWord = current === theme.id ? 'Applied' : 'Apply'
+        const previewWord = previewing === theme.id ? 'Previewing' : 'Preview'
 
         return (
-          <Box key={`group-${mode}`} flexDirection="column" gap="md">
-            <Text key={`head-${mode}`} bold>
-              {title}
-            </Text>
-            {themes.map(theme => {
-              const applyWord = current === theme.id ? 'Applied' : 'Apply'
-              const previewWord = previewing === theme.id ? 'Previewing' : 'Preview'
-
-              return (
-                <Box key={`theme-${theme.id}`} flexDirection="column" gap="xs">
-                  <Box flexDirection="row" flexWrap="wrap" justifyContent="space-between" columnGap="md" rowGap="xs">
-                    <Text bold={current === theme.id}>
-                      {current === theme.id ? '✓ ' : ''}
-                      {theme.title}
-                    </Text>
-                    <Box flexDirection="row" gap={1}>
-                      <Button
-                        key={`apply-${theme.id}`}
-                        label={applyWord}
-                        onPress={async () => {
-                          try {
-                            void $.ui.toast(await apply($, theme))
-                          } catch (error) {
-                            void $.ui.toast(`${theme.title} could not be applied: ${reasonOf(error)}`)
-                            return
-                          }
-                          closeCard($)
-                        }}
-                      >
-                        {applyWord}
-                      </Button>
-                      <Button
-                        key={`preview-${theme.id}`}
-                        label={previewWord}
-                        onPress={async () => {
-                          try {
-                            void $.ui.toast(await preview($, theme))
-                          } catch (error) {
-                            void $.ui.toast(`${theme.title} could not be shown: ${reasonOf(error)}`)
-                          }
-                        }}
-                      >
-                        {previewWord}
-                      </Button>
-                    </Box>
-                  </Box>
-                  <Text dimColor>{theme.blurb}</Text>
-                </Box>
-              )
-            })}
+          <Box key={`theme-${theme.id}`} flexDirection="column" gap="xs">
+            <Box flexDirection="row" flexWrap="wrap" justifyContent="space-between" columnGap="md" rowGap="xs">
+              <Text bold={current === theme.id}>
+                {current === theme.id ? '✓ ' : ''}
+                {theme.title}
+              </Text>
+              <Box flexDirection="row" gap={1}>
+                <Button
+                  key={`apply-${theme.id}`}
+                  label={applyWord}
+                  onPress={async () => {
+                    try {
+                      void $.ui.toast(await apply($, theme))
+                    } catch (error) {
+                      void $.ui.toast(`${theme.title} could not be applied: ${reasonOf(error)}`)
+                      return
+                    }
+                    closeCard($)
+                  }}
+                >
+                  {applyWord}
+                </Button>
+                <Button
+                  key={`preview-${theme.id}`}
+                  label={previewWord}
+                  onPress={async () => {
+                    try {
+                      void $.ui.toast(await preview($, theme))
+                    } catch (error) {
+                      void $.ui.toast(`${theme.title} could not be shown: ${reasonOf(error)}`)
+                    }
+                  }}
+                >
+                  {previewWord}
+                </Button>
+              </Box>
+            </Box>
+            <Text dimColor>{describe(theme)}</Text>
+            <Text dimColor>{theme.blurb}</Text>
           </Box>
         )
       })}
+      {pages > 1 ? (
+        <Box flexDirection="row" gap={1}>
+          {at > 0 ? (
+            <Button
+              key="prev"
+              label="Previous"
+              onPress={() => {
+                page = at - 1
+                redraw()
+              }}
+            >
+              Previous
+            </Button>
+          ) : null}
+          {at < pages - 1 ? (
+            <Button
+              key="next"
+              label="Next"
+              onPress={() => {
+                page = at + 1
+                redraw()
+              }}
+            >
+              Next
+            </Button>
+          ) : null}
+        </Box>
+      ) : null}
     </Box>
   )
+}
+
+/** The next theme in the filter's list, a step away from the applied one, or a random one. */
+function stepTheme(kind: 'next' | 'prev' | 'random', id: FilterId, text: string): Theme | undefined {
+  const pool = visibleThemes(id, text)
+
+  if (pool.length === 0) {
+    return undefined
+  }
+
+  const at = pool.findIndex(theme => theme.id === current)
+
+  if (kind === 'random') {
+    const others = pool.filter(theme => theme.id !== current)
+
+    return others.length === 0 ? pool[0] : others[Math.floor(Math.random() * others.length)]
+  }
+  if (at < 0) {
+    return kind === 'next' ? pool[0] : pool[pool.length - 1]
+  }
+
+  return pool[(at + (kind === 'next' ? 1 : pool.length - 1)) % pool.length]
 }
 
 export const register: Register = on => {
@@ -268,24 +510,30 @@ export const register: Register = on => {
     try {
       await $.command.register({
         name: COMMAND,
-        description: 'Switch themes: alone it opens the picker; with a theme name it applies that theme; "list", "random", "next" and "off" also work',
-        argumentHint: '[theme | list | random | next | off]',
+        description: 'Switch themes: alone it opens the picker; a theme name applies it; dark, light, pixel, vector or clock filter the picker; "find <words>", "auto", "list", "random", "next", "prev" and "off" also work',
+        argumentHint: '[theme | dark | light | pixel | vector | clock | find <words> | auto | list | random | next | prev | off]',
       })
     } catch (error) {
       void $.ui.toast(`${PLUGIN}: /${COMMAND} is not available (${reasonOf(error)})`)
     }
 
-    // Scenes that follow the clock are redrawn now and then.
-    $.clock.every(REFRESH_MS, () => $.ui.invalidate('ui.render'))
+    // Scenes that follow the clock, and day and night, are looked at now and then.
+    $.clock.every(REFRESH_MS, () => {
+      $.ui.invalidate('ui.render')
+      if (auto && previewing === undefined) {
+        void quietly($, async () => void (await showApplied($)))
+      }
+    })
 
-    // The theme chosen before comes back.
+    // The theme chosen before comes back, as the hour asks.
     await quietly($, async () => {
       const saved = await $.store.get(CHOICE_KEY)
       const theme = typeof saved === 'string' ? THEMES.find(one => one.id === saved) : undefined
 
+      auto = (await $.store.get(AUTO_KEY)) === 'on'
       if (theme !== undefined) {
         current = theme.id
-        await setTheme($, theme)
+        await showApplied($, true)
       }
     })
 
@@ -294,41 +542,56 @@ export const register: Register = on => {
 
   on('command.run', { command: COMMAND }, async ($, e) => {
     const words = e.args.trim()
-    const key = keyOf(words)
+    const [first = '', ...more] = words.toLowerCase().split(/\s+/).filter(Boolean)
+    const rest = more.join(' ')
+    const filterOf = (text: string): FilterId => (isFilter(text) ? text : 'all')
+    const searchOf = (text: string): string => (isFilter(text) ? '' : text)
 
     try {
-      if (key === '') {
-        // A surface that draws placed rows gets the card in the transcript; another gets it above the prompt.
-        const placed = await $.ui.place({ id: CARD })
-
-        cardOpen = true
-        cardInBand = !placed.isPlaced
-        $.ui.invalidate('ui.render')
-
-        return { text: 'Pick a theme on the card.' }
+      if (first === '') {
+        return { text: await openCard($, 'all', '') }
       }
-      if (key === 'list') {
-        return { text: themeList() }
+      if (first === 'list') {
+        return { text: themeList(filterOf(rest), searchOf(rest)) }
       }
-      if (key === 'off' || key === 'none') {
+      if (first === 'find' || first === 'search') {
+        return { text: rest === '' ? `Say what to look for: /${COMMAND} find beach, or /${COMMAND} find pixel night.` : await openCard($, 'all', rest) }
+      }
+      if (first === 'off' || first === 'none') {
         return { text: await apply($, undefined) }
       }
-      if (key === 'random' || key === 'next') {
-        const at = THEMES.findIndex(theme => theme.id === current)
-        const pool = THEMES.filter(theme => theme.id !== current)
-        const theme =
-          key === 'next' ? THEMES[(at + 1) % THEMES.length] : pool[Math.floor(Math.random() * pool.length)]
+      if (first === 'auto' || first === 'daynight') {
+        return { text: await setAuto($, rest === 'on' ? true : rest === 'off' ? false : !auto) }
+      }
+      if (first === 'random' || first === 'next' || first === 'prev' || first === 'previous') {
+        const theme = stepTheme(first === 'previous' ? 'prev' : first, filterOf(rest), searchOf(rest))
 
         return { text: theme === undefined ? 'No themes to pick from.' : await apply($, theme) }
       }
 
-      const theme = themeNamed(words)
+      const exact = exactTheme(words)
 
-      if (theme === undefined) {
+      if (exact !== undefined) {
+        return { text: await apply($, exact) }
+      }
+      if (more.length === 0 && isFilter(first)) {
+        return { text: await openCard($, first, '') }
+      }
+
+      const near = fuzzyTheme(words)
+
+      if (near !== undefined) {
+        return { text: await apply($, near) }
+      }
+
+      // Not a name: treat the words as a search.
+      const found = visibleThemes('all', words)
+
+      if (found.length === 0) {
         return { text: `No theme named "${words}". /${COMMAND} list names all ${THEMES.length}.` }
       }
 
-      return { text: await apply($, theme) }
+      return { text: `${found.length} ${found.length === 1 ? 'theme matches' : 'themes match'} "${words}". ${await openCard($, 'all', words)}` }
     } catch (error) {
       return { text: `That did not work: ${reasonOf(error)}` }
     }
@@ -347,7 +610,7 @@ export const register: Register = on => {
 
     const { Svg } = $.ui.resolve(e)
     // Only a scene that follows the clock takes the hour.
-    const follows = theme.build.length > 0
+    const follows = isClock(theme)
     const hour = follows ? await localHour($) : 12
     const key = follows ? `${theme.id}@${hour}` : theme.id
     let source = sceneOf.get(key)

@@ -38,6 +38,12 @@ const data = [
     "title": "Abyss Lantern",
     "blurb": "The deep sea: sun shafts fading into the dark, glowing jellyfish, swaying kelp, bubbles and a passing school of fish. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "ocean",
+      "underwater",
+      "dark"
+    ],
     "glass": {
       "blur": 14,
       "opacity": 0.5,
@@ -73,6 +79,12 @@ const data = [
     "title": "Arcade Hall",
     "blurb": "A pixel-art arcade at night: rows of cabinets playing their own little games, neon tubes and a patterned carpet. Dark.",
     "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "arcade",
+      "dark"
+    ],
     "glass": {
       "blur": 10,
       "opacity": 0.5,
@@ -108,6 +120,12 @@ const data = [
     "title": "Aurora Field",
     "blurb": "Northern lights over a frozen lake ringed by pines, with twinkling stars and the odd shooting star. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "aurora",
+      "nature",
+      "dark"
+    ],
     "glass": {
       "blur": 14,
       "opacity": 0.5,
@@ -143,6 +161,10 @@ const data = [
     "title": "Beacon Cove",
     "blurb": "An animated pixel-art theme that follows your clock: a lighthouse cape and sea from night through dawn, day and dusk, with a moving sun and moon, drifting clouds, a small boat and fireflies.",
     "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel"
+    ],
     "glass": {
       "blur": 20,
       "opacity": 0.45,
@@ -178,6 +200,12 @@ const data = [
     "title": "Code Rain",
     "blurb": "Columns of falling glyphs in phosphor green, bright at the head and fading behind, dimmer under the chat. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "terminal",
+      "matrix",
+      "dark"
+    ],
     "glass": {
       "blur": 6,
       "opacity": 0.45,
@@ -213,6 +241,12 @@ const data = [
     "title": "Contour Map",
     "blurb": "A topographic survey on warm paper: elevation lines draw themselves one height at a time around a flat basin. Light.",
     "mode": "light",
+    "style": "vector",
+    "tags": [
+      "map",
+      "lines",
+      "light"
+    ],
     "glass": {
       "blur": 4,
       "opacity": 0.45,
@@ -240,13 +274,20 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "contour-map-night"
   },
   {
     "id": "contour-map-night",
     "title": "Contour Map Night",
     "blurb": "The topographic survey in pale ink on blue-black paper, with the contours drawing themselves. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "map",
+      "lines",
+      "dark"
+    ],
     "glass": {
       "blur": 4,
       "opacity": 0.45,
@@ -275,13 +316,20 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "contour-map"
   },
   {
     "id": "desert-night",
     "title": "Desert Night",
     "blurb": "A desert after dark: stars and a cold moon over blue-violet mesas, saguaros in silhouette, a campfire with sparks and an owl. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "desert",
+      "night",
+      "dark"
+    ],
     "glass": {
       "blur": 10,
       "opacity": 0.5,
@@ -310,13 +358,20 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "desert-noon"
   },
   {
     "id": "desert-noon",
     "title": "Desert Noon",
     "blurb": "A bright desert at midday: red mesas, a pale sun, saguaros, heat shimmer, drifting dust and a tumbleweed. Light.",
     "mode": "light",
+    "style": "vector",
+    "tags": [
+      "desert",
+      "noon",
+      "light"
+    ],
     "glass": {
       "blur": 8,
       "opacity": 0.5,
@@ -344,13 +399,20 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "desert-night"
   },
   {
     "id": "fog-valley",
     "title": "Fog Valley",
     "blurb": "A misty mountain morning: blue ridges with fog drifting between them, low sun rays, a flock of birds and a far balloon. Light.",
     "mode": "light",
+    "style": "vector",
+    "tags": [
+      "fog",
+      "mountains",
+      "light"
+    ],
     "glass": {
       "blur": 10,
       "opacity": 0.5,
@@ -378,13 +440,21 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "fog-valley-night"
   },
   {
     "id": "fog-valley-night",
     "title": "Fog Valley Night",
     "blurb": "A misty mountain night: a moon over deep-blue ridges, pale fog drifting between them, fireflies in the pines and a sky lantern rising. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "fog",
+      "mountains",
+      "night",
+      "dark"
+    ],
     "glass": {
       "blur": 12,
       "opacity": 0.5,
@@ -413,13 +483,20 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "fog-valley"
   },
   {
     "id": "halftone-harbor",
     "title": "Halftone Harbor",
     "blurb": "A two-ink halftone print of a harbor at sunset: a coral sun and its wake, blue water, a headland with a lighthouse, two boats. Light.",
     "mode": "light",
+    "style": "vector",
+    "tags": [
+      "halftone",
+      "print",
+      "light"
+    ],
     "glass": {
       "blur": 14,
       "opacity": 0.5,
@@ -447,13 +524,20 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "halftone-harbor-night"
   },
   {
     "id": "halftone-harbor-night",
     "title": "Halftone Harbor Night",
     "blurb": "The halftone harbor printed on night-blue stock: an ember sun and pale-blue water in breathing dots. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "halftone",
+      "print",
+      "dark"
+    ],
     "glass": {
       "blur": 14,
       "opacity": 0.5,
@@ -482,13 +566,18 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "halftone-harbor"
   },
   {
     "id": "hearth",
     "title": "Hearth",
     "blurb": "A warm theme: espresso and cream surfaces, terracotta accents, and a slow dusk backdrop with embers drifting up.",
     "mode": "both",
+    "style": "vector",
+    "tags": [
+      "warm"
+    ],
     "glass": {
       "blur": 32,
       "opacity": 0.88
@@ -534,6 +623,12 @@ const data = [
     "title": "Low Orbit",
     "blurb": "A pixel-art view of space: a ringed gas giant, a small moon, a nebula, parallax stars, a passing ship and shooting stars. Dark.",
     "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "space",
+      "dark"
+    ],
     "glass": {
       "blur": 10,
       "opacity": 0.5,
@@ -569,6 +664,12 @@ const data = [
     "title": "Meadow Hours",
     "blurb": "A rolling meadow that follows your clock: dawn, day, dusk and night, with a moving sun and moon, butterflies by day and fireflies after dark. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "meadow",
+      "clock",
+      "dark"
+    ],
     "glass": {
       "blur": 14,
       "opacity": 0.5,
@@ -604,6 +705,13 @@ const data = [
     "title": "Moonlit Shore",
     "blurb": "A pixel-art beach at night: a moon and its glitter on the sea, stars, a campfire with sparks, a lantern boat and a crab. Dark.",
     "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "beach",
+      "night",
+      "dark"
+    ],
     "glass": {
       "blur": 10,
       "opacity": 0.5,
@@ -632,13 +740,20 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "sunny-shore"
   },
   {
     "id": "neon-rain",
     "title": "Neon Rain",
     "blurb": "A pixel-art city at night in the rain: towers with lit windows, buzzing neon signs, a wet street and a passing car. Dark.",
     "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "cyberpunk",
+      "dark"
+    ],
     "glass": {
       "blur": 12,
       "opacity": 0.5,
@@ -674,6 +789,12 @@ const data = [
     "title": "Night Train",
     "blurb": "A night run seen from a carriage window: hills, town lights and telegraph poles sliding past under a thin moon. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "train",
+      "night",
+      "dark"
+    ],
     "glass": {
       "blur": 12,
       "opacity": 0.5,
@@ -709,6 +830,12 @@ const data = [
     "title": "Papercut Peaks",
     "blurb": "Five sheets of colored paper layered into mountains, each casting a soft shadow, with paper clouds and birds. Light.",
     "mode": "light",
+    "style": "vector",
+    "tags": [
+      "paper",
+      "layered",
+      "light"
+    ],
     "glass": {
       "blur": 10,
       "opacity": 0.5,
@@ -736,13 +863,20 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "papercut-peaks-night"
   },
   {
     "id": "papercut-peaks-night",
     "title": "Papercut Peaks Night",
     "blurb": "The paper-cut mountains in deep indigo under a paper moon and cut-out stars. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "paper",
+      "layered",
+      "dark"
+    ],
     "glass": {
       "blur": 10,
       "opacity": 0.5,
@@ -771,13 +905,20 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "papercut-peaks"
   },
   {
     "id": "rainy-window",
     "title": "Rainy Window",
     "blurb": "A night city seen through a rain-streaked window: soft bokeh lights, drops sliding down the glass, a warm lamp and a steaming mug. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "cozy",
+      "rain",
+      "dark"
+    ],
     "glass": {
       "blur": 18,
       "opacity": 0.5,
@@ -813,6 +954,12 @@ const data = [
     "title": "Reading Room",
     "blurb": "A cozy library at night: tall shelves of books, a floor lamp with dust turning in its light, a candle, a cup of tea and a sleeping cat. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "library",
+      "cozy",
+      "dark"
+    ],
     "glass": {
       "blur": 14,
       "opacity": 0.5,
@@ -848,6 +995,12 @@ const data = [
     "title": "Retro Grid",
     "blurb": "A neon horizon: a slatted sun, wireframe mountains and a perspective grid that rolls toward you. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "retro",
+      "neon",
+      "dark"
+    ],
     "glass": {
       "blur": 10,
       "opacity": 0.5,
@@ -883,6 +1036,12 @@ const data = [
     "title": "Rooftop Garden",
     "blurb": "A pixel-art rooftop at golden hour: a pastel skyline, planters of sunflowers and tomatoes, string lights, birds on a wire and a kite. Light.",
     "mode": "light",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "garden",
+      "light"
+    ],
     "glass": {
       "blur": 8,
       "opacity": 0.5,
@@ -910,13 +1069,21 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "rooftop-garden-night"
   },
   {
     "id": "rooftop-garden-night",
     "title": "Rooftop Garden Night",
     "blurb": "A pixel-art rooftop after dark: a moon and stars over a skyline of lit windows, glowing string lights, fireflies and a lantern. Dark.",
     "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "garden",
+      "night",
+      "dark"
+    ],
     "glass": {
       "blur": 10,
       "opacity": 0.5,
@@ -945,13 +1112,21 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "rooftop-garden"
   },
   {
     "id": "sakura-drift",
     "title": "Sakura Drift",
     "blurb": "A spring dusk of pastel sky, misty hills and a blossoming tree, with petals drifting down. Light and dark.",
     "mode": "both",
+    "style": "vector",
+    "tags": [
+      "spring",
+      "pastel",
+      "light",
+      "dark"
+    ],
     "glass": {
       "blur": 16,
       "opacity": 0.55
@@ -997,6 +1172,12 @@ const data = [
     "title": "Snow Cabin",
     "blurb": "A winter night: a log cabin with a lit window, smoke curling from the chimney, snowy pines and snow falling in three layers. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "snow",
+      "winter",
+      "dark"
+    ],
     "glass": {
       "blur": 12,
       "opacity": 0.45,
@@ -1025,13 +1206,20 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "snow-cabin-day"
   },
   {
     "id": "snow-cabin-day",
     "title": "Snow Cabin Day",
     "blurb": "A winter noon: a pale blue sky and low sun, white hills, a log cabin with smoke from its chimney and snow falling in three layers. Light.",
     "mode": "light",
+    "style": "vector",
+    "tags": [
+      "snow",
+      "winter",
+      "light"
+    ],
     "glass": {
       "blur": 8,
       "opacity": 0.5,
@@ -1059,13 +1247,20 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "snow-cabin"
   },
   {
     "id": "sunny-shore",
     "title": "Sunny Shore",
     "blurb": "A pixel-art beach on a bright day: a pulsing sun, drifting clouds, a sparkling sea, rolling foam, palms, gulls and a crab. Light.",
     "mode": "light",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "beach",
+      "light"
+    ],
     "glass": {
       "blur": 8,
       "opacity": 0.5,
@@ -1093,13 +1288,20 @@ const data = [
           }
         }
       }
-    }
+    },
+    "twin": "moonlit-shore"
   },
   {
     "id": "tide-pool",
     "title": "Tide Pool",
     "blurb": "Looking straight down into a rock pool: breathing anemones, starfish, rippling light, drops making rings and small fish. Dark.",
     "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "ocean",
+      "tide pool",
+      "dark"
+    ],
     "glass": {
       "blur": 10,
       "opacity": 0.45,
@@ -1135,6 +1337,12 @@ const data = [
     "title": "Torch Dungeon",
     "blurb": "A pixel-art dungeon wall: two flickering torches, a dark doorway with watching eyes, bats, a hopping slime and a treasure chest. Dark.",
     "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "dungeon",
+      "dark"
+    ],
     "glass": {
       "blur": 8,
       "opacity": 0.5,

@@ -87,10 +87,13 @@ Then, in a session:
 
 | Command | What it does |
 | --- | --- |
-| `/ccthemes` | Opens a card with every theme: Apply, Preview (20 seconds, not kept) and No theme |
+| `/ccthemes` | Opens a card of themes you can filter (dark, light, pixel, vector, clock): Apply, Preview (20 seconds, not kept) and No theme |
 | `/ccthemes <name>` | Applies a theme, such as `/ccthemes neon-rain` (a unique start of the name works) |
+| `/ccthemes dark`, `light`, `pixel`, `vector`, `clock` | Opens the card with that filter on |
+| `/ccthemes find <words>` | Searches names, tags and descriptions, such as `find beach` |
+| `/ccthemes auto` | Day and night: themes with a twin switch between their light and dark halves by your clock |
 | `/ccthemes list` | Names every theme |
-| `/ccthemes random` / `next` | Applies a random or the next theme |
+| `/ccthemes random` / `next` / `prev` | Applies a random, the next or the previous theme, optionally within a filter |
 | `/ccthemes off` | Clears the theme |
 
 The theme you apply is kept for later sessions, in every project. In a new session no theme shows until you send a first message.
