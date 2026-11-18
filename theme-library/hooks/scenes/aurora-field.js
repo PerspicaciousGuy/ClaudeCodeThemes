@@ -74,13 +74,13 @@ function pine(x, y, h, fill) {
 }
 
 const CSS = `
-.tw{animation:tw 5s ease-in-out infinite}
+.tw{opacity:var(--o,1);animation:tw 5s ease-in-out infinite}
 .a1{transform-origin:800px 320px;animation:s1 17s ease-in-out infinite alternate}
 .a2{transform-origin:800px 320px;animation:s2 23s ease-in-out infinite alternate}
 .a3{transform-origin:800px 320px;animation:s1 29s ease-in-out infinite alternate-reverse}
 .shoot{animation:shoot 13s linear infinite}
 .sh{animation:sh 6s ease-in-out infinite}
-@keyframes tw{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes tw{0%,100%{opacity:var(--o,1)}50%{opacity:calc(var(--o,1)*.25)}}
 @keyframes s1{from{transform:translateX(-60px) skewX(-4deg);opacity:.7}to{transform:translateX(60px) skewX(4deg);opacity:1}}
 @keyframes s2{from{transform:translateX(50px) skewX(3deg);opacity:1}to{transform:translateX(-50px) skewX(-3deg);opacity:.65}}
 @keyframes shoot{0%,92%{opacity:0;transform:translate(0,0)}93%{opacity:1}100%{opacity:0;transform:translate(-340px,160px)}}
@@ -105,7 +105,11 @@ export function buildScene() {
     const r = 0.6 + rand() * 1.3
     const tw = rand() < 0.3
 
-    out += `<circle cx="${Math.round(rand() * W)}" cy="${Math.round(rand() * 520)}" r="${r.toFixed(1)}" fill="#e8f0ff" opacity="${(0.4 + rand() * 0.5).toFixed(2)}"${tw ? ` class="tw" style="animation-delay:${(-rand() * 5).toFixed(1)}s"` : ''}/>`
+    const cx = Math.round(rand() * W)
+    const cy = Math.round(rand() * 520)
+    const o = (0.4 + rand() * 0.5).toFixed(2)
+
+    out += `<circle cx="${cx}" cy="${cy}" r="${r.toFixed(1)}" fill="#e8f0ff"${tw ? ` class="tw" style="--o:${o};animation-delay:${(-rand() * 5).toFixed(1)}s"` : ` opacity="${o}"`}/>`
   }
   out += '<g class="shoot"><g transform="translate(1250 90) rotate(25)"><rect width="110" height="2" fill="url(#sg)"/></g></g>'
 
@@ -115,7 +119,7 @@ export function buildScene() {
   let rays = ''
 
   for (let x = -20; x < W + 20; x += 26) {
-    rays += `<rect x="${x}" y="${A.topAt(x).toFixed(0)}" width="${(4 + rand() * 6).toFixed(0)}" height="${(130 + rand() * 190).toFixed(0)}" fill="url(#gRay)" opacity="${(0.25 + rand() * 0.4).toFixed(2)}" class="sh" style="animation-duration:${(4 + rand() * 5).toFixed(1)}s;animation-delay:${(-rand() * 6).toFixed(1)}s"/>`
+    rays += `<rect x="${x}" y="${A.topAt(x).toFixed(0)}" width="${(4 + rand() * 6).toFixed(0)}" height="${(130 + rand() * 190).toFixed(0)}" fill="url(#gRay)" class="sh" style="animation-duration:${(4 + rand() * 5).toFixed(1)}s;animation-delay:${(-rand() * 6).toFixed(1)}s"/>`
   }
 
   const curtains = `<g class="a3"><path d="${C.d}" fill="url(#gC)"/></g><g class="a2"><path d="${B.d}" fill="url(#gB)"/></g><g class="a1"><path d="${A.d}" fill="url(#gA)"/>${rays}</g>`

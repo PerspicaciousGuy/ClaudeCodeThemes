@@ -48,6 +48,11 @@
       "description": "The topographic survey in pale ink on blue-black paper, with the contours drawing themselves. Dark."
     },
     {
+      "name": "desert-night",
+      "source": "./themes/desert-night",
+      "description": "A desert after dark: stars and a cold moon over blue-violet mesas, saguaros in silhouette, a campfire with sparks and an owl. Dark."
+    },
+    {
       "name": "desert-noon",
       "source": "./themes/desert-noon",
       "description": "A bright desert at midday: red mesas, a pale sun, saguaros, heat shimmer, drifting dust and a tumbleweed. Light."
@@ -56,6 +61,11 @@
       "name": "fog-valley",
       "source": "./themes/fog-valley",
       "description": "A misty mountain morning: blue ridges with fog drifting between them, low sun rays, a flock of birds and a far balloon. Light."
+    },
+    {
+      "name": "fog-valley-night",
+      "source": "./themes/fog-valley-night",
+      "description": "A misty mountain night: a moon over deep-blue ridges, pale fog drifting between them, fireflies in the pines and a sky lantern rising. Dark."
     },
     {
       "name": "halftone-harbor",
@@ -76,6 +86,16 @@
       "name": "low-orbit",
       "source": "./themes/low-orbit",
       "description": "A pixel-art view of space: a ringed gas giant, a small moon, a nebula, parallax stars, a passing ship and shooting stars. Dark."
+    },
+    {
+      "name": "meadow-hours",
+      "source": "./themes/meadow-hours",
+      "description": "A rolling meadow that follows your clock: dawn, day, dusk and night, with a moving sun and moon, butterflies by day and fireflies after dark. Dark."
+    },
+    {
+      "name": "moonlit-shore",
+      "source": "./themes/moonlit-shore",
+      "description": "A pixel-art beach at night: a moon and its glitter on the sea, stars, a campfire with sparks, a lantern boat and a crab. Dark."
     },
     {
       "name": "neon-rain",
@@ -118,6 +138,11 @@
       "description": "A pixel-art rooftop at golden hour: a pastel skyline, planters of sunflowers and tomatoes, string lights, birds on a wire and a kite. Light."
     },
     {
+      "name": "rooftop-garden-night",
+      "source": "./themes/rooftop-garden-night",
+      "description": "A pixel-art rooftop after dark: a moon and stars over a skyline of lit windows, glowing string lights, fireflies and a lantern. Dark."
+    },
+    {
       "name": "sakura-drift",
       "source": "./themes/sakura-drift",
       "description": "A spring dusk of pastel sky, misty hills and a blossoming tree, with petals drifting down. Light and dark."
@@ -126,6 +151,11 @@
       "name": "snow-cabin",
       "source": "./themes/snow-cabin",
       "description": "A winter night: a log cabin with a lit window, smoke curling from the chimney, snowy pines and snow falling in three layers. Dark."
+    },
+    {
+      "name": "snow-cabin-day",
+      "source": "./themes/snow-cabin-day",
+      "description": "A winter noon: a pale blue sky and low sun, white hills, a log cabin with smoke from its chimney and snow falling in three layers. Light."
     },
     {
       "name": "sunny-shore",

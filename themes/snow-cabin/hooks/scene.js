@@ -48,13 +48,13 @@ function pine(x, y, h, dark) {
 }
 
 const CSS = `
-.tw{animation:tw 5s ease-in-out infinite}
+.tw{opacity:var(--o,1);animation:tw 5s ease-in-out infinite}
 .fl{animation:flick 3.6s ease-in-out infinite alternate}
 .sm{animation:smoke 9s ease-out infinite}
 .s1{animation:fall 24s linear infinite}
 .s2{animation:fall 15s linear infinite}
 .s3{animation:fall 9s linear infinite}
-@keyframes tw{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes tw{0%,100%{opacity:var(--o,1)}50%{opacity:calc(var(--o,1)*.25)}}
 @keyframes flick{0%{opacity:.78}40%{opacity:1}70%{opacity:.86}100%{opacity:.96}}
 @keyframes smoke{0%{opacity:0;transform:translate(0,0) scale(.5)}15%{opacity:.55}100%{opacity:0;transform:translate(70px,-190px) scale(2.6)}}
 @keyframes fall{from{transform:translate(0,-30px)}to{transform:translate(-70px,960px)}}
@@ -72,7 +72,12 @@ export function buildScene() {
   let out = `<rect width="${W}" height="${H}" fill="url(#sky)"/>`
 
   for (let i = 0; i < 130; i++) {
-    out += `<circle cx="${Math.round(rand() * W)}" cy="${Math.round(rand() * 470)}" r="${(0.5 + rand() * 1.3).toFixed(1)}" fill="#eef3ff" opacity="${(0.4 + rand() * 0.5).toFixed(2)}"${rand() < 0.3 ? ` class="tw" style="animation-delay:${(-rand() * 5).toFixed(1)}s"` : ''}/>`
+    const cx = Math.round(rand() * W)
+    const cy = Math.round(rand() * 470)
+    const r = (0.5 + rand() * 1.3).toFixed(1)
+    const o = (0.4 + rand() * 0.5).toFixed(2)
+
+    out += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="#eef3ff"${rand() < 0.3 ? ` class="tw" style="--o:${o};animation-delay:${(-rand() * 5).toFixed(1)}s"` : ` opacity="${o}"`}/>`
   }
   out += '<circle cx="300" cy="170" r="150" fill="url(#moon)"/><circle cx="300" cy="170" r="42" fill="#f4f8ff"/><circle cx="286" cy="160" r="8" fill="#dbe4f4"/><circle cx="318" cy="186" r="11" fill="#dbe4f4"/>'
 

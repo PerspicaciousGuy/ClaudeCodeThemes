@@ -6,25 +6,31 @@ import * as s3 from './scenes/beacon-cove.js'
 import * as s4 from './scenes/code-rain.js'
 import * as s5 from './scenes/contour-map.js'
 import * as s6 from './scenes/contour-map-night.js'
-import * as s7 from './scenes/desert-noon.js'
-import * as s8 from './scenes/fog-valley.js'
-import * as s9 from './scenes/halftone-harbor.js'
-import * as s10 from './scenes/halftone-harbor-night.js'
-import * as s11 from './scenes/hearth.js'
-import * as s12 from './scenes/low-orbit.js'
-import * as s13 from './scenes/neon-rain.js'
-import * as s14 from './scenes/night-train.js'
-import * as s15 from './scenes/papercut-peaks.js'
-import * as s16 from './scenes/papercut-peaks-night.js'
-import * as s17 from './scenes/rainy-window.js'
-import * as s18 from './scenes/reading-room.js'
-import * as s19 from './scenes/retro-grid.js'
-import * as s20 from './scenes/rooftop-garden.js'
-import * as s21 from './scenes/sakura-drift.js'
-import * as s22 from './scenes/snow-cabin.js'
-import * as s23 from './scenes/sunny-shore.js'
-import * as s24 from './scenes/tide-pool.js'
-import * as s25 from './scenes/torch-dungeon.js'
+import * as s7 from './scenes/desert-night.js'
+import * as s8 from './scenes/desert-noon.js'
+import * as s9 from './scenes/fog-valley.js'
+import * as s10 from './scenes/fog-valley-night.js'
+import * as s11 from './scenes/halftone-harbor.js'
+import * as s12 from './scenes/halftone-harbor-night.js'
+import * as s13 from './scenes/hearth.js'
+import * as s14 from './scenes/low-orbit.js'
+import * as s15 from './scenes/meadow-hours.js'
+import * as s16 from './scenes/moonlit-shore.js'
+import * as s17 from './scenes/neon-rain.js'
+import * as s18 from './scenes/night-train.js'
+import * as s19 from './scenes/papercut-peaks.js'
+import * as s20 from './scenes/papercut-peaks-night.js'
+import * as s21 from './scenes/rainy-window.js'
+import * as s22 from './scenes/reading-room.js'
+import * as s23 from './scenes/retro-grid.js'
+import * as s24 from './scenes/rooftop-garden.js'
+import * as s25 from './scenes/rooftop-garden-night.js'
+import * as s26 from './scenes/sakura-drift.js'
+import * as s27 from './scenes/snow-cabin.js'
+import * as s28 from './scenes/snow-cabin-day.js'
+import * as s29 from './scenes/sunny-shore.js'
+import * as s30 from './scenes/tide-pool.js'
+import * as s31 from './scenes/torch-dungeon.js'
 
 const data = [
   {
@@ -272,6 +278,41 @@ const data = [
     }
   },
   {
+    "id": "desert-night",
+    "title": "Desert Night",
+    "blurb": "A desert after dark: stars and a cold moon over blue-violet mesas, saguaros in silhouette, a campfire with sparks and an owl. Dark.",
+    "mode": "dark",
+    "glass": {
+      "blur": 10,
+      "opacity": 0.5,
+      "tint": "#10122c"
+    },
+    "colors": {
+      "label": "Desert Night",
+      "only": "dark",
+      "roles": {
+        "accent": "#ff9a4a",
+        "danger": "#f0606a",
+        "success": "#5fd39a",
+        "warning": "#e8bd5a",
+        "pro": "#a58cf0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#0a0b1e",
+            "surface-1": "#10112a",
+            "surface-2": "#181a38",
+            "surface-3": "#202346",
+            "text-primary": "#ecebfa",
+            "text-secondary": "#c4c3e6",
+            "text-muted": "#9a99c4"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "desert-noon",
     "title": "Desert Noon",
     "blurb": "A bright desert at midday: red mesas, a pale sun, saguaros, heat shimmer, drifting dust and a tumbleweed. Light.",
@@ -334,6 +375,41 @@ const data = [
             "text-primary": "#1c2a33",
             "text-secondary": "#41545f",
             "text-muted": "#556a77"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "fog-valley-night",
+    "title": "Fog Valley Night",
+    "blurb": "A misty mountain night: a moon over deep-blue ridges, pale fog drifting between them, fireflies in the pines and a sky lantern rising. Dark.",
+    "mode": "dark",
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#0e1630"
+    },
+    "colors": {
+      "label": "Fog Valley Night",
+      "only": "dark",
+      "roles": {
+        "accent": "#7fd0c8",
+        "danger": "#f07178",
+        "success": "#6fcf97",
+        "warning": "#e6c05a",
+        "pro": "#9aa5ff"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#080d1e",
+            "surface-1": "#0e1530",
+            "surface-2": "#151e3e",
+            "surface-3": "#1c274c",
+            "text-primary": "#e6eaf8",
+            "text-secondary": "#b9c2de",
+            "text-muted": "#8b97ba"
           }
         }
       }
@@ -483,6 +559,76 @@ const data = [
             "text-primary": "#e9e8f7",
             "text-secondary": "#bfbde0",
             "text-muted": "#9390b8"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "meadow-hours",
+    "title": "Meadow Hours",
+    "blurb": "A rolling meadow that follows your clock: dawn, day, dusk and night, with a moving sun and moon, butterflies by day and fireflies after dark. Dark.",
+    "mode": "dark",
+    "glass": {
+      "blur": 14,
+      "opacity": 0.5,
+      "tint": "#142034"
+    },
+    "colors": {
+      "label": "Meadow Hours",
+      "only": "dark",
+      "roles": {
+        "accent": "#9ad86a",
+        "danger": "#f07178",
+        "success": "#6fcf97",
+        "warning": "#e6c05a",
+        "pro": "#a58cf0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#0b1220",
+            "surface-1": "#111a2c",
+            "surface-2": "#182338",
+            "surface-3": "#202d46",
+            "text-primary": "#e8f0f8",
+            "text-secondary": "#bccadc",
+            "text-muted": "#8e9fb8"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "moonlit-shore",
+    "title": "Moonlit Shore",
+    "blurb": "A pixel-art beach at night: a moon and its glitter on the sea, stars, a campfire with sparks, a lantern boat and a crab. Dark.",
+    "mode": "dark",
+    "glass": {
+      "blur": 10,
+      "opacity": 0.5,
+      "tint": "#0b1230"
+    },
+    "colors": {
+      "label": "Moonlit Shore",
+      "only": "dark",
+      "roles": {
+        "accent": "#f2a85a",
+        "danger": "#f07178",
+        "success": "#5fcf9a",
+        "warning": "#e6c05a",
+        "pro": "#9aa5ff"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#070b1e",
+            "surface-1": "#0c1230",
+            "surface-2": "#131b40",
+            "surface-3": "#1a2450",
+            "text-primary": "#e8ecf8",
+            "text-secondary": "#bcc6e4",
+            "text-muted": "#8e9ac0"
           }
         }
       }
@@ -767,6 +913,41 @@ const data = [
     }
   },
   {
+    "id": "rooftop-garden-night",
+    "title": "Rooftop Garden Night",
+    "blurb": "A pixel-art rooftop after dark: a moon and stars over a skyline of lit windows, glowing string lights, fireflies and a lantern. Dark.",
+    "mode": "dark",
+    "glass": {
+      "blur": 10,
+      "opacity": 0.5,
+      "tint": "#0e1640"
+    },
+    "colors": {
+      "label": "Rooftop Garden Night",
+      "only": "dark",
+      "roles": {
+        "accent": "#ffb86b",
+        "danger": "#f07178",
+        "success": "#6fcf97",
+        "warning": "#e6c05a",
+        "pro": "#b09aff"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#0a1030",
+            "surface-1": "#101840",
+            "surface-2": "#18214e",
+            "surface-3": "#202b5c",
+            "text-primary": "#eceefa",
+            "text-secondary": "#c2c8e6",
+            "text-muted": "#929ac0"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "sakura-drift",
     "title": "Sakura Drift",
     "blurb": "A spring dusk of pastel sky, misty hills and a blossoming tree, with petals drifting down. Light and dark.",
@@ -841,6 +1022,40 @@ const data = [
             "text-primary": "#eaf2fc",
             "text-secondary": "#bccce6",
             "text-muted": "#8ea3c6"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "snow-cabin-day",
+    "title": "Snow Cabin Day",
+    "blurb": "A winter noon: a pale blue sky and low sun, white hills, a log cabin with smoke from its chimney and snow falling in three layers. Light.",
+    "mode": "light",
+    "glass": {
+      "blur": 8,
+      "opacity": 0.5,
+      "tint": "#eaf2f9"
+    },
+    "colors": {
+      "label": "Snow Cabin Day",
+      "only": "light",
+      "roles": {
+        "accent": "#b8592a",
+        "danger": "#b83a3a",
+        "success": "#3f7f52",
+        "warning": "#a87414",
+        "pro": "#6a63b0"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#e3edf6",
+            "surface-1": "#ebf2f9",
+            "surface-2": "#f4f8fc",
+            "text-primary": "#14222e",
+            "text-secondary": "#3c5064",
+            "text-muted": "#4f6478"
           }
         }
       }
@@ -951,6 +1166,6 @@ const data = [
     }
   }
 ]
-const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25]
+const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31]
 
 export const THEMES = data.map((d, i) => ({ ...d, build: scenes[i].buildScene }))

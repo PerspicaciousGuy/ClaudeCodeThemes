@@ -27,11 +27,11 @@ const GLOWS = [
 const CSS = `
 .bk{animation:bk 7s ease-in-out infinite}
 .dr{animation:dr 9s ease-in infinite}
-.st{animation:st 5s ease-in-out infinite}
+.st{opacity:var(--o,1);animation:st 5s ease-in-out infinite}
 .car{animation:car 40s linear infinite}
 @keyframes bk{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:1;transform:scale(1.12)}}
 @keyframes dr{0%{transform:translateY(0);opacity:0}8%{opacity:.8}85%{opacity:.55}100%{transform:translateY(var(--len));opacity:0}}
-@keyframes st{0%{transform:translate(0,0);opacity:0}25%{opacity:.5}100%{transform:translate(var(--sx),-90px);opacity:0}}
+@keyframes st{0%{transform:translate(0,0);opacity:0}25%{opacity:calc(var(--o,1)*1.25)}100%{transform:translate(var(--sx),-90px);opacity:0}}
 @keyframes car{from{transform:translateX(-120px)}to{transform:translateX(1720px)}}
 @media (prefers-reduced-motion:reduce){.bk,.dr,.st,.car{animation:none}}
 `
@@ -98,7 +98,7 @@ export function buildScene() {
   // A mug on the sill, with steam.
   out += '<g transform="translate(150 826)"><rect x="-34" y="-62" width="68" height="62" rx="9" fill="#2f2420"/><rect x="-34" y="-62" width="68" height="8" rx="4" fill="#4a3a32"/><path d="M34 -46 C 62 -46 62 -14 34 -14" fill="none" stroke="#2f2420" stroke-width="9" stroke-linecap="round"/><ellipse cx="0" cy="-58" rx="30" ry="4" fill="#6a4a30"/></g>'
   for (let i = 0; i < 4; i++) {
-    out += `<path class="st" style="--sx:${(i % 2 ? 22 : -22)}px;animation-delay:${(-i * 1.25).toFixed(2)}s" d="M${140 + i * 8} 756 C ${132 + i * 8} 738 ${152 + i * 8} 724 ${144 + i * 8} 706" fill="none" stroke="#ffe9cf" stroke-width="5" stroke-linecap="round" opacity=".4"/>`
+    out += `<path class="st" style="--o:.4;--sx:${(i % 2 ? 22 : -22)}px;animation-delay:${(-i * 1.25).toFixed(2)}s" d="M${140 + i * 8} 756 C ${132 + i * 8} 738 ${152 + i * 8} 724 ${144 + i * 8} 706" fill="none" stroke="#ffe9cf" stroke-width="5" stroke-linecap="round"/>`
   }
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice"><defs>${defs}</defs><style>${CSS}</style>${out}</svg>`

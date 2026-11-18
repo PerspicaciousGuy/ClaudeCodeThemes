@@ -118,10 +118,10 @@ function contour(grid, level) {
 }
 
 const CSS = `
-.ln{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 26s ease-in-out infinite}
+.ln{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;opacity:var(--o,1);animation:draw 26s ease-in-out infinite}
 .sv{animation:sv 4s ease-in-out infinite}
 .sh{animation:sh 6s ease-in-out infinite}
-@keyframes draw{0%{stroke-dashoffset:1;opacity:1}22%{stroke-dashoffset:0}88%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes draw{0%{stroke-dashoffset:1;opacity:var(--o,1)}22%{stroke-dashoffset:0}88%{stroke-dashoffset:0;opacity:var(--o,1)}100%{stroke-dashoffset:0;opacity:0}}
 @keyframes sv{0%,100%{opacity:1}50%{opacity:.4}}
 @keyframes sh{0%,100%{opacity:.15}50%{opacity:.5}}
 @media (prefers-reduced-motion:reduce){.ln{animation:none;stroke-dashoffset:0}.sv,.sh{animation:none}}
@@ -147,7 +147,7 @@ export function buildScene() {
       if (pts.length < 3) {
         continue
       }
-      lines += `<path class="ln" pathLength="1" stroke="${isIndex ? INK.index : INK.line}" stroke-width="${isIndex ? 2.4 : 1.2}" opacity="${isIndex ? 0.95 : 0.7}" style="animation-delay:${delay}s" d="M${pts.map(([x, y]) => `${Math.round(x)} ${Math.round(y)}`).join('L')}"/>`
+      lines += `<path class="ln" pathLength="1" stroke="${isIndex ? INK.index : INK.line}" stroke-width="${isIndex ? 2.4 : 1.2}" style="--o:${isIndex ? 0.95 : 0.7};animation-delay:${delay}s" d="M${pts.map(([x, y]) => `${Math.round(x)} ${Math.round(y)}`).join('L')}"/>`
     }
   }
 

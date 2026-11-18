@@ -20,11 +20,11 @@ function rng(seed) {
 const CSS = `
 .rolling{animation:roll 1.8s linear infinite}
 .sun{animation:glow 7s ease-in-out infinite}
-.tw{animation:tw 4s ease-in-out infinite}
+.tw{opacity:var(--o,1);animation:tw 4s ease-in-out infinite}
 .beam{animation:scan 9s linear infinite}
 @keyframes roll{from{transform:translateY(0)}to{transform:translateY(var(--d))}}
 @keyframes glow{0%,100%{opacity:.9}50%{opacity:1}}
-@keyframes tw{0%,100%{opacity:1}50%{opacity:.2}}
+@keyframes tw{0%,100%{opacity:var(--o,1)}50%{opacity:calc(var(--o,1)*.25)}}
 @keyframes scan{from{transform:translateX(-1700px)}to{transform:translateX(100px)}}
 @media (prefers-reduced-motion:reduce){.rolling,.sun,.tw,.beam{animation:none}}
 `
@@ -48,7 +48,7 @@ export function buildScene() {
   let out = `<rect width="${W}" height="${H}" fill="url(#sky)"/>`
 
   for (let i = 0; i < 90; i++) {
-    out += `<circle class="tw" cx="${Math.round(r() * W)}" cy="${Math.round(r() * (HORIZON - 40))}" r="${(0.6 + r() * 1.3).toFixed(1)}" fill="#f0e8ff" opacity=".8" style="animation-delay:${(-r() * 4).toFixed(1)}s"/>`
+    out += `<circle class="tw" cx="${Math.round(r() * W)}" cy="${Math.round(r() * (HORIZON - 40))}" r="${(0.6 + r() * 1.3).toFixed(1)}" fill="#f0e8ff" style="--o:.8;animation-delay:${(-r() * 4).toFixed(1)}s"/>`
   }
 
   // The sun, set behind the right-hand mountains, with slats cut across it.

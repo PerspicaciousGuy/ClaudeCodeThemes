@@ -1,0 +1,17 @@
+{
+  "name": "meadow-hours",
+  "version": "0.1.0",
+  "description": "A rolling meadow that follows your clock: dawn, day, dusk and night, with a moving sun and moon, butterflies by day and fireflies after dark. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "meadow",
+    "clock",
+    "dark"
+  ]
+}

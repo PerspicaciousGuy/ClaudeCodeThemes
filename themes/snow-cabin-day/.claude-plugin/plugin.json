@@ -1,0 +1,17 @@
+{
+  "name": "snow-cabin-day",
+  "version": "0.1.0",
+  "description": "A winter noon: a pale blue sky and low sun, white hills, a log cabin with smoke from its chimney and snow falling in three layers. Light.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "snow",
+    "winter",
+    "light"
+  ]
+}

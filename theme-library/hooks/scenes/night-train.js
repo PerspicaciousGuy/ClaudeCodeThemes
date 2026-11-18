@@ -55,11 +55,11 @@ const CSS = `
 .l1{animation:slide 150s linear infinite}
 .l2{animation:slide 70s linear infinite}
 .l3{animation:slide 11s linear infinite}
-.tw{animation:tw 5s ease-in-out infinite}
+.tw{opacity:var(--o,1);animation:tw 5s ease-in-out infinite}
 .lt{animation:tw 3.4s ease-in-out infinite}
 .sway{animation:sway 9s ease-in-out infinite alternate}
 @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-1600px)}}
-@keyframes tw{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes tw{0%,100%{opacity:var(--o,1)}50%{opacity:calc(var(--o,1)*.3)}}
 @keyframes sway{from{opacity:.5}to{opacity:1}}
 @media (prefers-reduced-motion:reduce){.l1,.l2,.l3,.tw,.lt,.sway{animation:none}}
 `
@@ -75,7 +75,12 @@ export function buildScene() {
   let out = `<rect width="${W}" height="${H}" fill="url(#sky)"/>`
 
   for (let i = 0; i < 120; i++) {
-    out += `<circle cx="${Math.round(rand() * W)}" cy="${Math.round(rand() * 480)}" r="${(0.5 + rand() * 1.2).toFixed(1)}" fill="#e8ecff" opacity="${(0.35 + rand() * 0.5).toFixed(2)}"${rand() < 0.3 ? ` class="tw" style="animation-delay:${(-rand() * 5).toFixed(1)}s"` : ''}/>`
+    const cx = Math.round(rand() * W)
+    const cy = Math.round(rand() * 480)
+    const r = (0.5 + rand() * 1.2).toFixed(1)
+    const o = (0.35 + rand() * 0.5).toFixed(2)
+
+    out += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="#e8ecff"${rand() < 0.3 ? ` class="tw" style="--o:${o};animation-delay:${(-rand() * 5).toFixed(1)}s"` : ` opacity="${o}"`}/>`
   }
 
   // A thin moon.

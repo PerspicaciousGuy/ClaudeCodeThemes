@@ -211,6 +211,37 @@ function index() {
 
 // ---------- check ----------
 
+// A CSS animation that moves opacity replaces an element's own opacity attribute
+// while it runs, so a glow drawn with opacity=".1" turns solid. Finds the classes
+// that animate opacity and are used on a tag that also carries an opacity attribute.
+function opacityClashes(svg) {
+  const css = (svg.match(/<style>([\s\S]*?)<\/style>/) || [])[1] || ''
+  const fades = new Set([...css.matchAll(/@keyframes\s+([\w-]+)\s*\{([\s\S]*?\}\s*)\}/g)].filter(m => /opacity\s*:/.test(m[2])).map(m => m[1]))
+  const animated = new Set()
+
+  for (const m of css.matchAll(/\.([\w-]+)\s*\{[^}]*animation(?:-name)?\s*:\s*([\w-]+)/g)) {
+    if (fades.has(m[2])) {
+      animated.add(m[1])
+    }
+  }
+
+  const bad = new Set()
+
+  for (const tag of svg.matchAll(/<[a-z]+\s[^>]*>/g)) {
+    const cls = /\sclass="([^"]+)"/.exec(tag[0])
+
+    if (cls && /\sopacity="/.test(tag[0])) {
+      for (const c of cls[1].split(/\s+/)) {
+        if (animated.has(c)) {
+          bad.add(c)
+        }
+      }
+    }
+  }
+
+  return bad
+}
+
 async function check() {
   const problems = []
   const listed = new Set(JSON.parse(readFileSync(join(ROOT, '.claude-plugin', 'marketplace.json'), 'utf8')).plugins.map(p => p.name))
@@ -274,6 +305,9 @@ async function check() {
       }
       if (!/prefers-reduced-motion/.test(svg) && /animation/.test(svg)) {
         problems.push(`${id}: animated scene has no prefers-reduced-motion rule`)
+      }
+      for (const cls of opacityClashes(svg)) {
+        problems.push(`${id}: class "${cls}" animates opacity on an element that also has an opacity attribute, so the attribute is lost (put the class on a wrapping <g>)`)
       }
     }
   }

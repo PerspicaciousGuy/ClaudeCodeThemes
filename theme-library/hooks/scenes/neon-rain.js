@@ -26,14 +26,14 @@ const WINDOWS = ['#ffd27a', '#5be7ff', '#ff5fb0', '#ffe9b0']
 const CSS = `
 .rn{animation:rn 1s linear infinite}
 .rf{animation:rn 1.7s linear infinite}
-.nz{animation:nz 3s ease-in-out infinite}
+.nz{opacity:var(--o,1);animation:nz 3s ease-in-out infinite}
 .wf{animation:wf 5s steps(1,end) infinite}
 .sp{animation:sp 1.1s ease-out infinite}
 .car{animation:car 28s linear infinite}
 .drone{animation:drone 70s linear infinite}
 .blink{animation:blink 1.4s steps(1,end) infinite}
 @keyframes rn{from{transform:translate(0,-8px)}to{transform:translate(-8px,118px)}}
-@keyframes nz{0%,100%{opacity:1}45%{opacity:.55}50%{opacity:.9}55%{opacity:.5}}
+@keyframes nz{0%,100%{opacity:var(--o,1)}45%{opacity:calc(var(--o,1)*.55)}50%{opacity:calc(var(--o,1)*.9)}55%{opacity:calc(var(--o,1)*.5)}}
 @keyframes wf{0%,100%{opacity:1}40%{opacity:.15}60%{opacity:1}}
 @keyframes sp{0%{opacity:0}20%{opacity:.7}100%{opacity:0}}
 @keyframes car{from{transform:translateX(-24px)}to{transform:translateX(216px)}}
@@ -100,13 +100,13 @@ export function buildScene() {
     const d = (-rand() * 3).toFixed(1)
 
     if (s.tall) {
-      out += rect(s.x - 2, s.top + 4, 6, 16, s.c, ` opacity=".14" class="nz" style="animation-delay:${d}s"`)
+      out += rect(s.x - 2, s.top + 4, 6, 16, s.c, ` class="nz" style="--o:.14;animation-delay:${d}s"`)
       out += rect(s.x, s.top + 6, 2, 12, s.c, ` class="nz" style="animation-delay:${d}s"`)
-      out += rect(s.x, GROUND + 2, 2, 14, s.c, ` opacity=".3" class="nz" style="animation-delay:${d}s"`)
+      out += rect(s.x, GROUND + 2, 2, 14, s.c, ` class="nz" style="--o:.3;animation-delay:${d}s"`)
     } else {
-      out += rect(s.x - 8, s.top - 4, 12, 4, s.c, ` opacity=".14" class="nz" style="animation-delay:${d}s"`)
+      out += rect(s.x - 8, s.top - 4, 12, 4, s.c, ` class="nz" style="--o:.14;animation-delay:${d}s"`)
       out += rect(s.x - 7, s.top - 3, 10, 2, s.c, ` class="nz" style="animation-delay:${d}s"`)
-      out += rect(s.x - 7, GROUND + 3, 10, 1, s.c, ` opacity=".3" class="nz" style="animation-delay:${d}s"`)
+      out += rect(s.x - 7, GROUND + 3, 10, 1, s.c, ` class="nz" style="--o:.3;animation-delay:${d}s"`)
     }
   }
 

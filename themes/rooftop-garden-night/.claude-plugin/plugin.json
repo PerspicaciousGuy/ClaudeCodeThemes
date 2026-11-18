@@ -1,0 +1,18 @@
+{
+  "name": "rooftop-garden-night",
+  "version": "0.1.0",
+  "description": "A pixel-art rooftop after dark: a moon and stars over a skyline of lit windows, glowing string lights, fireflies and a lantern. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "garden",
+    "night",
+    "dark"
+  ]
+}
