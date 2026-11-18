@@ -1,0 +1,17 @@
+{
+  "name": "low-orbit",
+  "version": "0.1.0",
+  "description": "A pixel-art view of space: a ringed gas giant, a small moon, a nebula, parallax stars, a passing ship and shooting stars. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel-art",
+    "space",
+    "dark"
+  ]
+}

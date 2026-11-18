@@ -1,19 +1,51 @@
 {
   "name": "claude-code-themes",
-  "owner": { "name": "Perspicacious Guy" },
+  "owner": {
+    "name": "Perspicacious Guy"
+  },
   "metadata": {
     "description": "Themes for the Claude Code desktop app: colors and animated backdrops."
   },
   "plugins": [
     {
+      "name": "abyss-lantern",
+      "source": "./themes/abyss-lantern",
+      "description": "The deep sea: sun shafts fading into the dark, glowing jellyfish, swaying kelp, bubbles and a passing school of fish. Dark."
+    },
+    {
+      "name": "aurora-field",
+      "source": "./themes/aurora-field",
+      "description": "Northern lights over a frozen lake ringed by pines, with twinkling stars and the odd shooting star. Dark."
+    },
+    {
       "name": "beacon-cove",
       "source": "./themes/beacon-cove",
-      "description": "Animated pixel-art lighthouse that follows your clock, night through dawn, day and dusk."
+      "description": "An animated pixel-art theme that follows your clock: a lighthouse cape and sea from night through dawn, day and dusk, with a moving sun and moon, drifting clouds, a small boat and fireflies."
     },
     {
       "name": "hearth",
       "source": "./themes/hearth",
-      "description": "Warm espresso and cream with terracotta accents and a slow dusk of drifting embers."
+      "description": "A warm theme: espresso and cream surfaces, terracotta accents, and a slow dusk backdrop with embers drifting up."
+    },
+    {
+      "name": "low-orbit",
+      "source": "./themes/low-orbit",
+      "description": "A pixel-art view of space: a ringed gas giant, a small moon, a nebula, parallax stars, a passing ship and shooting stars. Dark."
+    },
+    {
+      "name": "neon-rain",
+      "source": "./themes/neon-rain",
+      "description": "A pixel-art city at night in the rain: towers with lit windows, buzzing neon signs, a wet street and a passing car. Dark."
+    },
+    {
+      "name": "rainy-window",
+      "source": "./themes/rainy-window",
+      "description": "A night city seen through a rain-streaked window: soft bokeh lights, drops sliding down the glass, a warm lamp and a steaming mug. Dark."
+    },
+    {
+      "name": "sakura-drift",
+      "source": "./themes/sakura-drift",
+      "description": "A spring dusk of pastel sky, misty hills and a blossoming tree, with petals drifting down. Light and dark."
     }
   ]
 }

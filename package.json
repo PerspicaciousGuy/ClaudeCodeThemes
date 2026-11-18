@@ -1,0 +1,6 @@
+{
+  "name": "claude-code-themes",
+  "private": true,
+  "type": "module",
+  "description": "Maintenance scripts for the theme library (not published)."
+}

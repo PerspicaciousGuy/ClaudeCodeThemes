@@ -1,0 +1,17 @@
+{
+  "name": "rainy-window",
+  "version": "0.1.0",
+  "description": "A night city seen through a rain-streaked window: soft bokeh lights, drops sliding down the glass, a warm lamp and a steaming mug. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "cozy",
+    "rain",
+    "dark"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "neon-rain",
+  "version": "0.1.0",
+  "description": "A pixel-art city at night in the rain: towers with lit windows, buzzing neon signs, a wet street and a passing car. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel-art",
+    "cyberpunk",
+    "dark"
+  ]
+}

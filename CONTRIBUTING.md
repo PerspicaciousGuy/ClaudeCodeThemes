@@ -84,9 +84,19 @@ The validator may warn `no component is named Backdrop, so it never runs`. That 
 
 ## Add it
 
-1. Add a preview image of the backdrop to `docs/previews/<name>.png` (a screenshot of your SVG is enough; show a few hours for a theme that changes through the day).
-2. Add the theme to `marketplace.json` and to the table in the README.
-3. Open a pull request. Say what the idea is and which of the checks above you did.
+The library has a small script that does the bookkeeping. It needs Node 18+ and, for previews, Chrome (set `CHROME` to its path if it isn't found).
+
+1. Put your theme in `themes/<name>/`. If it draws a scene, export `buildScene()` from `hooks/scene.js` (a function returning the SVG string) and import it from `register.tsx`, as the existing themes do: the preview and gallery tools call it.
+2. Render the preview: `node scripts/library.mjs previews <name>` (writes `docs/previews/<name>.png`). Look at it.
+3. Rebuild the index, gallery and README table, and run the checks: `node scripts/library.mjs all`.
+4. Validate: `claude plugin validate ./themes/<name>` and `claude plugin validate .`.
+5. Open a pull request. Say what the idea is and which of the checks above you did.
+
+`check` fails if a theme is missing a required file or its preview, isn't listed in `marketplace.json`, has a scene over 131,072 characters, uses a script, image or external link in a scene, or animates without a reduced-motion rule.
+
+## Ideas wanted
+
+The aim is a big, varied library. Themes that aren't here yet: a cozy library or study, a train window at night, a desert at noon (a light theme), a misty mountain morning, a retro arcade, a snowy cabin, a tide pool, a rooftop garden, a paper-craft landscape, a terminal-green phosphor look, a high-contrast theme, a colorblind-safe one. Light-mode themes and still-image themes are welcome too.
 
 ## Notes
 

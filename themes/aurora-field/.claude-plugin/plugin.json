@@ -1,0 +1,17 @@
+{
+  "name": "aurora-field",
+  "version": "0.1.0",
+  "description": "Northern lights over a frozen lake ringed by pines, with twinkling stars and the odd shooting star. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "aurora",
+    "nature",
+    "dark"
+  ]
+}

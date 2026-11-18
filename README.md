@@ -4,16 +4,28 @@ Themes for the **Claude Code desktop app**: custom colors, and animated backdrop
 
 ## Themes
 
+<!-- previews:start -->
+|   |   |   |
+| --- | --- | --- |
+[<img src="docs/previews/abyss-lantern.png" width="300" alt="abyss-lantern"><br>**abyss-lantern**](themes/abyss-lantern) | [<img src="docs/previews/aurora-field.png" width="300" alt="aurora-field"><br>**aurora-field**](themes/aurora-field) | [<img src="docs/previews/beacon-cove.png" width="300" alt="beacon-cove"><br>**beacon-cove**](themes/beacon-cove)
+[<img src="docs/previews/hearth.png" width="300" alt="hearth"><br>**hearth**](themes/hearth) | [<img src="docs/previews/low-orbit.png" width="300" alt="low-orbit"><br>**low-orbit**](themes/low-orbit) | [<img src="docs/previews/neon-rain.png" width="300" alt="neon-rain"><br>**neon-rain**](themes/neon-rain)
+[<img src="docs/previews/rainy-window.png" width="300" alt="rainy-window"><br>**rainy-window**](themes/rainy-window) | [<img src="docs/previews/sakura-drift.png" width="300" alt="sakura-drift"><br>**sakura-drift**](themes/sakura-drift) |
+<!-- previews:end -->
+
+*Previews show each theme's backdrop alone, not the app. [`docs/gallery.html`](docs/gallery.html) shows every backdrop animated: open it in a browser after cloning.*
+
+<!-- themes:start -->
 | Theme | What it is |
 | --- | --- |
-| [**Beacon Cove**](themes/beacon-cove) | An animated pixel-art lighthouse that follows your clock: night, dawn, day and dusk, with a moving sun and moon, a sweeping beam, drifting clouds, a boat and fireflies. |
-| [**Hearth**](themes/hearth) | Warm espresso and cream surfaces, terracotta accents, and a slow dusk with embers drifting up. Light and dark. |
-
-![Beacon Cove at 2:00, 6:24, 12:00 and 18:06](docs/previews/beacon-cove.png)
-
-*Beacon Cove's backdrop at four hours of the day. These previews show the backdrop alone, not the app.*
-
-![Hearth](docs/previews/hearth.png)
+| [**abyss-lantern**](themes/abyss-lantern) | The deep sea: sun shafts fading into the dark, glowing jellyfish, swaying kelp, bubbles and a passing school of fish. Dark. |
+| [**aurora-field**](themes/aurora-field) | Northern lights over a frozen lake ringed by pines, with twinkling stars and the odd shooting star. Dark. |
+| [**beacon-cove**](themes/beacon-cove) | An animated pixel-art theme that follows your clock: a lighthouse cape and sea from night through dawn, day and dusk, with a moving sun and moon, drifting clouds, a small boat and fireflies. |
+| [**hearth**](themes/hearth) | A warm theme: espresso and cream surfaces, terracotta accents, and a slow dusk backdrop with embers drifting up. |
+| [**low-orbit**](themes/low-orbit) | A pixel-art view of space: a ringed gas giant, a small moon, a nebula, parallax stars, a passing ship and shooting stars. Dark. |
+| [**neon-rain**](themes/neon-rain) | A pixel-art city at night in the rain: towers with lit windows, buzzing neon signs, a wet street and a passing car. Dark. |
+| [**rainy-window**](themes/rainy-window) | A night city seen through a rain-streaked window: soft bokeh lights, drops sliding down the glass, a warm lamp and a steaming mug. Dark. |
+| [**sakura-drift**](themes/sakura-drift) | A spring dusk of pastel sky, misty hills and a blossoming tree, with petals drifting down. Light and dark. |
+<!-- themes:end -->
 
 ## Install
 
