@@ -1,0 +1,20 @@
+{
+  "name": "risograph",
+  "version": "0.1.0",
+  "description": "A risograph print: fluorescent pink, teal and yellow shapes overprinting on warm paper with halftone dots and slight misregistration, drifting as if the ink were still wet. Light.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "risograph",
+    "print",
+    "halftone",
+    "pop",
+    "light"
+  ]
+}

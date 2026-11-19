@@ -1,0 +1,20 @@
+{
+  "name": "art-deco",
+  "version": "0.1.0",
+  "description": "A 1920s deco poster: a gold sunburst over deep navy, stepped towers with gold-lined windows, concentric fan arcs and a shimmer of light crossing the gold. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "art-deco",
+    "gold",
+    "geometric",
+    "1920s",
+    "dark"
+  ]
+}

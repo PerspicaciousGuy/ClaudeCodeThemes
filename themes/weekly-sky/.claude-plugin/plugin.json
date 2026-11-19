@@ -1,0 +1,22 @@
+{
+  "name": "weekly-sky",
+  "version": "0.1.0",
+  "description": "A lakeside cabin under a sky that crosses a whole day as your 7-day usage window is used: sunrise at the start of the week, noon in the middle, sunset as you near the limit and night when you reach it. A live theme. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "live",
+    "sky",
+    "sun",
+    "cabin",
+    "lake",
+    "usage",
+    "dark"
+  ],
+  "types": "./types/index.d.ts"
+}

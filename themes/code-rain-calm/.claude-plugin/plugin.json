@@ -1,0 +1,19 @@
+{
+  "name": "code-rain-calm",
+  "version": "0.1.0",
+  "description": "A calm version of code-rain: the same scene slowed to about 40% speed and softened under a veil, with heavier frosted panels, for when motion is distracting. Dark",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "terminal",
+    "matrix",
+    "dark",
+    "calm",
+    "quiet"
+  ]
+}

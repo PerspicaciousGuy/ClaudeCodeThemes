@@ -15,6 +15,21 @@ Each batch ends the same way: previews rendered and looked at, `node scripts/lib
 | **E** *(done)* | Abstract and tech | `blueprint`, `circuit-board` (pulses along traces), `oscilloscope` (phosphor waves), `constellations` (a star map that draws itself), `ink-wash` (sumi-e, light) |
 | **F** *(done)* | Accessibility and still | `high-contrast-dark` and `-light`, `colorblind-safe-dark` and `-light`, and colors-only themes with no backdrop: `graphite`, `paperback`, `forest-floor`, `midnight-ink` |
 | **G** *(done)* | Seasonal events | `winter-lights`, `new-year-fireworks`, `halloween-night` (a vector companion to `haunted-manor`) |
+| **H** *(done)* | Art styles | `ukiyo-e-wave` (light), `stained-glass`, `risograph` (light), `art-deco`, `isometric-room`, `cassette-futurism` |
+| **I** *(done)* | Calm variants | `oscilloscope-calm`, `circuit-board-calm`, `new-year-fireworks-calm`, `coral-reef-calm`, `code-rain-calm`, `neon-rain-calm`: the busiest scenes at about 40% speed under a veil, with heavier glass. Made by `make-calm`-style wrapping of the original scene. |
+
+## Live themes
+
+Themes that change with the session. A live theme is its own plugin (it is not bundled into `theme-library`), tagged `live`, and reads `$.session.usage()` and the turn events.
+
+| Idea | What it shows |
+| --- | --- |
+| `campfire` *(done)* | The 5-hour limit as a fire, the context window as a woodpile, sparks faster while Claude works. |
+| `tide` *(done)* | The 5-hour window as a tide that draws back from the sand. |
+| `weekly-sky` *(done)* | The 7-day limit as the sun crossing a day, with night at the limit. |
+| `weather-mood` *(done)* | Calm when idle, rain while Claude works (harder as context fills), lightning on a failed tool call. |
+| `real-sky` *(done)* | The sun by your clock and the moon in its real phase for today. |
+| `/ccthemes make` | A palette from a hex or an image, so people make themes without SVG. |
 
 ## Tooling
 

@@ -4,7 +4,17 @@ What changed in the library, by release. Releases follow the `theme-library` plu
 
 Update this file when you add themes or change the tools, and bump `theme-library`'s version in `theme-library/.claude-plugin/plugin.json` when its behavior changes.
 
-## Unreleased (63 themes)
+## Unreleased (80 themes)
+
+**New themes (6), calm variants (batch I)**
+- `oscilloscope-calm`, `circuit-board-calm`, `new-year-fireworks-calm`, `coral-reef-calm`, `code-rain-calm` and `neon-rain-calm`: the same scenes slowed to about 40% speed and softened under a veil, with heavier frosted panels, for when motion is distracting.
+
+**New themes (6), art styles (batch H)**
+- `ukiyo-e-wave` (light), `stained-glass`, `risograph` (light), `art-deco`, `isometric-room` and `cassette-futurism`.
+
+**New live themes (5)**
+- `tide` (the 5-hour limit as a tide), `weekly-sky` (the 7-day limit as the sun crossing a day), `weather-mood` (calm when Claude is idle, rain while it works, lightning on a failed tool call) and `real-sky` (the sun by your clock and the moon in its real phase). Each is its own plugin and has a command, `/tide`, `/weeksky`, `/weather` and `/realsky`, to put its look on.
+- `campfire`, a night camp whose fire follows your 5-hour usage window and whose woodpile follows your context window. It is its own plugin, since it changes with the session; run `/fire` to put it on. The library tooling skips live themes when it builds `theme-library`.
 
 **New themes (6), vector scenes (batch D)**
 - `greenhouse-rain`, `koi-pond` (seen from above), `bamboo-grove` (light, misty), `lantern-festival`, `cloud-sea` (light) and `coral-reef`.

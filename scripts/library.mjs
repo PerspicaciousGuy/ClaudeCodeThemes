@@ -30,6 +30,9 @@ const ids = () =>
 
 const manifest = id => JSON.parse(readFileSync(join(THEMES, id, '.claude-plugin', 'plugin.json'), 'utf8'))
 
+// A live theme changes with your usage, so it is its own plugin and is not bundled into theme-library.
+const isLive = id => (manifest(id).keywords ?? []).includes('live')
+
 async function scene(id, hour) {
   const file = join(THEMES, id, 'hooks', 'scene.js')
 
@@ -186,7 +189,7 @@ function pack() {
     copyFileSync(join(ROOT, 'template', 'hooks', f), join(dir, f))
   }
 
-  const list = ids()
+  const list = ids().filter(id => !isLive(id))
   const imports = []
   const scenes = []
   const data = []
@@ -398,7 +401,7 @@ async function check() {
   } else {
     const text = readFileSync(registry, 'utf8')
 
-    for (const id of ids()) {
+    for (const id of ids().filter(id => !isLive(id))) {
       if (!text.includes(`"id": "${id}"`)) {
         problems.push(`theme-library: ${id} is missing from the registry (run: node scripts/library.mjs pack)`)
       }

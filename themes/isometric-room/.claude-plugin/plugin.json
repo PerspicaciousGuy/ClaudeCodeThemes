@@ -1,0 +1,20 @@
+{
+  "name": "isometric-room",
+  "version": "0.1.0",
+  "description": "A small isometric room at night: a desk with a glowing monitor and lamp, a plant, a bookshelf, a window onto a moonlit sky and a cat asleep on the rug. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "isometric",
+    "room",
+    "cozy",
+    "cat",
+    "dark"
+  ]
+}

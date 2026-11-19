@@ -23,6 +23,11 @@
       "description": "A pixel-art arcade at night: rows of cabinets playing their own little games, neon tubes and a patterned carpet. Dark."
     },
     {
+      "name": "art-deco",
+      "source": "./themes/art-deco",
+      "description": "A 1920s deco poster: a gold sunburst over deep navy, stepped towers with gold-lined windows, concentric fan arcs and a shimmer of light crossing the gold. Dark."
+    },
+    {
       "name": "aurora-field",
       "source": "./themes/aurora-field",
       "description": "Northern lights over a frozen lake ringed by pines, with twinkling stars and the odd shooting star. Dark."
@@ -48,9 +53,24 @@
       "description": "An architect's blueprint: a fine grid on deep blue paper, with a gear, a house elevation, a beam section and a compass drawing that trace themselves in white line. Dark."
     },
     {
+      "name": "campfire",
+      "source": "./themes/campfire",
+      "description": "A night camp whose fire follows your 5-hour usage window and whose woodpile follows your context window: a roaring fire when plenty is left, embers when you are near the limit. A live theme. Dark."
+    },
+    {
+      "name": "cassette-futurism",
+      "source": "./themes/cassette-futurism",
+      "description": "A 1980s vision of the future: an amber monochrome console with a sweeping radar, a spectrum, scrolling data, turning cassette reels, blinking lights and scanlines. Dark."
+    },
+    {
       "name": "circuit-board",
       "source": "./themes/circuit-board",
       "description": "A green circuit board: traces between pads and chips, bright pulses of light running along them and small LEDs blinking on their own beats. Dark."
+    },
+    {
+      "name": "circuit-board-calm",
+      "source": "./themes/circuit-board-calm",
+      "description": "A calm version of circuit-board: the same scene slowed to about 40% speed and softened under a veil, with heavier frosted panels, for when motion is distracting. Dark"
     },
     {
       "name": "cloud-sea",
@@ -61,6 +81,11 @@
       "name": "code-rain",
       "source": "./themes/code-rain",
       "description": "Columns of falling glyphs in phosphor green, bright at the head and fading behind, dimmer under the chat. Dark."
+    },
+    {
+      "name": "code-rain-calm",
+      "source": "./themes/code-rain-calm",
+      "description": "A calm version of code-rain: the same scene slowed to about 40% speed and softened under a veil, with heavier frosted panels, for when motion is distracting. Dark"
     },
     {
       "name": "colorblind-safe-dark",
@@ -91,6 +116,11 @@
       "name": "coral-reef",
       "source": "./themes/coral-reef",
       "description": "A sunlit coral reef: caustic light rippling over branching corals and sea fans, schools of bright fish, a clownfish in an anemone, a turtle gliding by and rising bubbles. Dark."
+    },
+    {
+      "name": "coral-reef-calm",
+      "source": "./themes/coral-reef-calm",
+      "description": "A calm version of coral-reef: the same scene slowed to about 40% speed and softened under a veil, with heavier frosted panels, for when motion is distracting. Dark"
     },
     {
       "name": "desert-night",
@@ -178,6 +208,11 @@
       "description": "A sumi-e painting on rice paper: mountains in grey washes fading into mist, a pine branch, a lone boat, birds crossing and a red seal. Light."
     },
     {
+      "name": "isometric-room",
+      "source": "./themes/isometric-room",
+      "description": "A small isometric room at night: a desk with a glowing monitor and lamp, a plant, a bookshelf, a window onto a moonlit sky and a cat asleep on the rug. Dark."
+    },
+    {
       "name": "koi-pond",
       "source": "./themes/koi-pond",
       "description": "A koi pond seen from above at dusk: orange and white koi gliding in slow loops, lily pads with pink flowers, ripples spreading and petals drifting on dark water. Dark."
@@ -213,9 +248,19 @@
       "description": "A pixel-art city at night in the rain: towers with lit windows, buzzing neon signs, a wet street and a passing car. Dark."
     },
     {
+      "name": "neon-rain-calm",
+      "source": "./themes/neon-rain-calm",
+      "description": "A calm version of neon-rain: the same scene slowed to about 40% speed and softened under a veil, with heavier frosted panels, for when motion is distracting. Dark"
+    },
+    {
       "name": "new-year-fireworks",
       "source": "./themes/new-year-fireworks",
       "description": "New Year's night over a city: rockets climbing and bursting in rings of colored sparks that fall as they fade, lit windows and stars through the smoke. Dark."
+    },
+    {
+      "name": "new-year-fireworks-calm",
+      "source": "./themes/new-year-fireworks-calm",
+      "description": "A calm version of new-year-fireworks: the same scene slowed to about 40% speed and softened under a veil, with heavier frosted panels, for when motion is distracting. Dark"
     },
     {
       "name": "night-market",
@@ -231,6 +276,11 @@
       "name": "oscilloscope",
       "source": "./themes/oscilloscope",
       "description": "An oscilloscope screen: a glowing green graticule with a sine, a two-tone, a square and a triangle wave scrolling across and a cursor sweeping the display. Dark."
+    },
+    {
+      "name": "oscilloscope-calm",
+      "source": "./themes/oscilloscope-calm",
+      "description": "A calm version of oscilloscope: the same scene slowed to about 40% speed and softened under a veil, with heavier frosted panels, for when motion is distracting. Dark"
     },
     {
       "name": "paperback",
@@ -263,9 +313,19 @@
       "description": "A cozy library at night: tall shelves of books, a floor lamp with dust turning in its light, a candle, a cup of tea and a sleeping cat. Dark."
     },
     {
+      "name": "real-sky",
+      "source": "./themes/real-sky",
+      "description": "A lakeside view under the sky outside right now: the sun crosses from sunrise to sunset by your clock, and at night the moon crosses in its real phase for today, with stars and its reflection in the lake. A live theme. Dark."
+    },
+    {
       "name": "retro-grid",
       "source": "./themes/retro-grid",
       "description": "A neon horizon: a slatted sun, wireframe mountains and a perspective grid that rolls toward you. Dark."
+    },
+    {
+      "name": "risograph",
+      "source": "./themes/risograph",
+      "description": "A risograph print: fluorescent pink, teal and yellow shapes overprinting on warm paper with halftone dots and slight misregistration, drifting as if the ink were still wet. Light."
     },
     {
       "name": "rooftop-garden",
@@ -303,6 +363,11 @@
       "description": "A soft spring rain over pale green hills: blossoming trees shedding petals, rain streaking through, puddles rippling under a pastel sky. Light."
     },
     {
+      "name": "stained-glass",
+      "source": "./themes/stained-glass",
+      "description": "A cathedral window at night: four arched lancets of jewel-colored panes in dark lead, a slowly turning rose window and light drifting across the glass. Dark."
+    },
+    {
       "name": "summer-fireflies",
       "source": "./themes/summer-fireflies",
       "description": "A meadow at dusk: fireflies blinking and drifting over swaying grass, a thin moon, first stars and the last orange glow on the horizon. Dark."
@@ -313,6 +378,11 @@
       "description": "A pixel-art beach on a bright day: a pulsing sun, drifting clouds, a sparkling sea, rolling foam, palms, gulls and a crab. Light."
     },
     {
+      "name": "tide",
+      "source": "./themes/tide",
+      "description": "A beach at dusk whose tide follows your 5-hour usage window: high water while plenty is left, then the sea draws back and leaves wet sand, rocks, tide pools and a stranded boat. A live theme. Dark."
+    },
+    {
       "name": "tide-pool",
       "source": "./themes/tide-pool",
       "description": "Looking straight down into a rock pool: breathing anemones, starfish, rippling light, drops making rings and small fish. Dark."
@@ -321,6 +391,21 @@
       "name": "torch-dungeon",
       "source": "./themes/torch-dungeon",
       "description": "A pixel-art dungeon wall: two flickering torches, a dark doorway with watching eyes, bats, a hopping slime and a treasure chest. Dark."
+    },
+    {
+      "name": "ukiyo-e-wave",
+      "source": "./themes/ukiyo-e-wave",
+      "description": "A Japanese woodblock print: a great wave curling over scale-pattern swells, boats riding the water, a red sun and a snow-capped mountain on cream paper. Light."
+    },
+    {
+      "name": "weather-mood",
+      "source": "./themes/weather-mood",
+      "description": "A lighthouse on a rocky headland whose weather follows Claude: a clear calm night while it is idle, clouds and rain while it works (harder as the context window fills) and a flash of lightning when a tool call fails. A live theme. Dark."
+    },
+    {
+      "name": "weekly-sky",
+      "source": "./themes/weekly-sky",
+      "description": "A lakeside cabin under a sky that crosses a whole day as your 7-day usage window is used: sunrise at the start of the week, noon in the middle, sunset as you near the limit and night when you reach it. A live theme. Dark."
     },
     {
       "name": "winter-lights",

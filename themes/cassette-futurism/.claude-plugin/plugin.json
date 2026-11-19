@@ -1,0 +1,20 @@
+{
+  "name": "cassette-futurism",
+  "version": "0.1.0",
+  "description": "A 1980s vision of the future: an amber monochrome console with a sweeping radar, a spectrum, scrolling data, turning cassette reels, blinking lights and scanlines. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "retro",
+    "amber",
+    "console",
+    "sci-fi",
+    "dark"
+  ]
+}
