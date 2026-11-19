@@ -1,0 +1,21 @@
+{
+  "name": "pixel-cafe",
+  "version": "0.1.0",
+  "description": "A pixel-art cafe on a rainy night: rain running down a big window over blurred city lights, warm pendant lamps, a steaming cup on the counter and a cat asleep on the sill. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "cafe",
+    "rain",
+    "cozy",
+    "warm",
+    "night",
+    "dark"
+  ]
+}

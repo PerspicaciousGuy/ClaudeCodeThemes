@@ -83,6 +83,11 @@
       "description": "Moss, bark and fern: a green-brown dark theme and a pale lichen light one, with a fern-green accent. Colors only."
     },
     {
+      "name": "forest-trail",
+      "source": "./themes/forest-trail",
+      "description": "A pixel-art forest trail on a bright morning: sunbeams through layered trees, a winding dirt path, drifting mist, butterflies and falling leaves. Light."
+    },
+    {
       "name": "graphite",
       "source": "./themes/graphite",
       "description": "Neutral graphite grays with one steel-blue accent. Quiet and tool-like, light and dark, colors only."
@@ -96,6 +101,11 @@
       "name": "halftone-harbor-night",
       "source": "./themes/halftone-harbor-night",
       "description": "The halftone harbor printed on night-blue stock: an ember sun and pale-blue water in breathing dots. Dark."
+    },
+    {
+      "name": "haunted-manor",
+      "source": "./themes/haunted-manor",
+      "description": "A pixel-art haunted manor under a huge moon: flickering windows, bats crossing the sky, a bare tree, drifting ground fog and an iron fence. Dark."
     },
     {
       "name": "hearth",
@@ -138,6 +148,11 @@
       "description": "A pixel-art city at night in the rain: towers with lit windows, buzzing neon signs, a wet street and a passing car. Dark."
     },
     {
+      "name": "night-market",
+      "source": "./themes/night-market",
+      "description": "A pixel-art night market: strings of paper lanterns swinging over a lane, two glowing food stalls with rising steam, puddles that carry the light and a cat on a crate. Dark."
+    },
+    {
       "name": "night-train",
       "source": "./themes/night-train",
       "description": "A night run seen from a carriage window: hills, town lights and telegraph poles sliding past under a thin moon. Dark."
@@ -156,6 +171,11 @@
       "name": "papercut-peaks-night",
       "source": "./themes/papercut-peaks-night",
       "description": "The paper-cut mountains in deep indigo under a paper moon and cut-out stars. Dark."
+    },
+    {
+      "name": "pixel-cafe",
+      "source": "./themes/pixel-cafe",
+      "description": "A pixel-art cafe on a rainy night: rain running down a big window over blurred city lights, warm pendant lamps, a steaming cup on the counter and a cat asleep on the sill. Dark."
     },
     {
       "name": "rainy-window",
@@ -196,6 +216,11 @@
       "name": "snow-cabin-day",
       "source": "./themes/snow-cabin-day",
       "description": "A winter noon: a pale blue sky and low sun, white hills, a log cabin with smoke from its chimney and snow falling in three layers. Light."
+    },
+    {
+      "name": "snow-station",
+      "source": "./themes/snow-station",
+      "description": "A pixel-art train station in a night snowfall: snow drifting past warm lamps, a slow night train on the far track, a glowing clock on the gable and a bench under the canopy. Dark."
     },
     {
       "name": "sunny-shore",

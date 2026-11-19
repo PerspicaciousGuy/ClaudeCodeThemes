@@ -10,27 +10,32 @@ import * as s9 from './scenes/desert-night.js'
 import * as s10 from './scenes/desert-noon.js'
 import * as s11 from './scenes/fog-valley.js'
 import * as s12 from './scenes/fog-valley-night.js'
-import * as s15 from './scenes/halftone-harbor.js'
-import * as s16 from './scenes/halftone-harbor-night.js'
-import * as s17 from './scenes/hearth.js'
-import * as s20 from './scenes/low-orbit.js'
-import * as s21 from './scenes/meadow-hours.js'
-import * as s23 from './scenes/moonlit-shore.js'
-import * as s24 from './scenes/neon-rain.js'
-import * as s25 from './scenes/night-train.js'
-import * as s27 from './scenes/papercut-peaks.js'
-import * as s28 from './scenes/papercut-peaks-night.js'
-import * as s29 from './scenes/rainy-window.js'
-import * as s30 from './scenes/reading-room.js'
-import * as s31 from './scenes/retro-grid.js'
-import * as s32 from './scenes/rooftop-garden.js'
-import * as s33 from './scenes/rooftop-garden-night.js'
-import * as s34 from './scenes/sakura-drift.js'
-import * as s35 from './scenes/snow-cabin.js'
-import * as s36 from './scenes/snow-cabin-day.js'
-import * as s37 from './scenes/sunny-shore.js'
-import * as s38 from './scenes/tide-pool.js'
-import * as s39 from './scenes/torch-dungeon.js'
+import * as s14 from './scenes/forest-trail.js'
+import * as s16 from './scenes/halftone-harbor.js'
+import * as s17 from './scenes/halftone-harbor-night.js'
+import * as s18 from './scenes/haunted-manor.js'
+import * as s19 from './scenes/hearth.js'
+import * as s22 from './scenes/low-orbit.js'
+import * as s23 from './scenes/meadow-hours.js'
+import * as s25 from './scenes/moonlit-shore.js'
+import * as s26 from './scenes/neon-rain.js'
+import * as s27 from './scenes/night-market.js'
+import * as s28 from './scenes/night-train.js'
+import * as s30 from './scenes/papercut-peaks.js'
+import * as s31 from './scenes/papercut-peaks-night.js'
+import * as s32 from './scenes/pixel-cafe.js'
+import * as s33 from './scenes/rainy-window.js'
+import * as s34 from './scenes/reading-room.js'
+import * as s35 from './scenes/retro-grid.js'
+import * as s36 from './scenes/rooftop-garden.js'
+import * as s37 from './scenes/rooftop-garden-night.js'
+import * as s38 from './scenes/sakura-drift.js'
+import * as s39 from './scenes/snow-cabin.js'
+import * as s40 from './scenes/snow-cabin-day.js'
+import * as s41 from './scenes/snow-station.js'
+import * as s42 from './scenes/sunny-shore.js'
+import * as s43 from './scenes/tide-pool.js'
+import * as s44 from './scenes/torch-dungeon.js'
 
 const data = [
   {
@@ -643,6 +648,58 @@ const data = [
     }
   },
   {
+    "id": "forest-trail",
+    "title": "Forest Trail",
+    "blurb": "A pixel-art forest trail on a bright morning: sunbeams through layered trees, a winding dirt path, drifting mist, butterflies and falling leaves. Light.",
+    "mode": "light",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "forest",
+      "morning",
+      "nature",
+      "green",
+      "light"
+    ],
+    "glass": {
+      "blur": 10,
+      "opacity": 0.55,
+      "tint": "#e8f0d8"
+    },
+    "colors": {
+      "label": "Forest Trail",
+      "only": "light",
+      "roles": {
+        "accent": "#3f7a2a",
+        "danger": "#a8392c",
+        "success": "#2a7a52",
+        "warning": "#8a6410",
+        "pro": "#6b4a96"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#d8e2c4",
+            "surface-1": "#e4ecd2",
+            "surface-2": "#f0f5e2",
+            "text-primary": "#1a2416",
+            "text-secondary": "#34422b",
+            "text-muted": "#4c5a3d"
+          }
+        },
+        "git": {
+          "added": "#1f6b34",
+          "removed": "#a8322a",
+          "modified": "#6e5208",
+          "merged": "#6a4a9a",
+          "closed": "#505660",
+          "conflicting": "#85440c",
+          "draft": "#505660"
+        }
+      }
+    }
+  },
+  {
     "id": "graphite",
     "title": "Graphite",
     "blurb": "Neutral graphite grays with one steel-blue accent. Quiet and tool-like, light and dark, colors only.",
@@ -787,6 +844,50 @@ const data = [
       }
     },
     "twin": "halftone-harbor"
+  },
+  {
+    "id": "haunted-manor",
+    "title": "Haunted Manor",
+    "blurb": "A pixel-art haunted manor under a huge moon: flickering windows, bats crossing the sky, a bare tree, drifting ground fog and an iron fence. Dark.",
+    "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "spooky",
+      "halloween",
+      "moon",
+      "night",
+      "dark"
+    ],
+    "glass": {
+      "blur": 10,
+      "opacity": 0.5,
+      "tint": "#140e20"
+    },
+    "colors": {
+      "label": "Haunted Manor",
+      "only": "dark",
+      "roles": {
+        "accent": "#f29a3a",
+        "danger": "#ef6a78",
+        "success": "#6fd4a0",
+        "warning": "#ecc450",
+        "pro": "#b48cf0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#0c0814",
+            "surface-1": "#140e20",
+            "surface-2": "#1c142c",
+            "surface-3": "#261c3a",
+            "text-primary": "#ece6f6",
+            "text-secondary": "#c8bde0",
+            "text-muted": "#9c90bc"
+          }
+        }
+      }
+    }
   },
   {
     "id": "hearth",
@@ -1137,6 +1238,49 @@ const data = [
     }
   },
   {
+    "id": "night-market",
+    "title": "Night Market",
+    "blurb": "A pixel-art night market: strings of paper lanterns swinging over a lane, two glowing food stalls with rising steam, puddles that carry the light and a cat on a crate. Dark.",
+    "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "market",
+      "lanterns",
+      "night",
+      "dark"
+    ],
+    "glass": {
+      "blur": 10,
+      "opacity": 0.5,
+      "tint": "#1a0f17"
+    },
+    "colors": {
+      "label": "Night Market",
+      "only": "dark",
+      "roles": {
+        "accent": "#ff9a3c",
+        "danger": "#ef6a5e",
+        "success": "#7ccf8a",
+        "warning": "#f0c24a",
+        "pro": "#c08be0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#120a10",
+            "surface-1": "#1a0f17",
+            "surface-2": "#24151f",
+            "surface-3": "#2e1c28",
+            "text-primary": "#f6e9dc",
+            "text-secondary": "#d8c4b4",
+            "text-muted": "#ab9486"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "night-train",
     "title": "Night Train",
     "blurb": "A night run seen from a carriage window: hills, town lights and telegraph poles sliding past under a thin moon. Dark.",
@@ -1305,6 +1449,51 @@ const data = [
       }
     },
     "twin": "papercut-peaks"
+  },
+  {
+    "id": "pixel-cafe",
+    "title": "Pixel Cafe",
+    "blurb": "A pixel-art cafe on a rainy night: rain running down a big window over blurred city lights, warm pendant lamps, a steaming cup on the counter and a cat asleep on the sill. Dark.",
+    "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "cafe",
+      "rain",
+      "cozy",
+      "warm",
+      "night",
+      "dark"
+    ],
+    "glass": {
+      "blur": 10,
+      "opacity": 0.5,
+      "tint": "#20140e"
+    },
+    "colors": {
+      "label": "Pixel Cafe",
+      "only": "dark",
+      "roles": {
+        "accent": "#e8924a",
+        "danger": "#e8675c",
+        "success": "#8bc279",
+        "warning": "#ebc35a",
+        "pro": "#c49ad4"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#170e0a",
+            "surface-1": "#20140e",
+            "surface-2": "#2b1c14",
+            "surface-3": "#36251a",
+            "text-primary": "#f6e8d6",
+            "text-secondary": "#d9c3a8",
+            "text-muted": "#ab937a"
+          }
+        }
+      }
+    }
   },
   {
     "id": "rainy-window",
@@ -1649,6 +1838,50 @@ const data = [
     "twin": "snow-cabin"
   },
   {
+    "id": "snow-station",
+    "title": "Snow Station",
+    "blurb": "A pixel-art train station in a night snowfall: snow drifting past warm lamps, a slow night train on the far track, a glowing clock on the gable and a bench under the canopy. Dark.",
+    "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "winter",
+      "snow",
+      "train",
+      "night",
+      "dark"
+    ],
+    "glass": {
+      "blur": 10,
+      "opacity": 0.5,
+      "tint": "#101b2e"
+    },
+    "colors": {
+      "label": "Snow Station",
+      "only": "dark",
+      "roles": {
+        "accent": "#ffc15e",
+        "danger": "#f0737a",
+        "success": "#6fd1a0",
+        "warning": "#f2cd62",
+        "pro": "#a9a5f5"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#0a1220",
+            "surface-1": "#101b2e",
+            "surface-2": "#172640",
+            "surface-3": "#1f3252",
+            "text-primary": "#e8f0fb",
+            "text-secondary": "#bfd0e6",
+            "text-muted": "#92a8c6"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "sunny-shore",
     "title": "Sunny Shore",
     "blurb": "A pixel-art beach on a bright day: a pulsing sun, drifting clouds, a sparkling sea, rolling foam, palms, gulls and a crab. Light.",
@@ -1772,6 +2005,6 @@ const data = [
     }
   }
 ]
-const scenes = [s0, s1, s2, s3, s4, null, null, s7, s8, s9, s10, s11, s12, null, null, s15, s16, s17, null, null, s20, s21, null, s23, s24, s25, null, s27, s28, s29, s30, s31, s32, s33, s34, s35, s36, s37, s38, s39]
+const scenes = [s0, s1, s2, s3, s4, null, null, s7, s8, s9, s10, s11, s12, null, s14, null, s16, s17, s18, s19, null, null, s22, s23, null, s25, s26, s27, s28, null, s30, s31, s32, s33, s34, s35, s36, s37, s38, s39, s40, s41, s42, s43, s44]
 
 export const THEMES = data.map((d, i) => ({ ...d, build: scenes[i] === null ? null : scenes[i].buildScene }))
