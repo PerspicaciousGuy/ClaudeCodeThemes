@@ -1,0 +1,20 @@
+{
+  "name": "new-year-fireworks",
+  "version": "0.1.0",
+  "description": "New Year's night over a city: rockets climbing and bursting in rings of colored sparks that fall as they fade, lit windows and stars through the smoke. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "fireworks",
+    "new-year",
+    "city",
+    "celebration",
+    "dark"
+  ]
+}

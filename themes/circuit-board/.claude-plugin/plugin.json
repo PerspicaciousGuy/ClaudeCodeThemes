@@ -1,0 +1,20 @@
+{
+  "name": "circuit-board",
+  "version": "0.1.0",
+  "description": "A green circuit board: traces between pads and chips, bright pulses of light running along them and small LEDs blinking on their own beats. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "circuit",
+    "electronics",
+    "tech",
+    "green",
+    "dark"
+  ]
+}

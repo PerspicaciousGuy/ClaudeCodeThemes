@@ -9,12 +9,12 @@ Each batch ends the same way: previews rendered and looked at, `node scripts/lib
 | Batch | Focus | Themes |
 | --- | --- | --- |
 | **A** *(done)* | Twins and clock | `moonlit-shore` (pixel, night), `rooftop-garden-night` (pixel, string lights), `desert-night` (stars, campfire), `snow-cabin-day` (light winter noon), `fog-valley-night` (moonlit fog), `meadow-hours` (follows your clock) |
-| **B** | Seasons | `autumn-forest` (falling leaves), `spring-rain` (light), `summer-fireflies` (dusk meadow), `harvest-moon` |
+| **B** *(done)* | Seasons | `autumn-forest` (falling leaves), `spring-rain` (light), `summer-fireflies` (dusk meadow), `harvest-moon` |
 | **C** *(done)* | Pixel art 2 | `night-market`, `snow-station`, `pixel-cafe` (rainy window, warm), `haunted-manor`, `forest-trail` |
 | **D** *(done)* | Vector scenes 2 | `greenhouse-rain`, `koi-pond` (top-down), `bamboo-grove` (misty, light), `lantern-festival`, `cloud-sea`, `coral-reef` |
-| **E** | Abstract and tech | `blueprint`, `circuit-board` (pulses along traces), `oscilloscope` (phosphor waves), `constellations` (a star map that draws itself), `ink-wash` (sumi-e, light) |
+| **E** *(done)* | Abstract and tech | `blueprint`, `circuit-board` (pulses along traces), `oscilloscope` (phosphor waves), `constellations` (a star map that draws itself), `ink-wash` (sumi-e, light) |
 | **F** *(done)* | Accessibility and still | `high-contrast-dark` and `-light`, `colorblind-safe-dark` and `-light`, and colors-only themes with no backdrop: `graphite`, `paperback`, `forest-floor`, `midnight-ink` |
-| **G** | Seasonal events | `winter-lights`, `new-year-fireworks`, a Halloween variant of `haunted-manor` |
+| **G** *(done)* | Seasonal events | `winter-lights`, `new-year-fireworks`, `halloween-night` (a vector companion to `haunted-manor`) |
 
 ## Tooling
 

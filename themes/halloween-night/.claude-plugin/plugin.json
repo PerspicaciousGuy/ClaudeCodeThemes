@@ -1,0 +1,21 @@
+{
+  "name": "halloween-night",
+  "version": "0.1.0",
+  "description": "A haunted hill on Halloween: a huge orange moon, a crooked manor with flickering windows, bats, drifting ghosts, glowing jack-o'-lanterns and fog among the gravestones. Dark. A vector companion to haunted-manor.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "halloween",
+    "spooky",
+    "pumpkins",
+    "ghosts",
+    "night",
+    "dark"
+  ]
+}

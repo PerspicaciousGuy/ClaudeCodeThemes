@@ -1,0 +1,20 @@
+{
+  "name": "constellations",
+  "version": "0.1.0",
+  "description": "A star map: rings and meridians of a celestial chart on deep blue, with constellations that draw themselves star to star, hold, then fade, and shooting stars. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "stars",
+    "constellations",
+    "map",
+    "astronomy",
+    "dark"
+  ]
+}

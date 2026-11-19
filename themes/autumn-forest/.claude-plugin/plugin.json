@@ -1,0 +1,20 @@
+{
+  "name": "autumn-forest",
+  "version": "0.1.0",
+  "description": "A forest in autumn at golden dusk: trees in red, orange and gold, leaves spiraling down, slanting light and a carpet of fallen leaves. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "autumn",
+    "forest",
+    "leaves",
+    "warm",
+    "dark"
+  ]
+}

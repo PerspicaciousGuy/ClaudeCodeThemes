@@ -28,6 +28,11 @@
       "description": "Northern lights over a frozen lake ringed by pines, with twinkling stars and the odd shooting star. Dark."
     },
     {
+      "name": "autumn-forest",
+      "source": "./themes/autumn-forest",
+      "description": "A forest in autumn at golden dusk: trees in red, orange and gold, leaves spiraling down, slanting light and a carpet of fallen leaves. Dark."
+    },
+    {
       "name": "bamboo-grove",
       "source": "./themes/bamboo-grove",
       "description": "A bamboo grove in morning mist: tall green stalks in layers fading into haze, leaves swaying, slow light shafts and a few leaves falling. Light."
@@ -36,6 +41,16 @@
       "name": "beacon-cove",
       "source": "./themes/beacon-cove",
       "description": "An animated pixel-art theme that follows your clock: a lighthouse cape and sea from night through dawn, day and dusk, with a moving sun and moon, drifting clouds, a small boat and fireflies."
+    },
+    {
+      "name": "blueprint",
+      "source": "./themes/blueprint",
+      "description": "An architect's blueprint: a fine grid on deep blue paper, with a gear, a house elevation, a beam section and a compass drawing that trace themselves in white line. Dark."
+    },
+    {
+      "name": "circuit-board",
+      "source": "./themes/circuit-board",
+      "description": "A green circuit board: traces between pads and chips, bright pulses of light running along them and small LEDs blinking on their own beats. Dark."
     },
     {
       "name": "cloud-sea",
@@ -56,6 +71,11 @@
       "name": "colorblind-safe-light",
       "source": "./themes/colorblind-safe-light",
       "description": "A light theme whose colors stay apart for red-green and blue-yellow color blindness: blue and orange for added and removed, and a different lightness for each status. Colors only."
+    },
+    {
+      "name": "constellations",
+      "source": "./themes/constellations",
+      "description": "A star map: rings and meridians of a celestial chart on deep blue, with constellations that draw themselves star to star, hold, then fade, and shooting stars. Dark."
     },
     {
       "name": "contour-map",
@@ -123,6 +143,16 @@
       "description": "The halftone harbor printed on night-blue stock: an ember sun and pale-blue water in breathing dots. Dark."
     },
     {
+      "name": "halloween-night",
+      "source": "./themes/halloween-night",
+      "description": "A haunted hill on Halloween: a huge orange moon, a crooked manor with flickering windows, bats, drifting ghosts, glowing jack-o'-lanterns and fog among the gravestones. Dark. A vector companion to haunted-manor."
+    },
+    {
+      "name": "harvest-moon",
+      "source": "./themes/harvest-moon",
+      "description": "A huge orange moon over a wheat field: wheat swaying in waves, hay bales and a barn in silhouette, crows crossing the moon and stars coming out. Dark."
+    },
+    {
       "name": "haunted-manor",
       "source": "./themes/haunted-manor",
       "description": "A pixel-art haunted manor under a huge moon: flickering windows, bats crossing the sky, a bare tree, drifting ground fog and an iron fence. Dark."
@@ -141,6 +171,11 @@
       "name": "high-contrast-light",
       "source": "./themes/high-contrast-light",
       "description": "Black on white with deep, saturated colors: text well past the AA bar on every surface, and strong borders. Light, colors only."
+    },
+    {
+      "name": "ink-wash",
+      "source": "./themes/ink-wash",
+      "description": "A sumi-e painting on rice paper: mountains in grey washes fading into mist, a pine branch, a lone boat, birds crossing and a red seal. Light."
     },
     {
       "name": "koi-pond",
@@ -178,6 +213,11 @@
       "description": "A pixel-art city at night in the rain: towers with lit windows, buzzing neon signs, a wet street and a passing car. Dark."
     },
     {
+      "name": "new-year-fireworks",
+      "source": "./themes/new-year-fireworks",
+      "description": "New Year's night over a city: rockets climbing and bursting in rings of colored sparks that fall as they fade, lit windows and stars through the smoke. Dark."
+    },
+    {
       "name": "night-market",
       "source": "./themes/night-market",
       "description": "A pixel-art night market: strings of paper lanterns swinging over a lane, two glowing food stalls with rising steam, puddles that carry the light and a cat on a crate. Dark."
@@ -186,6 +226,11 @@
       "name": "night-train",
       "source": "./themes/night-train",
       "description": "A night run seen from a carriage window: hills, town lights and telegraph poles sliding past under a thin moon. Dark."
+    },
+    {
+      "name": "oscilloscope",
+      "source": "./themes/oscilloscope",
+      "description": "An oscilloscope screen: a glowing green graticule with a sine, a two-tone, a square and a triangle wave scrolling across and a cursor sweeping the display. Dark."
     },
     {
       "name": "paperback",
@@ -253,6 +298,16 @@
       "description": "A pixel-art train station in a night snowfall: snow drifting past warm lamps, a slow night train on the far track, a glowing clock on the gable and a bench under the canopy. Dark."
     },
     {
+      "name": "spring-rain",
+      "source": "./themes/spring-rain",
+      "description": "A soft spring rain over pale green hills: blossoming trees shedding petals, rain streaking through, puddles rippling under a pastel sky. Light."
+    },
+    {
+      "name": "summer-fireflies",
+      "source": "./themes/summer-fireflies",
+      "description": "A meadow at dusk: fireflies blinking and drifting over swaying grass, a thin moon, first stars and the last orange glow on the horizon. Dark."
+    },
+    {
       "name": "sunny-shore",
       "source": "./themes/sunny-shore",
       "description": "A pixel-art beach on a bright day: a pulsing sun, drifting clouds, a sparkling sea, rolling foam, palms, gulls and a crab. Light."
@@ -266,6 +321,11 @@
       "name": "torch-dungeon",
       "source": "./themes/torch-dungeon",
       "description": "A pixel-art dungeon wall: two flickering torches, a dark doorway with watching eyes, bats, a hopping slime and a treasure chest. Dark."
+    },
+    {
+      "name": "winter-lights",
+      "source": "./themes/winter-lights",
+      "description": "A snowy night dressed for the holidays: strings of colored lights twinkling in three phases, lit fir trees and a cottage, falling snow and a bright moon. Dark."
     }
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "name": "ink-wash",
+  "version": "0.1.0",
+  "description": "A sumi-e painting on rice paper: mountains in grey washes fading into mist, a pine branch, a lone boat, birds crossing and a red seal. Light.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pixel",
+    "ink",
+    "sumi-e",
+    "mountains",
+    "paper",
+    "light"
+  ]
+}

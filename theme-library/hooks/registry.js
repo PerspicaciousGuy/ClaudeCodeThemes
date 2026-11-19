@@ -2,46 +2,58 @@
 import * as s0 from './scenes/abyss-lantern.js'
 import * as s1 from './scenes/arcade-hall.js'
 import * as s2 from './scenes/aurora-field.js'
-import * as s3 from './scenes/bamboo-grove.js'
-import * as s4 from './scenes/beacon-cove.js'
-import * as s5 from './scenes/cloud-sea.js'
-import * as s6 from './scenes/code-rain.js'
-import * as s9 from './scenes/contour-map.js'
-import * as s10 from './scenes/contour-map-night.js'
-import * as s11 from './scenes/coral-reef.js'
-import * as s12 from './scenes/desert-night.js'
-import * as s13 from './scenes/desert-noon.js'
-import * as s14 from './scenes/fog-valley.js'
-import * as s15 from './scenes/fog-valley-night.js'
-import * as s17 from './scenes/forest-trail.js'
-import * as s19 from './scenes/greenhouse-rain.js'
-import * as s20 from './scenes/halftone-harbor.js'
-import * as s21 from './scenes/halftone-harbor-night.js'
-import * as s22 from './scenes/haunted-manor.js'
-import * as s23 from './scenes/hearth.js'
-import * as s26 from './scenes/koi-pond.js'
-import * as s27 from './scenes/lantern-festival.js'
-import * as s28 from './scenes/low-orbit.js'
-import * as s29 from './scenes/meadow-hours.js'
-import * as s31 from './scenes/moonlit-shore.js'
-import * as s32 from './scenes/neon-rain.js'
-import * as s33 from './scenes/night-market.js'
-import * as s34 from './scenes/night-train.js'
-import * as s36 from './scenes/papercut-peaks.js'
-import * as s37 from './scenes/papercut-peaks-night.js'
-import * as s38 from './scenes/pixel-cafe.js'
-import * as s39 from './scenes/rainy-window.js'
-import * as s40 from './scenes/reading-room.js'
-import * as s41 from './scenes/retro-grid.js'
-import * as s42 from './scenes/rooftop-garden.js'
-import * as s43 from './scenes/rooftop-garden-night.js'
-import * as s44 from './scenes/sakura-drift.js'
-import * as s45 from './scenes/snow-cabin.js'
-import * as s46 from './scenes/snow-cabin-day.js'
-import * as s47 from './scenes/snow-station.js'
-import * as s48 from './scenes/sunny-shore.js'
-import * as s49 from './scenes/tide-pool.js'
-import * as s50 from './scenes/torch-dungeon.js'
+import * as s3 from './scenes/autumn-forest.js'
+import * as s4 from './scenes/bamboo-grove.js'
+import * as s5 from './scenes/beacon-cove.js'
+import * as s6 from './scenes/blueprint.js'
+import * as s7 from './scenes/circuit-board.js'
+import * as s8 from './scenes/cloud-sea.js'
+import * as s9 from './scenes/code-rain.js'
+import * as s12 from './scenes/constellations.js'
+import * as s13 from './scenes/contour-map.js'
+import * as s14 from './scenes/contour-map-night.js'
+import * as s15 from './scenes/coral-reef.js'
+import * as s16 from './scenes/desert-night.js'
+import * as s17 from './scenes/desert-noon.js'
+import * as s18 from './scenes/fog-valley.js'
+import * as s19 from './scenes/fog-valley-night.js'
+import * as s21 from './scenes/forest-trail.js'
+import * as s23 from './scenes/greenhouse-rain.js'
+import * as s24 from './scenes/halftone-harbor.js'
+import * as s25 from './scenes/halftone-harbor-night.js'
+import * as s26 from './scenes/halloween-night.js'
+import * as s27 from './scenes/harvest-moon.js'
+import * as s28 from './scenes/haunted-manor.js'
+import * as s29 from './scenes/hearth.js'
+import * as s32 from './scenes/ink-wash.js'
+import * as s33 from './scenes/koi-pond.js'
+import * as s34 from './scenes/lantern-festival.js'
+import * as s35 from './scenes/low-orbit.js'
+import * as s36 from './scenes/meadow-hours.js'
+import * as s38 from './scenes/moonlit-shore.js'
+import * as s39 from './scenes/neon-rain.js'
+import * as s40 from './scenes/new-year-fireworks.js'
+import * as s41 from './scenes/night-market.js'
+import * as s42 from './scenes/night-train.js'
+import * as s43 from './scenes/oscilloscope.js'
+import * as s45 from './scenes/papercut-peaks.js'
+import * as s46 from './scenes/papercut-peaks-night.js'
+import * as s47 from './scenes/pixel-cafe.js'
+import * as s48 from './scenes/rainy-window.js'
+import * as s49 from './scenes/reading-room.js'
+import * as s50 from './scenes/retro-grid.js'
+import * as s51 from './scenes/rooftop-garden.js'
+import * as s52 from './scenes/rooftop-garden-night.js'
+import * as s53 from './scenes/sakura-drift.js'
+import * as s54 from './scenes/snow-cabin.js'
+import * as s55 from './scenes/snow-cabin-day.js'
+import * as s56 from './scenes/snow-station.js'
+import * as s57 from './scenes/spring-rain.js'
+import * as s58 from './scenes/summer-fireflies.js'
+import * as s59 from './scenes/sunny-shore.js'
+import * as s60 from './scenes/tide-pool.js'
+import * as s61 from './scenes/torch-dungeon.js'
+import * as s62 from './scenes/winter-lights.js'
 
 const data = [
   {
@@ -168,6 +180,50 @@ const data = [
     }
   },
   {
+    "id": "autumn-forest",
+    "title": "Autumn Forest",
+    "blurb": "A forest in autumn at golden dusk: trees in red, orange and gold, leaves spiraling down, slanting light and a carpet of fallen leaves. Dark.",
+    "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "autumn",
+      "forest",
+      "leaves",
+      "warm",
+      "dark"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#26150f"
+    },
+    "colors": {
+      "label": "Autumn Forest",
+      "only": "dark",
+      "roles": {
+        "accent": "#f0963c",
+        "danger": "#ee6a5a",
+        "success": "#8fcf6a",
+        "warning": "#e8c24a",
+        "pro": "#c49ae0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#1a0e0c",
+            "surface-1": "#26150f",
+            "surface-2": "#331d15",
+            "surface-3": "#40261b",
+            "text-primary": "#f6ebe0",
+            "text-secondary": "#d8c4b2",
+            "text-muted": "#ad9484"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "bamboo-grove",
     "title": "Bamboo Grove",
     "blurb": "A bamboo grove in morning mist: tall green stalks in layers fading into haze, leaves swaying, slow light shafts and a few leaves falling. Light.",
@@ -252,6 +308,94 @@ const data = [
             "text-primary": "#e8ecf8",
             "text-secondary": "#bcc4de",
             "text-muted": "#8e98ba"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "blueprint",
+    "title": "Blueprint",
+    "blurb": "An architect's blueprint: a fine grid on deep blue paper, with a gear, a house elevation, a beam section and a compass drawing that trace themselves in white line. Dark.",
+    "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "blueprint",
+      "technical",
+      "grid",
+      "drafting",
+      "dark"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#0f3366"
+    },
+    "colors": {
+      "label": "Blueprint",
+      "only": "dark",
+      "roles": {
+        "accent": "#ffd866",
+        "danger": "#ff8080",
+        "success": "#a4f6cc",
+        "warning": "#ffd866",
+        "pro": "#b9a0f4"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#091f42",
+            "surface-1": "#0d2b58",
+            "surface-2": "#113565",
+            "surface-3": "#173f74",
+            "text-primary": "#eaf3ff",
+            "text-secondary": "#c0d8f4",
+            "text-muted": "#98b8e0"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "circuit-board",
+    "title": "Circuit Board",
+    "blurb": "A green circuit board: traces between pads and chips, bright pulses of light running along them and small LEDs blinking on their own beats. Dark.",
+    "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "circuit",
+      "electronics",
+      "tech",
+      "green",
+      "dark"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#08201a"
+    },
+    "colors": {
+      "label": "Circuit Board",
+      "only": "dark",
+      "roles": {
+        "accent": "#5dffb0",
+        "danger": "#ff7a7a",
+        "success": "#5dffb0",
+        "warning": "#ffd24a",
+        "pro": "#b9a0f4"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#04130e",
+            "surface-1": "#08201a",
+            "surface-2": "#0d2c24",
+            "surface-3": "#143a30",
+            "text-primary": "#e0f5ec",
+            "text-secondary": "#b4d8c8",
+            "text-muted": "#88b0a0"
           }
         }
       }
@@ -441,6 +585,50 @@ const data = [
       }
     },
     "twin": "colorblind-safe-dark"
+  },
+  {
+    "id": "constellations",
+    "title": "Constellations",
+    "blurb": "A star map: rings and meridians of a celestial chart on deep blue, with constellations that draw themselves star to star, hold, then fade, and shooting stars. Dark.",
+    "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "stars",
+      "constellations",
+      "map",
+      "astronomy",
+      "dark"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#0c1432"
+    },
+    "colors": {
+      "label": "Constellations",
+      "only": "dark",
+      "roles": {
+        "accent": "#ffe28a",
+        "danger": "#ff8a9a",
+        "success": "#6fe0b0",
+        "warning": "#ffd24a",
+        "pro": "#b9a0f4"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#060b1e",
+            "surface-1": "#0c1432",
+            "surface-2": "#131d46",
+            "surface-3": "#1b2858",
+            "text-primary": "#eaf0ff",
+            "text-secondary": "#c0cced",
+            "text-muted": "#94a2d0"
+          }
+        }
+      }
+    }
   },
   {
     "id": "contour-map",
@@ -1040,6 +1228,96 @@ const data = [
     "twin": "halftone-harbor"
   },
   {
+    "id": "halloween-night",
+    "title": "Halloween Night",
+    "blurb": "A haunted hill on Halloween: a huge orange moon, a crooked manor with flickering windows, bats, drifting ghosts, glowing jack-o'-lanterns and fog among the gravestones. Dark. A vector companion to haunted-manor.",
+    "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "halloween",
+      "spooky",
+      "pumpkins",
+      "ghosts",
+      "night",
+      "dark"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#190f28"
+    },
+    "colors": {
+      "label": "Halloween Night",
+      "only": "dark",
+      "roles": {
+        "accent": "#ff8a2a",
+        "danger": "#ff6a7a",
+        "success": "#7ae0a0",
+        "warning": "#ffc84a",
+        "pro": "#c49af0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#0e0818",
+            "surface-1": "#190f28",
+            "surface-2": "#251638",
+            "surface-3": "#311e4a",
+            "text-primary": "#f4eaf8",
+            "text-secondary": "#d6c6e0",
+            "text-muted": "#aa9aba"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "harvest-moon",
+    "title": "Harvest Moon",
+    "blurb": "A huge orange moon over a wheat field: wheat swaying in waves, hay bales and a barn in silhouette, crows crossing the moon and stars coming out. Dark.",
+    "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "harvest",
+      "moon",
+      "wheat",
+      "autumn",
+      "night",
+      "dark"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#1d1230"
+    },
+    "colors": {
+      "label": "Harvest Moon",
+      "only": "dark",
+      "roles": {
+        "accent": "#f0a040",
+        "danger": "#ee6a5a",
+        "success": "#8fcf6a",
+        "warning": "#e8c24a",
+        "pro": "#c49ae0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#120c1e",
+            "surface-1": "#1d1230",
+            "surface-2": "#291a42",
+            "surface-3": "#352355",
+            "text-primary": "#f4ecf0",
+            "text-secondary": "#d8c8d4",
+            "text-muted": "#ae9ab0"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "haunted-manor",
     "title": "Haunted Manor",
     "blurb": "A pixel-art haunted manor under a huge moon: flickering windows, bats crossing the sky, a bare tree, drifting ground fog and an iron fence. Dark.",
@@ -1226,6 +1504,58 @@ const data = [
       }
     },
     "twin": "high-contrast-dark"
+  },
+  {
+    "id": "ink-wash",
+    "title": "Ink Wash",
+    "blurb": "A sumi-e painting on rice paper: mountains in grey washes fading into mist, a pine branch, a lone boat, birds crossing and a red seal. Light.",
+    "mode": "light",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "ink",
+      "sumi-e",
+      "mountains",
+      "paper",
+      "light"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.55,
+      "tint": "#f2ecdc"
+    },
+    "colors": {
+      "label": "Ink Wash",
+      "only": "light",
+      "roles": {
+        "accent": "#b3261e",
+        "danger": "#a8322a",
+        "success": "#2c6a4a",
+        "warning": "#8a6410",
+        "pro": "#5a4a8a"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#e8e1d0",
+            "surface-1": "#f0ead9",
+            "surface-2": "#f8f4ea",
+            "text-primary": "#1e1d1b",
+            "text-secondary": "#403e3a",
+            "text-muted": "#5a5750"
+          }
+        },
+        "git": {
+          "added": "#1f6b34",
+          "removed": "#a8322a",
+          "modified": "#6e5208",
+          "merged": "#6a4a9a",
+          "closed": "#505660",
+          "conflicting": "#85440c",
+          "draft": "#505660"
+        }
+      }
+    }
   },
   {
     "id": "koi-pond",
@@ -1519,6 +1849,50 @@ const data = [
     }
   },
   {
+    "id": "new-year-fireworks",
+    "title": "New Year Fireworks",
+    "blurb": "New Year's night over a city: rockets climbing and bursting in rings of colored sparks that fall as they fade, lit windows and stars through the smoke. Dark.",
+    "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "fireworks",
+      "new-year",
+      "city",
+      "celebration",
+      "dark"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#10102c"
+    },
+    "colors": {
+      "label": "New Year Fireworks",
+      "only": "dark",
+      "roles": {
+        "accent": "#ffd45a",
+        "danger": "#ff7a8a",
+        "success": "#7aff9a",
+        "warning": "#ffd45a",
+        "pro": "#c4a0f8"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#080818",
+            "surface-1": "#10102c",
+            "surface-2": "#191a42",
+            "surface-3": "#232458",
+            "text-primary": "#f0f0ff",
+            "text-secondary": "#ccccec",
+            "text-muted": "#9c9cc8"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "night-market",
     "title": "Night Market",
     "blurb": "A pixel-art night market: strings of paper lanterns swinging over a lane, two glowing food stalls with rising steam, puddles that carry the light and a cat on a crate. Dark.",
@@ -1597,6 +1971,50 @@ const data = [
             "text-primary": "#ebeefa",
             "text-secondary": "#c0c6e2",
             "text-muted": "#8f98c0"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "oscilloscope",
+    "title": "Oscilloscope",
+    "blurb": "An oscilloscope screen: a glowing green graticule with a sine, a two-tone, a square and a triangle wave scrolling across and a cursor sweeping the display. Dark.",
+    "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "oscilloscope",
+      "waves",
+      "retro",
+      "tech",
+      "dark"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#07140d"
+    },
+    "colors": {
+      "label": "Oscilloscope",
+      "only": "dark",
+      "roles": {
+        "accent": "#4dff9a",
+        "danger": "#ff7a7a",
+        "success": "#4dff9a",
+        "warning": "#ffc24a",
+        "pro": "#ff9ae0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#030b07",
+            "surface-1": "#07140d",
+            "surface-2": "#0c1f14",
+            "surface-3": "#122b1b",
+            "text-primary": "#dcffe8",
+            "text-secondary": "#a8dcbc",
+            "text-muted": "#7fb494"
           }
         }
       }
@@ -2163,6 +2581,102 @@ const data = [
     }
   },
   {
+    "id": "spring-rain",
+    "title": "Spring Rain",
+    "blurb": "A soft spring rain over pale green hills: blossoming trees shedding petals, rain streaking through, puddles rippling under a pastel sky. Light.",
+    "mode": "light",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "spring",
+      "rain",
+      "blossom",
+      "pastel",
+      "light"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.55,
+      "tint": "#eef3f1"
+    },
+    "colors": {
+      "label": "Spring Rain",
+      "only": "light",
+      "roles": {
+        "accent": "#b0457a",
+        "danger": "#b03a3a",
+        "success": "#2c7a52",
+        "warning": "#8a6410",
+        "pro": "#6a4fa8"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#dde6e4",
+            "surface-1": "#e8eeec",
+            "surface-2": "#f4f7f5",
+            "text-primary": "#1e2b2a",
+            "text-secondary": "#3a4c4a",
+            "text-muted": "#546664"
+          }
+        },
+        "git": {
+          "added": "#1f6b34",
+          "removed": "#a8322a",
+          "modified": "#6e5208",
+          "merged": "#6a4a9a",
+          "closed": "#505660",
+          "conflicting": "#85440c",
+          "draft": "#505660"
+        }
+      }
+    }
+  },
+  {
+    "id": "summer-fireflies",
+    "title": "Summer Fireflies",
+    "blurb": "A meadow at dusk: fireflies blinking and drifting over swaying grass, a thin moon, first stars and the last orange glow on the horizon. Dark.",
+    "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "summer",
+      "fireflies",
+      "meadow",
+      "dusk",
+      "dark"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#0e1530"
+    },
+    "colors": {
+      "label": "Summer Fireflies",
+      "only": "dark",
+      "roles": {
+        "accent": "#e8d84a",
+        "danger": "#ee6a7a",
+        "success": "#6fd9a0",
+        "warning": "#f0b84a",
+        "pro": "#b79af0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#070b1e",
+            "surface-1": "#0e1530",
+            "surface-2": "#161f42",
+            "surface-3": "#1f2a56",
+            "text-primary": "#eef0fa",
+            "text-secondary": "#c8cee8",
+            "text-muted": "#98a2cc"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "sunny-shore",
     "title": "Sunny Shore",
     "blurb": "A pixel-art beach on a bright day: a pulsing sun, drifting clouds, a sparkling sea, rolling foam, palms, gulls and a crab. Light.",
@@ -2284,8 +2798,52 @@ const data = [
         }
       }
     }
+  },
+  {
+    "id": "winter-lights",
+    "title": "Winter Lights",
+    "blurb": "A snowy night dressed for the holidays: strings of colored lights twinkling in three phases, lit fir trees and a cottage, falling snow and a bright moon. Dark.",
+    "mode": "dark",
+    "style": "pixel",
+    "tags": [
+      "pixel",
+      "winter",
+      "holiday",
+      "lights",
+      "snow",
+      "dark"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#111b42"
+    },
+    "colors": {
+      "label": "Winter Lights",
+      "only": "dark",
+      "roles": {
+        "accent": "#ffd24a",
+        "danger": "#ff7a7a",
+        "success": "#7aff9a",
+        "warning": "#ffd24a",
+        "pro": "#c4a0f8"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#0a1230",
+            "surface-1": "#111b42",
+            "surface-2": "#18245a",
+            "surface-3": "#202f6e",
+            "text-primary": "#eef2ff",
+            "text-secondary": "#c8d2f0",
+            "text-muted": "#98a6d4"
+          }
+        }
+      }
+    }
   }
 ]
-const scenes = [s0, s1, s2, s3, s4, s5, s6, null, null, s9, s10, s11, s12, s13, s14, s15, null, s17, null, s19, s20, s21, s22, s23, null, null, s26, s27, s28, s29, null, s31, s32, s33, s34, null, s36, s37, s38, s39, s40, s41, s42, s43, s44, s45, s46, s47, s48, s49, s50]
+const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, null, null, s12, s13, s14, s15, s16, s17, s18, s19, null, s21, null, s23, s24, s25, s26, s27, s28, s29, null, null, s32, s33, s34, s35, s36, null, s38, s39, s40, s41, s42, s43, null, s45, s46, s47, s48, s49, s50, s51, s52, s53, s54, s55, s56, s57, s58, s59, s60, s61, s62]
 
 export const THEMES = data.map((d, i) => ({ ...d, build: scenes[i] === null ? null : scenes[i].buildScene }))

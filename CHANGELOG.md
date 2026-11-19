@@ -4,10 +4,19 @@ What changed in the library, by release. Releases follow the `theme-library` plu
 
 Update this file when you add themes or change the tools, and bump `theme-library`'s version in `theme-library/.claude-plugin/plugin.json` when its behavior changes.
 
-## Unreleased (51 themes)
+## Unreleased (63 themes)
 
 **New themes (6), vector scenes (batch D)**
 - `greenhouse-rain`, `koi-pond` (seen from above), `bamboo-grove` (light, misty), `lantern-festival`, `cloud-sea` (light) and `coral-reef`.
+
+**New themes (4), seasons (batch B)**
+- `autumn-forest`, `spring-rain` (light), `summer-fireflies` and `harvest-moon`.
+
+**New themes (5), abstract and technical (batch E)**
+- `blueprint`, `circuit-board`, `oscilloscope`, `constellations` and `ink-wash` (light). `blueprint` and `constellations` draw themselves in line.
+
+**New themes (3), seasonal events (batch G)**
+- `winter-lights`, `new-year-fireworks` and `halloween-night`, a vector companion to `haunted-manor`.
 
 ## 0.3.0: 2026-11-19 (45 themes)
 
