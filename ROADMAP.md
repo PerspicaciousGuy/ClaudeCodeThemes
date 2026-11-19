@@ -20,7 +20,7 @@ Each batch ends the same way: previews rendered and looked at, `node scripts/lib
 
 1. **Audit.** Catch a CSS animation that replaces an element's own `opacity` attribute (a glow turns solid). `check` now flags it. *Done.*
 2. **Picker.** Filters (dark, light, pixel, vector, clock), search, paging, and a day and night mode that swaps a theme for its twin by your clock. *Done.* Following the app's own light or dark setting isn't possible: plugins can't read it.
-3. **Automation.** A GitHub Action that runs `check`, confirms the generated files are up to date and validates the plugins on pull requests, a PR template and a "theme idea" issue template. *Done, except that plugin validation on a runner is unconfirmed until a run is green (it is set to not block).*
+3. **Automation.** A GitHub Action that runs `check`, confirms the generated files are up to date and validates the plugins on pull requests, a PR template and a "theme idea" issue template. *Done. CI validates only the marketplace file: a runner with no login rejects the plugins' `modules` hooks, so those are validated locally.*
 4. **Presentation.** Animated previews in the README, real in-app screenshots, the gallery on GitHub Pages.
 5. **Distribution.** A changelog and release tags, and a listing in the BuildWithClaude directory.
 

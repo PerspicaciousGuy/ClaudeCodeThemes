@@ -90,7 +90,7 @@ The library has a small script that does the bookkeeping. It needs Node 18+ and,
 2. Render the preview: `node scripts/library.mjs previews <name>` (writes `docs/previews/<name>.png`). Look at it.
 3. Rebuild everything and run the checks: `node scripts/library.mjs all`. That regenerates `theme-library/` (the all-in-one plugin: it copies your `hooks/scene.js` and reads your colors and glass from `register.tsx`), the marketplace file, the gallery and the README tables.
 4. Validate: `claude plugin validate ./themes/<name>` and `claude plugin validate .`.
-5. Open a pull request. The template lists the checks above. A GitHub Action runs `check`, confirms `theme-library/`, the marketplace and the README tables match what `all` generates, and validates the plugins.
+5. Open a pull request. The template lists the checks above. A GitHub Action runs `check`, confirms `theme-library/`, the marketplace and the README tables match what `all` generates, and validates the marketplace (run `claude plugin validate` on your theme yourself: CI can't).
 
 `check` fails if a theme is missing a required file or its preview, isn't listed in `marketplace.json`, has a scene over 131,072 characters, uses a script, image or external link in a scene, or animates without a reduced-motion rule.
 
