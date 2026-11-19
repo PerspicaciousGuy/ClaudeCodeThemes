@@ -77,6 +77,9 @@ async function sync($: any): Promise<string> {
 
 export const register: Register = on => {
   on('session.start', async ($, e, next) => {
+    // Clear any status line an earlier version of this mod pinned: it stays on screen until it is replaced.
+    $.ui.status(undefined)
+
     const unpainted = problems.find(line => line.startsWith("Desktop won't paint"))
 
     if (unpainted !== undefined) {
@@ -91,12 +94,12 @@ export const register: Register = on => {
 
     await $.command.register({ name: 'realsky', description: 'Apply the Real Sky look. /realsky 0 to 23 shows an hour to try it, /realsky auto follows your clock' })
 
-    $.ui.status(await sync($))
+    await sync($)
 
     // The sky moves on its own as the day goes by: look again every minute.
     $.clock.every(60000, () => {
       if (!manual) {
-        void sync($).then(text => $.ui.status(text))
+        void sync($)
       }
     })
 

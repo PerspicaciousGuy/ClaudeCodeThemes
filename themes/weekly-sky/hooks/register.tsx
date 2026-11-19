@@ -69,6 +69,9 @@ function note(u: Usage): string {
 
 export const register: Register = on => {
   on('session.start', async ($, e, next) => {
+    // Clear any status line an earlier version of this mod pinned: it stays on screen until it is replaced.
+    $.ui.status(undefined)
+
     const unpainted = problems.find(line => line.startsWith("Desktop won't paint"))
 
     if (unpainted !== undefined) {
@@ -87,7 +90,6 @@ export const register: Register = on => {
     const now = pick(usage)
 
     await update($, stage, () => now)
-    $.ui.status(note(usage))
 
     return next(e)
   })
@@ -96,7 +98,6 @@ export const register: Register = on => {
   on('session.measure', async ($, e, next) => {
     if (!manual) {
       await update($, stage, () => pick(e))
-      $.ui.status(note(e))
     }
 
     return next(e)
@@ -114,7 +115,6 @@ export const register: Register = on => {
       const now = pick(usage)
 
       await update($, stage, () => now)
-      $.ui.status(note(usage))
 
       return { text: `The sky follows your week again (stage ${now} of ${STAGES - 1}). ${note(usage)}.` }
     }

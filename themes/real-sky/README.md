@@ -21,7 +21,7 @@ Run `/realsky` to put the look on. If you also use `theme-library` or another li
 | `/realsky` or `/realsky auto` | Apply the look and follow your clock. |
 | `/realsky 0` to `/realsky 23` | Show an hour to see it, until `/realsky auto`. |
 
-The status line shows what it is reading, for example `sky: 21:30, waxing gibbous`.
+The reply to the command shows what it is reading, for example `sky: 21:30, waxing gibbous`.
 
 ## Why it is a separate plugin
 

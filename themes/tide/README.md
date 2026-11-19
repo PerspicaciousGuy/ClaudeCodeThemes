@@ -20,7 +20,7 @@ Run `/tide` to put the look on. If you also use `theme-library` or another live 
 | `/tide` or `/tide auto` | Apply the look and follow your real usage. |
 | `/tide 0` to `/tide 5` | Hold a level to see it, until `/tide auto`. |
 
-The status line shows what it is reading, for example `tide: 88% of 5h left`.
+The reply to the command shows what it is reading, for example `tide: 88% of 5h left`.
 
 ## Why it is a separate plugin
 

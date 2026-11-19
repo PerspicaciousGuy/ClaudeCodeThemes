@@ -85,6 +85,9 @@ function note(u: { rateLimits: { kind: string; percentUsed: number }[]; context:
 
 export const register: Register = on => {
   on('session.start', async ($, e, next) => {
+    // Clear any status line an earlier version of this mod pinned: it stays on screen until it is replaced.
+    $.ui.status(undefined)
+
     const unpainted = problems.find(line => line.startsWith("Desktop won't paint"))
 
     if (unpainted !== undefined) {
@@ -106,7 +109,6 @@ export const register: Register = on => {
 
     await update($, level, () => now)
     await update($, wood, () => pile)
-    $.ui.status(note(usage))
 
     return next(e)
   })
@@ -119,7 +121,6 @@ export const register: Register = on => {
 
     if (!manual) {
       await update($, level, () => stage(e))
-      $.ui.status(note(e))
     }
 
     return next(e)
@@ -150,7 +151,6 @@ export const register: Register = on => {
       const now = stage(usage)
 
       await update($, level, () => now)
-      $.ui.status(note(usage))
 
       return { text: `Campfire follows your usage again (level ${now}). ${note(usage)}.` }
     }

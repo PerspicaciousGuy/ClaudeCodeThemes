@@ -23,7 +23,7 @@ Run `/fire` to put the Campfire look on. If you also use `theme-library`, whiche
 | `/fire 0` to `/fire 5` | Hold the fire at a level to see it, until `/fire auto`. |
 | `/fire wood 0` to `/fire wood 6` | Show a woodpile size until the next usage change. |
 
-The status line shows what the fire is reading, for example `fire: 88% of 5h left`.
+The reply to the command shows what it is reading, for example `fire: 88% of 5h left`.
 
 ## Why it is a separate plugin
 

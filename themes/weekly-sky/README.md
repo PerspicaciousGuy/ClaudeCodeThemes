@@ -20,7 +20,7 @@ Run `/weeksky` to put the look on. If you also use `theme-library` or another li
 | `/weeksky` or `/weeksky auto` | Apply the look and follow your real 7-day usage. |
 | `/weeksky 0` to `/weeksky 11` | Hold a time of day to see it, until `/weeksky auto`. |
 
-The status line shows what it is reading, for example `sky: 85% of the week used`.
+The reply to the command shows what it is reading, for example `sky: 85% of the week used`.
 
 ## Why it is a separate plugin
 
