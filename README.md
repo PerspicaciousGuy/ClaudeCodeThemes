@@ -24,7 +24,17 @@ Themes for the **Claude Code desktop app**: custom colors, and animated backdrop
 [<img src="docs/previews/sunny-shore.svg" width="300" alt="sunny-shore"><br>**sunny-shore**](themes/sunny-shore) | [<img src="docs/previews/tide-pool.svg" width="300" alt="tide-pool"><br>**tide-pool**](themes/tide-pool) | [<img src="docs/previews/torch-dungeon.svg" width="300" alt="torch-dungeon"><br>**torch-dungeon**](themes/torch-dungeon)
 <!-- previews:end -->
 
-*Previews show each theme's backdrop alone, not the app, and they move (a theme with colors only shows its palette). The [live gallery](https://perspicaciousguy.github.io/ClaudeCodeThemes/) shows them as one page with the install line under each.*
+*Previews show each theme's backdrop alone (real screenshots are below), and they move (a theme with colors only shows its palette). The [live gallery](https://perspicaciousguy.github.io/ClaudeCodeThemes/) shows them as one page with the install line under each.*
+
+
+### In the app
+
+The same themes in the desktop app, with the `/ccthemes` picker open over them: the panels are frosted over the backdrop so text stays readable.
+
+| | | |
+| --- | --- | --- |
+| <img src="docs/screenshots/contour-map.webp" alt="contour-map in the desktop app"><br>**contour-map** | <img src="docs/screenshots/desert-noon.webp" alt="desert-noon in the desktop app"><br>**desert-noon** | <img src="docs/screenshots/fog-valley.webp" alt="fog-valley in the desktop app"><br>**fog-valley** |
+| <img src="docs/screenshots/forest-trail.png" alt="forest-trail in the desktop app"><br>**forest-trail** | <img src="docs/screenshots/papercut-peaks.png" alt="papercut-peaks in the desktop app"><br>**papercut-peaks** | <img src="docs/screenshots/hearth.webp" alt="hearth in the desktop app"><br>**hearth** |
 
 <!-- themes:start -->
 | Theme | What it is |
