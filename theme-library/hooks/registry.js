@@ -43,31 +43,32 @@ import * as s47 from './scenes/new-year-fireworks.js'
 import * as s48 from './scenes/new-year-fireworks-calm.js'
 import * as s49 from './scenes/night-market.js'
 import * as s50 from './scenes/night-train.js'
-import * as s51 from './scenes/oscilloscope.js'
-import * as s52 from './scenes/oscilloscope-calm.js'
-import * as s54 from './scenes/papercut-peaks.js'
-import * as s55 from './scenes/papercut-peaks-night.js'
-import * as s56 from './scenes/pirate-cove.js'
-import * as s57 from './scenes/pirate-cove-night.js'
-import * as s58 from './scenes/pixel-cafe.js'
-import * as s59 from './scenes/rainy-window.js'
-import * as s60 from './scenes/reading-room.js'
-import * as s61 from './scenes/retro-grid.js'
-import * as s62 from './scenes/risograph.js'
-import * as s63 from './scenes/rooftop-garden.js'
-import * as s64 from './scenes/rooftop-garden-night.js'
-import * as s65 from './scenes/sakura-drift.js'
-import * as s66 from './scenes/snow-cabin.js'
-import * as s67 from './scenes/snow-cabin-day.js'
-import * as s68 from './scenes/snow-station.js'
-import * as s69 from './scenes/spring-rain.js'
-import * as s70 from './scenes/stained-glass.js'
-import * as s71 from './scenes/summer-fireflies.js'
-import * as s72 from './scenes/sunny-shore.js'
-import * as s73 from './scenes/tide-pool.js'
-import * as s74 from './scenes/torch-dungeon.js'
-import * as s75 from './scenes/ukiyo-e-wave.js'
-import * as s76 from './scenes/winter-lights.js'
+import * as s51 from './scenes/origami-bay.js'
+import * as s52 from './scenes/oscilloscope.js'
+import * as s53 from './scenes/oscilloscope-calm.js'
+import * as s55 from './scenes/papercut-peaks.js'
+import * as s56 from './scenes/papercut-peaks-night.js'
+import * as s57 from './scenes/pirate-cove.js'
+import * as s58 from './scenes/pirate-cove-night.js'
+import * as s59 from './scenes/pixel-cafe.js'
+import * as s60 from './scenes/rainy-window.js'
+import * as s61 from './scenes/reading-room.js'
+import * as s62 from './scenes/retro-grid.js'
+import * as s63 from './scenes/risograph.js'
+import * as s64 from './scenes/rooftop-garden.js'
+import * as s65 from './scenes/rooftop-garden-night.js'
+import * as s66 from './scenes/sakura-drift.js'
+import * as s67 from './scenes/snow-cabin.js'
+import * as s68 from './scenes/snow-cabin-day.js'
+import * as s69 from './scenes/snow-station.js'
+import * as s70 from './scenes/spring-rain.js'
+import * as s71 from './scenes/stained-glass.js'
+import * as s72 from './scenes/summer-fireflies.js'
+import * as s73 from './scenes/sunny-shore.js'
+import * as s74 from './scenes/tide-pool.js'
+import * as s75 from './scenes/torch-dungeon.js'
+import * as s76 from './scenes/ukiyo-e-wave.js'
+import * as s77 from './scenes/winter-lights.js'
 
 const data = [
   {
@@ -2346,6 +2347,61 @@ const data = [
     }
   },
   {
+    "id": "origami-bay",
+    "title": "Origami Bay",
+    "blurb": "A bay made of folded paper: layered paper waves that drift, an origami sailboat bobbing, folded cranes flying across a paper sun and clouds. Light.",
+    "mode": "light",
+    "style": "vector",
+    "tags": [
+      "paper",
+      "origami",
+      "craft",
+      "sea",
+      "boat",
+      "crane",
+      "calm",
+      "day",
+      "light"
+    ],
+    "glass": {
+      "blur": 8,
+      "opacity": 0.6,
+      "tint": "#f3ead6"
+    },
+    "colors": {
+      "label": "Origami Bay",
+      "only": "light",
+      "roles": {
+        "accent": "#b8402c",
+        "danger": "#a8392c",
+        "success": "#1f7a52",
+        "warning": "#8a6410",
+        "pro": "#6b4a96"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#eadfc6",
+            "surface-1": "#f3ead6",
+            "surface-2": "#faf4e6",
+            "text-primary": "#2b2118",
+            "text-secondary": "#4a3d30",
+            "text-muted": "#66584a"
+          }
+        },
+        "git": {
+          "added": "#1f6b34",
+          "removed": "#a8322a",
+          "modified": "#6e5208",
+          "merged": "#6a4a9a",
+          "closed": "#505660",
+          "conflicting": "#85440c",
+          "draft": "#505660"
+        }
+      }
+    }
+  },
+  {
     "id": "oscilloscope",
     "title": "Oscilloscope",
     "blurb": "An oscilloscope screen: a glowing green graticule with a sine, a two-tone, a square and a triangle wave scrolling across and a cursor sweeping the display. Dark.",
@@ -3508,6 +3564,6 @@ const data = [
     }
   }
 ]
-const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, null, null, s16, s17, s18, s19, s20, s21, s22, s23, s24, null, s26, null, s28, s29, s30, s31, s32, s33, s34, null, null, s37, s38, s39, s40, s41, s42, null, s44, s45, s46, s47, s48, s49, s50, s51, s52, null, s54, s55, s56, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76]
+const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, null, null, s16, s17, s18, s19, s20, s21, s22, s23, s24, null, s26, null, s28, s29, s30, s31, s32, s33, s34, null, null, s37, s38, s39, s40, s41, s42, null, s44, s45, s46, s47, s48, s49, s50, s51, s52, s53, null, s55, s56, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77]
 
 export const THEMES = data.map((d, i) => ({ ...d, build: scenes[i] === null ? null : scenes[i].buildScene }))

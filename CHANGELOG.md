@@ -4,9 +4,10 @@ What changed in the library, by release. Releases follow the `theme-library` plu
 
 Update this file when you add themes or change the tools, and bump `theme-library`'s version in `theme-library/.claude-plugin/plugin.json` when its behavior changes.
 
-## Unreleased (82 themes)
+## Unreleased (83 themes)
 
-**New themes (2) in `theme-library`**
+**New themes (3) in `theme-library`**
+- `origami-bay` (light): a bay of folded paper, with layered paper waves that drift, an origami sailboat, flying paper cranes, a paper sun and clouds.
 - `pirate-cove` (light) and `pirate-cove-night`, a day and night pair: a pirate galleon with a waving skull flag, gulls or a full moon, a far ship and a treasure chest on a palm beach or islet.
 
 ## 0.4.0: 2026-11-19 (80 themes)

@@ -1,0 +1,23 @@
+{
+  "name": "origami-bay",
+  "version": "0.1.0",
+  "description": "A bay made of folded paper: layered paper waves that drift, an origami sailboat bobbing, folded cranes flying across a paper sun and clouds. Light.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "paper",
+    "origami",
+    "craft",
+    "sea",
+    "boat",
+    "crane",
+    "calm",
+    "day",
+    "light"
+  ]
+}

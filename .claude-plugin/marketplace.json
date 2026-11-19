@@ -273,6 +273,11 @@
       "description": "A night run seen from a carriage window: hills, town lights and telegraph poles sliding past under a thin moon. Dark."
     },
     {
+      "name": "origami-bay",
+      "source": "./themes/origami-bay",
+      "description": "A bay made of folded paper: layered paper waves that drift, an origami sailboat bobbing, folded cranes flying across a paper sun and clouds. Light."
+    },
+    {
       "name": "oscilloscope",
       "source": "./themes/oscilloscope",
       "description": "An oscilloscope screen: a glowing green graticule with a sine, a two-tone, a square and a triangle wave scrolling across and a cursor sweeping the display. Dark."
