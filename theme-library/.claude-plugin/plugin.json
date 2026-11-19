@@ -1,6 +1,6 @@
 {
   "name": "theme-library",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Every theme in this library in one plugin, with /ccthemes to switch between them: a card you can filter by mode and style, search, preview and apply, a day and night mode that swaps twin themes by your clock, random, next, prev and off. Install this instead of several single themes.",
   "author": { "name": "Perspicacious Guy" },
   "license": "MIT",
