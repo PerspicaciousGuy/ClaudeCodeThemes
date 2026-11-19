@@ -1,0 +1,46 @@
+name: Theme idea
+description: Suggest a theme, or claim one from the roadmap
+title: "Theme idea: "
+labels: ["theme-idea"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: A lowercase id with hyphens, such as `harbor-dawn`. For a roadmap theme, use its name from ROADMAP.md.
+    validations:
+      required: true
+  - type: textarea
+    id: look
+    attributes:
+      label: What does it look like?
+      description: The place or the mood, and what moves in it. A sketch or a reference photo of a real place helps; please don't copy an existing artwork or a company's logo.
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Light, dark or both?
+      options:
+        - Dark
+        - Light
+        - Both (a twin pair, or one that follows the app's mode)
+    validations:
+      required: true
+  - type: dropdown
+    id: style
+    attributes:
+      label: Style
+      options:
+        - Pixel art
+        - Vector scene
+        - Colors only (no backdrop)
+        - Not sure
+    validations:
+      required: true
+  - type: checkboxes
+    id: build
+    attributes:
+      label: Who builds it?
+      options:
+        - label: I'd like to build it myself (see CONTRIBUTING.md)

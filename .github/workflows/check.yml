@@ -1,0 +1,51 @@
+name: Check themes
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    name: Library checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Every theme has its files, a preview, a marketplace entry, a scene under the size
+      # limit with no script or image, a reduced-motion rule, and colors the app will paint.
+      - name: Check every theme
+        run: node scripts/library.mjs check
+
+      # theme-library/ and the marketplace and README tables are generated from themes/.
+      # If they differ after regenerating, the pull request forgot to run the script.
+      - name: Generated files are up to date
+        run: |
+          node scripts/library.mjs pack
+          node scripts/library.mjs index
+          git diff --exit-code -- theme-library .claude-plugin README.md || {
+            echo "::error::Generated files are out of date. Run: node scripts/library.mjs all"
+            exit 1
+          }
+
+  validate:
+    name: Plugin validation
+    runs-on: ubuntu-latest
+    # Not yet confirmed to work on a runner without a login. Remove this line once a run is green.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Validate the marketplace and every plugin
+        run: |
+          claude plugin validate .
+          for dir in theme-library themes/*/; do
+            claude plugin validate "./$dir"
+          done
