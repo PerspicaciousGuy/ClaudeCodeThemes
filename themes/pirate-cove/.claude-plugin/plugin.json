@@ -1,0 +1,22 @@
+{
+  "name": "pirate-cove",
+  "version": "0.1.0",
+  "description": "A pirate galleon in a sunny cove: a skull flag waving, gulls overhead, a far sail on the horizon and a treasure chest on a palm beach. Light.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pirate",
+    "ship",
+    "sea",
+    "ocean",
+    "treasure",
+    "beach",
+    "day",
+    "light"
+  ]
+}

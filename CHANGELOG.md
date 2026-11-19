@@ -4,6 +4,11 @@ What changed in the library, by release. Releases follow the `theme-library` plu
 
 Update this file when you add themes or change the tools, and bump `theme-library`'s version in `theme-library/.claude-plugin/plugin.json` when its behavior changes.
 
+## Unreleased (82 themes)
+
+**New themes (2) in `theme-library`**
+- `pirate-cove` (light) and `pirate-cove-night`, a day and night pair: a pirate galleon with a waving skull flag, gulls or a full moon, a far ship and a treasure chest on a palm beach or islet.
+
 ## 0.4.0: 2026-11-19 (80 themes)
 
 **New themes (30) in `theme-library`**

@@ -1,0 +1,21 @@
+{
+  "name": "pirate-cove-night",
+  "version": "0.1.0",
+  "description": "A pirate galleon under a full moon: a skull flag waving, lantern light at the stern, a far ship on the horizon and a treasure chest glowing on a palm islet. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "pirate",
+    "ship",
+    "sea",
+    "ocean",
+    "treasure",
+    "night",
+    "dark"
+  ]
+}

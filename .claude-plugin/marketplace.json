@@ -298,6 +298,16 @@
       "description": "The paper-cut mountains in deep indigo under a paper moon and cut-out stars. Dark."
     },
     {
+      "name": "pirate-cove",
+      "source": "./themes/pirate-cove",
+      "description": "A pirate galleon in a sunny cove: a skull flag waving, gulls overhead, a far sail on the horizon and a treasure chest on a palm beach. Light."
+    },
+    {
+      "name": "pirate-cove-night",
+      "source": "./themes/pirate-cove-night",
+      "description": "A pirate galleon under a full moon: a skull flag waving, lantern light at the stern, a far ship on the horizon and a treasure chest glowing on a palm islet. Dark."
+    },
+    {
       "name": "pixel-cafe",
       "source": "./themes/pixel-cafe",
       "description": "A pixel-art cafe on a rainy night: rain running down a big window over blurred city lights, warm pendant lamps, a steaming cup on the counter and a cat asleep on the sill. Dark."
