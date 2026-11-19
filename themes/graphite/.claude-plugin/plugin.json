@@ -1,0 +1,16 @@
+{
+  "name": "graphite",
+  "version": "0.1.0",
+  "description": "Neutral graphite grays with one steel-blue accent. Quiet and tool-like, light and dark, colors only.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "minimal",
+    "neutral",
+    "still"
+  ]
+}

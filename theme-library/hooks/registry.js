@@ -4,33 +4,33 @@ import * as s1 from './scenes/arcade-hall.js'
 import * as s2 from './scenes/aurora-field.js'
 import * as s3 from './scenes/beacon-cove.js'
 import * as s4 from './scenes/code-rain.js'
-import * as s5 from './scenes/contour-map.js'
-import * as s6 from './scenes/contour-map-night.js'
-import * as s7 from './scenes/desert-night.js'
-import * as s8 from './scenes/desert-noon.js'
-import * as s9 from './scenes/fog-valley.js'
-import * as s10 from './scenes/fog-valley-night.js'
-import * as s11 from './scenes/halftone-harbor.js'
-import * as s12 from './scenes/halftone-harbor-night.js'
-import * as s13 from './scenes/hearth.js'
-import * as s14 from './scenes/low-orbit.js'
-import * as s15 from './scenes/meadow-hours.js'
-import * as s16 from './scenes/moonlit-shore.js'
-import * as s17 from './scenes/neon-rain.js'
-import * as s18 from './scenes/night-train.js'
-import * as s19 from './scenes/papercut-peaks.js'
-import * as s20 from './scenes/papercut-peaks-night.js'
-import * as s21 from './scenes/rainy-window.js'
-import * as s22 from './scenes/reading-room.js'
-import * as s23 from './scenes/retro-grid.js'
-import * as s24 from './scenes/rooftop-garden.js'
-import * as s25 from './scenes/rooftop-garden-night.js'
-import * as s26 from './scenes/sakura-drift.js'
-import * as s27 from './scenes/snow-cabin.js'
-import * as s28 from './scenes/snow-cabin-day.js'
-import * as s29 from './scenes/sunny-shore.js'
-import * as s30 from './scenes/tide-pool.js'
-import * as s31 from './scenes/torch-dungeon.js'
+import * as s7 from './scenes/contour-map.js'
+import * as s8 from './scenes/contour-map-night.js'
+import * as s9 from './scenes/desert-night.js'
+import * as s10 from './scenes/desert-noon.js'
+import * as s11 from './scenes/fog-valley.js'
+import * as s12 from './scenes/fog-valley-night.js'
+import * as s15 from './scenes/halftone-harbor.js'
+import * as s16 from './scenes/halftone-harbor-night.js'
+import * as s17 from './scenes/hearth.js'
+import * as s20 from './scenes/low-orbit.js'
+import * as s21 from './scenes/meadow-hours.js'
+import * as s23 from './scenes/moonlit-shore.js'
+import * as s24 from './scenes/neon-rain.js'
+import * as s25 from './scenes/night-train.js'
+import * as s27 from './scenes/papercut-peaks.js'
+import * as s28 from './scenes/papercut-peaks-night.js'
+import * as s29 from './scenes/rainy-window.js'
+import * as s30 from './scenes/reading-room.js'
+import * as s31 from './scenes/retro-grid.js'
+import * as s32 from './scenes/rooftop-garden.js'
+import * as s33 from './scenes/rooftop-garden-night.js'
+import * as s34 from './scenes/sakura-drift.js'
+import * as s35 from './scenes/snow-cabin.js'
+import * as s36 from './scenes/snow-cabin-day.js'
+import * as s37 from './scenes/sunny-shore.js'
+import * as s38 from './scenes/tide-pool.js'
+import * as s39 from './scenes/torch-dungeon.js'
 
 const data = [
   {
@@ -235,6 +235,99 @@ const data = [
         }
       }
     }
+  },
+  {
+    "id": "colorblind-safe-dark",
+    "title": "Colorblind Safe Dark",
+    "blurb": "A dark theme whose colors stay apart for red-green and blue-yellow color blindness: blue and orange for added and removed, and a different lightness for each status. Colors only.",
+    "mode": "dark",
+    "style": "still",
+    "tags": [
+      "accessible",
+      "colorblind",
+      "dark",
+      "still"
+    ],
+    "colors": {
+      "label": "Colorblind Safe Dark",
+      "only": "dark",
+      "roles": {
+        "accent": "#56b4e9",
+        "danger": "#f2784b",
+        "success": "#2fc7a2",
+        "warning": "#f0e442",
+        "pro": "#cc79a7"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#11141a",
+            "surface-1": "#181c24",
+            "surface-2": "#20252f",
+            "surface-3": "#282e3a",
+            "text-primary": "#f2f4f8",
+            "text-secondary": "#cdd3de",
+            "text-muted": "#a9b1c0"
+          }
+        },
+        "git": {
+          "added": "#56b4e9",
+          "removed": "#f2784b",
+          "modified": "#f0e442",
+          "merged": "#cc79a7",
+          "closed": "#a9b1c0",
+          "conflicting": "#e69f00",
+          "draft": "#9aa3b2"
+        }
+      }
+    },
+    "twin": "colorblind-safe-light"
+  },
+  {
+    "id": "colorblind-safe-light",
+    "title": "Colorblind Safe Light",
+    "blurb": "A light theme whose colors stay apart for red-green and blue-yellow color blindness: blue and orange for added and removed, and a different lightness for each status. Colors only.",
+    "mode": "light",
+    "style": "still",
+    "tags": [
+      "accessible",
+      "colorblind",
+      "light",
+      "still"
+    ],
+    "colors": {
+      "label": "Colorblind Safe Light",
+      "only": "light",
+      "roles": {
+        "accent": "#0072b2",
+        "danger": "#a84300",
+        "success": "#007a5e",
+        "warning": "#8a6a00",
+        "pro": "#a0437a"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#e6e9ef",
+            "surface-1": "#eef0f4",
+            "surface-2": "#f7f8fa",
+            "text-primary": "#11141a",
+            "text-secondary": "#2b3240",
+            "text-muted": "#4a5363"
+          }
+        },
+        "git": {
+          "added": "#0072b2",
+          "removed": "#a84300",
+          "modified": "#7d6200",
+          "merged": "#a0437a",
+          "closed": "#5b6577",
+          "conflicting": "#9a5a00",
+          "draft": "#5b6577"
+        }
+      }
+    },
+    "twin": "colorblind-safe-dark"
   },
   {
     "id": "contour-map",
@@ -487,6 +580,132 @@ const data = [
     "twin": "fog-valley"
   },
   {
+    "id": "forest-floor",
+    "title": "Forest Floor",
+    "blurb": "Moss, bark and fern: a green-brown dark theme and a pale lichen light one, with a fern-green accent. Colors only.",
+    "mode": "both",
+    "style": "still",
+    "tags": [
+      "nature",
+      "green",
+      "still"
+    ],
+    "colors": {
+      "label": "Forest Floor",
+      "roles": {
+        "accent": "#9cc16a",
+        "danger": "#d9694f",
+        "success": "#5dbf8e",
+        "warning": "#e0b04f",
+        "pro": "#b394d4"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#101510",
+            "surface-1": "#161c15",
+            "surface-2": "#1d241b",
+            "surface-3": "#252d22",
+            "text-primary": "#e6ecdc",
+            "text-secondary": "#c1cbb1",
+            "text-muted": "#9aa68b"
+          }
+        }
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#dde3d0",
+            "surface-1": "#e7ecdc",
+            "surface-2": "#f2f5ea",
+            "text-primary": "#1a2217",
+            "text-secondary": "#38442f",
+            "text-muted": "#526046"
+          }
+        },
+        "roles": {
+          "accent": "#4a7a2a",
+          "danger": "#a8392a",
+          "success": "#2a7a55",
+          "warning": "#8a6410",
+          "pro": "#75519a"
+        },
+        "git": {
+          "added": "#2a6a2a",
+          "removed": "#a8322a",
+          "modified": "#6e5208",
+          "merged": "#6a4a9a",
+          "closed": "#4a5440",
+          "conflicting": "#85440c",
+          "draft": "#4a5440"
+        }
+      }
+    }
+  },
+  {
+    "id": "graphite",
+    "title": "Graphite",
+    "blurb": "Neutral graphite grays with one steel-blue accent. Quiet and tool-like, light and dark, colors only.",
+    "mode": "both",
+    "style": "still",
+    "tags": [
+      "minimal",
+      "neutral",
+      "still"
+    ],
+    "colors": {
+      "label": "Graphite",
+      "roles": {
+        "accent": "#8aa9c7",
+        "danger": "#e0665e",
+        "success": "#6fbf8a",
+        "warning": "#d9b25c",
+        "pro": "#a99bd1"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#121416",
+            "surface-1": "#181b1e",
+            "surface-2": "#1f2327",
+            "surface-3": "#272c30",
+            "text-primary": "#e8eaec",
+            "text-secondary": "#c3c8cd",
+            "text-muted": "#9ea5ac"
+          }
+        }
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#dfe2e5",
+            "surface-1": "#e8eaed",
+            "surface-2": "#f3f4f6",
+            "text-primary": "#1c1f22",
+            "text-secondary": "#3a4046",
+            "text-muted": "#565d65"
+          }
+        },
+        "roles": {
+          "accent": "#3d6486",
+          "danger": "#b13a33",
+          "success": "#2f7a4b",
+          "warning": "#8f6a12",
+          "pro": "#6a5aa3"
+        },
+        "git": {
+          "added": "#1f6b34",
+          "removed": "#a8322a",
+          "modified": "#6e5208",
+          "merged": "#6a4a9a",
+          "closed": "#505660",
+          "conflicting": "#85440c",
+          "draft": "#505660"
+        }
+      }
+    }
+  },
+  {
     "id": "halftone-harbor",
     "title": "Halftone Harbor",
     "blurb": "A two-ink halftone print of a harbor at sunset: a coral sun and its wake, blue water, a headland with a lighthouse, two boats. Light.",
@@ -619,6 +838,101 @@ const data = [
     }
   },
   {
+    "id": "high-contrast-dark",
+    "title": "High Contrast Dark",
+    "blurb": "Pure black and white with bright, saturated colors: text well past the AA bar on every surface, and strong borders. Dark, colors only.",
+    "mode": "dark",
+    "style": "still",
+    "tags": [
+      "accessible",
+      "high-contrast",
+      "dark",
+      "still"
+    ],
+    "colors": {
+      "label": "High Contrast Dark",
+      "only": "dark",
+      "contrast": "more",
+      "roles": {
+        "accent": "#5cc8ff",
+        "danger": "#ff7b72",
+        "success": "#6bf09a",
+        "warning": "#ffd23f",
+        "pro": "#ecc4ff"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#000000",
+            "surface-1": "#101010",
+            "surface-2": "#181818",
+            "surface-3": "#202020",
+            "text-primary": "#ffffff",
+            "text-secondary": "#ebebeb",
+            "text-muted": "#d0d0d0"
+          }
+        },
+        "git": {
+          "added": "#4ae37a",
+          "removed": "#ff7b72",
+          "modified": "#ffd23f",
+          "merged": "#e0a8ff",
+          "closed": "#ff9e97",
+          "conflicting": "#ffb454",
+          "draft": "#d0d0d0"
+        }
+      }
+    },
+    "twin": "high-contrast-light"
+  },
+  {
+    "id": "high-contrast-light",
+    "title": "High Contrast Light",
+    "blurb": "Black on white with deep, saturated colors: text well past the AA bar on every surface, and strong borders. Light, colors only.",
+    "mode": "light",
+    "style": "still",
+    "tags": [
+      "accessible",
+      "high-contrast",
+      "light",
+      "still"
+    ],
+    "colors": {
+      "label": "High Contrast Light",
+      "only": "light",
+      "contrast": "more",
+      "roles": {
+        "accent": "#0a3d91",
+        "danger": "#a40000",
+        "success": "#0b5d1e",
+        "warning": "#9a5b00",
+        "pro": "#5b1fb0"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#e4e4e4",
+            "surface-1": "#f0f0f0",
+            "surface-2": "#ffffff",
+            "text-primary": "#000000",
+            "text-secondary": "#141414",
+            "text-muted": "#333333"
+          }
+        },
+        "git": {
+          "added": "#0b5d1e",
+          "removed": "#a40000",
+          "modified": "#7a4a00",
+          "merged": "#5b1fb0",
+          "closed": "#8a1c1c",
+          "conflicting": "#8a3a00",
+          "draft": "#333333"
+        }
+      }
+    },
+    "twin": "high-contrast-dark"
+  },
+  {
     "id": "low-orbit",
     "title": "Low Orbit",
     "blurb": "A pixel-art view of space: a ringed gas giant, a small moon, a nebula, parallax stars, a passing ship and shooting stars. Dark.",
@@ -699,6 +1013,44 @@ const data = [
         }
       }
     }
+  },
+  {
+    "id": "midnight-ink",
+    "title": "Midnight Ink",
+    "blurb": "Blue-black ink with pale paper-white text and a periwinkle accent. Dark, colors only.",
+    "mode": "dark",
+    "style": "still",
+    "tags": [
+      "ink",
+      "night",
+      "dark",
+      "still"
+    ],
+    "colors": {
+      "label": "Midnight Ink",
+      "only": "dark",
+      "roles": {
+        "accent": "#8aa4ff",
+        "danger": "#e5706a",
+        "success": "#74c09a",
+        "warning": "#e8a75a",
+        "pro": "#c39be0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#0a0f1f",
+            "surface-1": "#10172b",
+            "surface-2": "#171f38",
+            "surface-3": "#1f2845",
+            "text-primary": "#e9eefb",
+            "text-secondary": "#bfc9e3",
+            "text-muted": "#96a3c6"
+          }
+        }
+      }
+    },
+    "twin": "paperback"
   },
   {
     "id": "moonlit-shore",
@@ -824,6 +1176,52 @@ const data = [
         }
       }
     }
+  },
+  {
+    "id": "paperback",
+    "title": "Paperback",
+    "blurb": "A well-read paperback: cream pages, brown-black ink and an ink-blue accent. Light, colors only.",
+    "mode": "light",
+    "style": "still",
+    "tags": [
+      "paper",
+      "warm",
+      "light",
+      "still"
+    ],
+    "colors": {
+      "label": "Paperback",
+      "only": "light",
+      "roles": {
+        "accent": "#2e5b7a",
+        "danger": "#b33a2c",
+        "success": "#4a7a32",
+        "warning": "#94650f",
+        "pro": "#7a4a8a"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#e9dfc8",
+            "surface-1": "#f1e9d6",
+            "surface-2": "#f8f2e4",
+            "text-primary": "#2b2118",
+            "text-secondary": "#54463a",
+            "text-muted": "#6b5b4c"
+          }
+        },
+        "git": {
+          "added": "#1f6b34",
+          "removed": "#a8322a",
+          "modified": "#6e5208",
+          "merged": "#6a4a9a",
+          "closed": "#5a4a3a",
+          "conflicting": "#85440c",
+          "draft": "#5a4a3a"
+        }
+      }
+    },
+    "twin": "midnight-ink"
   },
   {
     "id": "papercut-peaks",
@@ -1374,6 +1772,6 @@ const data = [
     }
   }
 ]
-const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31]
+const scenes = [s0, s1, s2, s3, s4, null, null, s7, s8, s9, s10, s11, s12, null, null, s15, s16, s17, null, null, s20, s21, null, s23, s24, s25, null, s27, s28, s29, s30, s31, s32, s33, s34, s35, s36, s37, s38, s39]
 
-export const THEMES = data.map((d, i) => ({ ...d, build: scenes[i].buildScene }))
+export const THEMES = data.map((d, i) => ({ ...d, build: scenes[i] === null ? null : scenes[i].buildScene }))

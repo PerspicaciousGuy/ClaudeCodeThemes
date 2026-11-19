@@ -13,7 +13,7 @@ Each batch ends the same way: previews rendered and looked at, `node scripts/lib
 | **C** | Pixel art 2 | `night-market`, `snow-station`, `pixel-cafe` (rainy window, warm), `haunted-manor`, `forest-trail` |
 | **D** | Vector scenes 2 | `greenhouse-rain`, `koi-pond` (top-down), `bamboo-grove` (misty, light), `lantern-festival`, `cloud-sea`, `coral-reef` |
 | **E** | Abstract and tech | `blueprint`, `circuit-board` (pulses along traces), `oscilloscope` (phosphor waves), `constellations` (a star map that draws itself), `ink-wash` (sumi-e, light) |
-| **F** | Accessibility and still | `high-contrast-dark` and `-light`, `colorblind-safe-dark` and `-light`, and colors-only themes with no backdrop: `graphite`, `paperback`, `forest-floor`, `midnight-ink` |
+| **F** *(done)* | Accessibility and still | `high-contrast-dark` and `-light`, `colorblind-safe-dark` and `-light`, and colors-only themes with no backdrop: `graphite`, `paperback`, `forest-floor`, `midnight-ink` |
 | **G** | Seasonal events | `winter-lights`, `new-year-fireworks`, a Halloween variant of `haunted-manor` |
 
 ## Tooling

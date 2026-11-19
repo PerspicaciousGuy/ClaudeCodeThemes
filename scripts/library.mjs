@@ -62,19 +62,51 @@ function fit(svg, w, h) {
 
 // ---------- previews ----------
 
+// A theme with no scene is shown as a card of its colors: each mode it has, with
+// the surfaces, the three text tints, the five roles and a few lines of code.
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;')
+
+function paletteCard(colors, mode) {
+  const half = colors[mode]
+  const a = half.gray.anchors
+  const roles = { ...colors.roles, ...half.roles }
+  const surfaces = ['surface-0', 'surface-1', 'surface-2', 'surface-3'].filter(k => a[k])
+  const chips = Object.entries(roles).map(([n, c]) => `<span style="background:${c};color:${a['surface-0']}">${n}</span>`).join('')
+  const git = half.git ? Object.entries(half.git).map(([n, c]) => `<span class="g" style="color:${c};border-color:${c}">${n}</span>`).join('') : ''
+
+  return `<section style="background:${a['surface-0']};color:${a['text-primary']}">
+<h2>${mode === 'dark' ? 'Dark' : 'Light'}</h2>
+<div class="sw">${surfaces.map(k => `<i style="background:${a[k]}" title="${k}"></i>`).join('')}</div>
+<p style="color:${a['text-primary']}">Primary text on the page</p>
+<p style="color:${a['text-secondary']}">Secondary text for details</p>
+<p style="color:${a['text-muted']}">Muted text for hints</p>
+<div class="chips">${chips}</div>
+<pre style="background:${a['surface-2']}"><b style="color:${roles.accent}">const</b> total = items.<b style="color:${roles.pro}">reduce</b>((n, x) =&gt; n + x.price, <b style="color:${roles.warning}">0</b>)
+<b style="color:${roles.success}">// ok</b>   <b style="color:${roles.danger}">// failed</b></pre>
+${git ? `<div class="chips">${git}</div>` : ''}
+</section>`
+}
+
+function paletteHtml(id) {
+  const { colors } = themeConfig(id)
+  const modes = ['dark', 'light'].filter(m => colors[m] && (!colors.only || colors.only === m))
+
+  return `<!doctype html><meta charset="utf-8"><body style="margin:0;background:#000;display:flex;width:1600px;height:900px;font:28px/1.5 system-ui,sans-serif">
+<style>section{flex:1;min-width:0;padding:56px 56px;box-sizing:border-box}h2{margin:0 0 20px;font-size:22px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}.sw{display:flex;height:96px;margin-bottom:28px;border-radius:10px;overflow:hidden;outline:1px solid #8884}.sw i{flex:1}p{margin:6px 0}.chips{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}.chips span{padding:6px 18px;border-radius:999px;font-size:22px;font-weight:600}.chips .g{background:none;border:2px solid;font-weight:500}pre{padding:22px 28px;border-radius:12px;font:22px/1.6 ui-monospace,Consolas,monospace;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}</style>${modes.map(m => paletteCard(colors, m)).join('')}</body>`
+}
+
 async function previews(only) {
   const dir = mkdtempSync(join(tmpdir(), 'cct-'))
 
   for (const id of only.length ? only : ids()) {
     const svg = await scene(id, 12)
-
-    if (!svg) {
-      continue
-    }
-
     const page = join(dir, `${id}.html`)
 
-    writeFileSync(page, `<!doctype html><body style="margin:0;background:#000">${fit(svg, 1600, 900)}</body>`)
+    if (svg) {
+      writeFileSync(page, `<!doctype html><body style="margin:0;background:#000">${fit(svg, 1600, 900)}</body>`)
+    } else {
+      writeFileSync(page, paletteHtml(id))
+    }
     execFileSync(chrome(), ['--headless=new', '--disable-gpu', '--hide-scrollbars', '--window-size=1600,900', '--virtual-time-budget=5000', `--screenshot=${join(ROOT, 'docs', 'previews', id + '.png')}`, pathToFileURL(page).href], { stdio: 'ignore' })
     console.log('preview', id)
   }
@@ -87,14 +119,11 @@ async function gallery() {
 
   for (const id of ids()) {
     const svg = await scene(id, new Date().getHours())
-
-    if (!svg) {
-      continue
-    }
-
     const m = manifest(id)
+    // A theme with no scene shows its preview image of its colors.
+    const art = svg ? fit(svg, 800, 450).replace(/style="width:800px;height:450px;display:block"/, 'class="scene"') : `<img class="scene" src="previews/${id}.png" alt="${id}" loading="lazy">`
 
-    cards += `<figure><div class="art">${fit(svg, 800, 450).replace(/style="width:800px;height:450px;display:block"/, 'class="scene"')}</div><figcaption><strong>${id}</strong><span>${m.description.replace(/</g, '&lt;')}</span><code>/plugin install ${id} --marketplace PerspicaciousGuy/ClaudeCodeThemes</code></figcaption></figure>`
+    cards += `<figure><div class="art">${art}</div><figcaption><strong>${id}</strong><span>${m.description.replace(/</g, '&lt;')}</span><code>/plugin install ${id} --marketplace PerspicaciousGuy/ClaudeCodeThemes</code></figcaption></figure>`
   }
 
   writeFileSync(
@@ -121,11 +150,12 @@ function themeConfig(id) {
   const to = reg.indexOf('\n})\n', from) + 2
   const glass = /glass:\s*(\{[^}]*\})/.exec(reg)
 
-  if (from < 11 || to < from || !glass) {
-    throw new Error(`${id}: could not read makeColors(...) and glass from register.tsx`)
+  if (from < 11 || to < from) {
+    throw new Error(`${id}: could not read makeColors(...) from register.tsx`)
   }
 
-  return { colors: new Function('return ' + reg.slice(from, to))(), glass: new Function('return ' + glass[1])() }
+  // A theme with no scene has no glass either.
+  return { colors: new Function('return ' + reg.slice(from, to))(), glass: glass ? new Function('return ' + glass[1])() : null }
 }
 
 // theme-library/ is every theme in one plugin with a switcher. Its scenes and
@@ -140,20 +170,25 @@ function pack() {
 
   const list = ids()
   const imports = []
+  const scenes = []
   const data = []
 
   list.forEach((id, i) => {
-    if (!existsSync(join(THEMES, id, 'hooks', 'scene.js'))) {
-      throw new Error(`${id}: no hooks/scene.js, so it cannot go in the library plugin`)
-    }
-    copyFileSync(join(THEMES, id, 'hooks', 'scene.js'), join(dir, 'scenes', `${id}.js`))
-
+    // A theme with no scene (colors only) goes in with no scene, no glass and a "still" style.
+    const drawn = existsSync(join(THEMES, id, 'hooks', 'scene.js'))
     const { colors, glass } = themeConfig(id)
+
+    if (drawn) {
+      copyFileSync(join(THEMES, id, 'hooks', 'scene.js'), join(dir, 'scenes', `${id}.js`))
+      imports.push(`import * as s${i} from './scenes/${id}.js'`)
+    } else if (glass) {
+      throw new Error(`${id}: register.tsx sets glass but there is no hooks/scene.js`)
+    }
+    scenes.push(drawn ? `s${i}` : 'null')
 
     const keywords = (manifest(id).keywords ?? []).filter(k => !['claude-code', 'theme', 'animated'].includes(k)).map(k => (k === 'pixel-art' ? 'pixel' : k))
 
-    imports.push(`import * as s${i} from './scenes/${id}.js'`)
-    data.push({ id, title: colors.label, blurb: manifest(id).description, mode: colors.only ?? 'both', style: keywords.includes('pixel') ? 'pixel' : 'vector', tags: keywords, glass, colors })
+    data.push({ id, title: colors.label, blurb: manifest(id).description, mode: colors.only ?? 'both', style: !drawn ? 'still' : keywords.includes('pixel') ? 'pixel' : 'vector', tags: keywords, ...(glass ? { glass } : {}), colors })
   })
 
   // Twins: a theme's README says "twin of `x`" or "twin is `x`". Make it mutual, and
@@ -172,7 +207,7 @@ function pack() {
   }
   writeFileSync(
     join(dir, 'registry.js'),
-    `// Generated by scripts/library.mjs pack from themes/. Do not edit by hand.\n${imports.join('\n')}\n\nconst data = ${JSON.stringify(data, null, 2)}\nconst scenes = [${list.map((_, i) => `s${i}`).join(', ')}]\n\nexport const THEMES = data.map((d, i) => ({ ...d, build: scenes[i].buildScene }))\n`,
+    `// Generated by scripts/library.mjs pack from themes/. Do not edit by hand.\n${imports.join('\n')}\n\nconst data = ${JSON.stringify(data, null, 2)}\nconst scenes = [${scenes.join(', ')}]\n\nexport const THEMES = data.map((d, i) => ({ ...d, build: scenes[i] === null ? null : scenes[i].buildScene }))\n`,
   )
   console.log(`pack: ${list.length} themes`)
 }

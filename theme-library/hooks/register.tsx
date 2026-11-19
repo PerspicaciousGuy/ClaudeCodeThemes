@@ -20,7 +20,7 @@ const DAY_END = 19
 const PAGE_SIZE = 6
 const NOT_DRAWN = 'If no theme shows, this window may not draw themes yet.'
 
-type FilterId = 'all' | 'dark' | 'light' | 'pixel' | 'vector' | 'clock'
+type FilterId = 'all' | 'dark' | 'light' | 'pixel' | 'vector' | 'still' | 'clock'
 
 const FILTERS: readonly (readonly [FilterId, string])[] = [
   ['all', 'All'],
@@ -28,6 +28,7 @@ const FILTERS: readonly (readonly [FilterId, string])[] = [
   ['light', 'Light'],
   ['pixel', 'Pixel'],
   ['vector', 'Vector'],
+  ['still', 'Still'],
   ['clock', 'Clock'],
 ]
 
@@ -86,7 +87,7 @@ function fuzzyTheme(text: string): Theme | undefined {
 }
 
 function isClock(theme: Theme): boolean {
-  return theme.build.length > 0
+  return theme.build !== null && theme.build.length > 0
 }
 
 function matchesFilter(theme: Theme, id: FilterId): boolean {
@@ -97,6 +98,7 @@ function matchesFilter(theme: Theme, id: FilterId): boolean {
       return theme.mode !== 'dark'
     case 'pixel':
     case 'vector':
+    case 'still':
       return theme.style === id
     case 'clock':
       return isClock(theme)
@@ -161,7 +163,8 @@ async function setTheme($: EngineInterface, theme: Theme): Promise<boolean> {
     colorsOf.set(theme.id, colors)
   }
 
-  const set = await $.theme.set({ colors, backdrop: { scene: theme.id, glass: theme.glass } })
+  // A still theme is colors only: no backdrop, so the previous theme's scene goes away.
+  const set = await $.theme.set(theme.build === null || theme.glass === undefined ? { colors } : { colors, backdrop: { scene: theme.id, glass: theme.glass } })
 
   shown = theme.id
 
@@ -292,7 +295,7 @@ function themeList(id: FilterId, text: string): string {
 
       return rows.length === 0 ? [] : [`${title}:`, ...rows]
     }),
-    `/${COMMAND} <name> applies one; /${COMMAND} dark, light, pixel, vector or clock filters the card; /${COMMAND} find <words> searches; /${COMMAND} auto turns day and night on or off; /${COMMAND} random, next, prev, off.`,
+    `/${COMMAND} <name> applies one; /${COMMAND} dark, light, pixel, vector, still or clock filters the card; /${COMMAND} find <words> searches; /${COMMAND} auto turns day and night on or off; /${COMMAND} random, next, prev, off.`,
   ].join('\n')
 }
 
@@ -510,8 +513,8 @@ export const register: Register = on => {
     try {
       await $.command.register({
         name: COMMAND,
-        description: 'Switch themes: alone it opens the picker; a theme name applies it; dark, light, pixel, vector or clock filter the picker; "find <words>", "auto", "list", "random", "next", "prev" and "off" also work',
-        argumentHint: '[theme | dark | light | pixel | vector | clock | find <words> | auto | list | random | next | prev | off]',
+        description: 'Switch themes: alone it opens the picker; a theme name applies it; dark, light, pixel, vector, still or clock filter the picker; "find <words>", "auto", "list", "random", "next", "prev" and "off" also work',
+        argumentHint: '[theme | dark | light | pixel | vector | still | clock | find <words> | auto | list | random | next | prev | off]',
       })
     } catch (error) {
       void $.ui.toast(`${PLUGIN}: /${COMMAND} is not available (${reasonOf(error)})`)
@@ -604,7 +607,7 @@ export const register: Register = on => {
 
     const theme = THEMES.find(one => one.id === e.props.scene)
 
-    if (theme === undefined) {
+    if (theme === undefined || theme.build === null) {
       return next(e)
     }
 

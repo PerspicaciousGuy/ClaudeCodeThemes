@@ -8,7 +8,7 @@ Install it once, then change themes whenever you like. Single-theme plugins can'
 
 `/ccthemes` opens a card. It shows six themes a page, each with **Apply** (keeps it), **Preview** (20 seconds, then it goes back) and a one-line look at what it is. Along the top:
 
-- **Filters**: All, Dark, Light, Pixel, Vector and Clock (themes that follow your computer's clock). Dark and Light also include the themes that follow the app's own mode.
+- **Filters**: All, Dark, Light, Pixel, Vector, Still (colors only, with no backdrop) and Clock (themes that follow your computer's clock). Dark and Light also include the themes that follow the app's own mode.
 - **Previous / Next** to page through a filter.
 - **Day and night**: see below.
 - **No theme** clears it; **Close** shuts the card.
@@ -18,7 +18,7 @@ Everything on the card also works from the prompt:
 | Command | What it does |
 | --- | --- |
 | `/ccthemes <name>` | Applies a theme: its id or title in any case, or a unique start of the id (`/ccthemes neon`) |
-| `/ccthemes dark`, `light`, `pixel`, `vector`, `clock` | Opens the card with that filter on |
+| `/ccthemes dark`, `light`, `pixel`, `vector`, `still`, `clock` | Opens the card with that filter on |
 | `/ccthemes find <words>` | Opens the card with a search: every word must be in a theme's name, tags or description (`find beach`, `find pixel night`) |
 | `/ccthemes <words>` | If the words aren't a theme's name, they are searched the same way |
 | `/ccthemes list [filter or words]` | Names the themes in the transcript, with their twins |

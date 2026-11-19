@@ -1,0 +1,17 @@
+{
+  "name": "high-contrast-dark",
+  "version": "0.1.0",
+  "description": "Pure black and white with bright, saturated colors: text well past the AA bar on every surface, and strong borders. Dark, colors only.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "accessible",
+    "high-contrast",
+    "dark",
+    "still"
+  ]
+}

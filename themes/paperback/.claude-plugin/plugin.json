@@ -1,0 +1,17 @@
+{
+  "name": "paperback",
+  "version": "0.1.0",
+  "description": "A well-read paperback: cream pages, brown-black ink and an ink-blue accent. Light, colors only.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "paper",
+    "warm",
+    "light",
+    "still"
+  ]
+}

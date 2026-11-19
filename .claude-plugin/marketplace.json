@@ -38,6 +38,16 @@
       "description": "Columns of falling glyphs in phosphor green, bright at the head and fading behind, dimmer under the chat. Dark."
     },
     {
+      "name": "colorblind-safe-dark",
+      "source": "./themes/colorblind-safe-dark",
+      "description": "A dark theme whose colors stay apart for red-green and blue-yellow color blindness: blue and orange for added and removed, and a different lightness for each status. Colors only."
+    },
+    {
+      "name": "colorblind-safe-light",
+      "source": "./themes/colorblind-safe-light",
+      "description": "A light theme whose colors stay apart for red-green and blue-yellow color blindness: blue and orange for added and removed, and a different lightness for each status. Colors only."
+    },
+    {
       "name": "contour-map",
       "source": "./themes/contour-map",
       "description": "A topographic survey on warm paper: elevation lines draw themselves one height at a time around a flat basin. Light."
@@ -68,6 +78,16 @@
       "description": "A misty mountain night: a moon over deep-blue ridges, pale fog drifting between them, fireflies in the pines and a sky lantern rising. Dark."
     },
     {
+      "name": "forest-floor",
+      "source": "./themes/forest-floor",
+      "description": "Moss, bark and fern: a green-brown dark theme and a pale lichen light one, with a fern-green accent. Colors only."
+    },
+    {
+      "name": "graphite",
+      "source": "./themes/graphite",
+      "description": "Neutral graphite grays with one steel-blue accent. Quiet and tool-like, light and dark, colors only."
+    },
+    {
       "name": "halftone-harbor",
       "source": "./themes/halftone-harbor",
       "description": "A two-ink halftone print of a harbor at sunset: a coral sun and its wake, blue water, a headland with a lighthouse, two boats. Light."
@@ -83,6 +103,16 @@
       "description": "A warm theme: espresso and cream surfaces, terracotta accents, and a slow dusk backdrop with embers drifting up."
     },
     {
+      "name": "high-contrast-dark",
+      "source": "./themes/high-contrast-dark",
+      "description": "Pure black and white with bright, saturated colors: text well past the AA bar on every surface, and strong borders. Dark, colors only."
+    },
+    {
+      "name": "high-contrast-light",
+      "source": "./themes/high-contrast-light",
+      "description": "Black on white with deep, saturated colors: text well past the AA bar on every surface, and strong borders. Light, colors only."
+    },
+    {
       "name": "low-orbit",
       "source": "./themes/low-orbit",
       "description": "A pixel-art view of space: a ringed gas giant, a small moon, a nebula, parallax stars, a passing ship and shooting stars. Dark."
@@ -91,6 +121,11 @@
       "name": "meadow-hours",
       "source": "./themes/meadow-hours",
       "description": "A rolling meadow that follows your clock: dawn, day, dusk and night, with a moving sun and moon, butterflies by day and fireflies after dark. Dark."
+    },
+    {
+      "name": "midnight-ink",
+      "source": "./themes/midnight-ink",
+      "description": "Blue-black ink with pale paper-white text and a periwinkle accent. Dark, colors only."
     },
     {
       "name": "moonlit-shore",
@@ -106,6 +141,11 @@
       "name": "night-train",
       "source": "./themes/night-train",
       "description": "A night run seen from a carriage window: hills, town lights and telegraph poles sliding past under a thin moon. Dark."
+    },
+    {
+      "name": "paperback",
+      "source": "./themes/paperback",
+      "description": "A well-read paperback: cream pages, brown-black ink and an ink-blue accent. Light, colors only."
     },
     {
       "name": "papercut-peaks",
