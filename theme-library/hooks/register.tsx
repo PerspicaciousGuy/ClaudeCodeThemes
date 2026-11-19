@@ -441,6 +441,32 @@ function card($: EngineInterface, { Box, Text, Button }: CardElements) {
           {auto ? 'Day and night: on' : 'Day and night: off'}
         </Button>
         <Button
+          key="widgets"
+          label={widgets ? 'Widgets: on' : 'Widgets: off'}
+          onPress={async () => {
+            try {
+              void $.ui.toast(await setWidgets($, !widgets))
+            } catch (error) {
+              void $.ui.toast(`Widgets could not change: ${reasonOf(error)}`)
+            }
+          }}
+        >
+          {widgets ? 'Widgets: on' : 'Widgets: off'}
+        </Button>
+        <Button
+          key="critter"
+          label={mascot !== 'off' ? 'Critter: on' : 'Critter: off'}
+          onPress={async () => {
+            try {
+              void $.ui.toast(await setMascot($, mascot === 'off' ? 'both' : 'off'))
+            } catch (error) {
+              void $.ui.toast(`The critter could not change: ${reasonOf(error)}`)
+            }
+          }}
+        >
+          {mascot !== 'off' ? 'Critter: on' : 'Critter: off'}
+        </Button>
+        <Button
           key="off"
           label="No theme"
           onPress={async () => {

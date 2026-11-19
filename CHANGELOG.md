@@ -4,6 +4,11 @@ What changed in the library, by release. Releases follow the `theme-library` plu
 
 Update this file when you add themes or change the tools, and bump `theme-library`'s version in `theme-library/.claude-plugin/plugin.json` when its behavior changes.
 
+## 0.6.1: 2026-11-19 (84 themes)
+
+**Changed in `theme-library`**
+- The picker card has `Widgets` and `Critter` buttons beside `Day and night`, so the side widgets and the critter turn on and off from the card. The choice is kept, like the slash commands.
+
 ## 0.6.0: 2026-11-19 (84 themes)
 
 **New theme (1) in `theme-library`**
