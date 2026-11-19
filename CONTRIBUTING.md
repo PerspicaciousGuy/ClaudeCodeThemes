@@ -16,7 +16,8 @@ themes/<name>/
   hooks/scene.js                 optional: builds an SVG backdrop
   tsconfig.json                  copied from template/
   README.md                      optional: a paragraph about the theme
-docs/previews/<name>.png         a preview image of the backdrop
+docs/previews/<name>.png         a preview image of the backdrop (or of the palette, with no scene)
+docs/previews/<name>.svg         the animated preview of a scene (written by the script)
 ```
 
 Then list the theme in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json):
@@ -87,7 +88,7 @@ The validator may warn `no component is named Backdrop, so it never runs`. That 
 The library has a small script that does the bookkeeping. It needs Node 18+ and, for previews, Chrome (set `CHROME` to its path if it isn't found).
 
 1. Put your theme in `themes/<name>/`. If it draws a scene, export `buildScene()` from `hooks/scene.js` (a function returning the SVG string) and import it from `register.tsx`, as the existing themes do: the preview and gallery tools call it.
-2. Render the preview: `node scripts/library.mjs previews <name>` (writes `docs/previews/<name>.png`). Look at it.
+2. Render the preview: `node scripts/library.mjs previews <name>` (writes `docs/previews/<name>.png`, and the animated `<name>.svg`). Look at the image.
 3. Rebuild everything and run the checks: `node scripts/library.mjs all`. That regenerates `theme-library/` (the all-in-one plugin: it copies your `hooks/scene.js` and reads your colors and glass from `register.tsx`), the marketplace file, the gallery and the README tables.
 4. Validate: `claude plugin validate ./themes/<name>` and `claude plugin validate .`.
 5. Open a pull request. The template lists the checks above. A GitHub Action runs `check`, confirms `theme-library/`, the marketplace and the README tables match what `all` generates, and validates the marketplace (run `claude plugin validate` on your theme yourself: CI can't).

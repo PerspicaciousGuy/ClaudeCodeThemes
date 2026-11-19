@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Tools for maintaining the theme library. Needs Node 18+.
 //
-//   node scripts/library.mjs previews [theme ...]   render docs/previews/<theme>.png with Chrome
+//   node scripts/library.mjs previews [theme ...]   render docs/previews/<theme>.png with Chrome (and the .svg)
+//   node scripts/library.mjs svgs [theme ...]       write docs/previews/<theme>.svg, the animated preview (no Chrome)
 //   node scripts/library.mjs gallery                build docs/gallery.html (every scene, animated)
 //   node scripts/library.mjs pack                   rebuild theme-library/ (every theme in one plugin)
 //   node scripts/library.mjs index                  rebuild marketplace.json and the README table
@@ -95,7 +96,22 @@ function paletteHtml(id) {
 <style>section{flex:1;min-width:0;padding:56px 56px;box-sizing:border-box}h2{margin:0 0 20px;font-size:22px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}.sw{display:flex;height:96px;margin-bottom:28px;border-radius:10px;overflow:hidden;outline:1px solid #8884}.sw i{flex:1}p{margin:6px 0}.chips{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}.chips span{padding:6px 18px;border-radius:999px;font-size:22px;font-weight:600}.chips .g{background:none;border:2px solid;font-weight:500}pre{padding:22px 28px;border-radius:12px;font:22px/1.6 ui-monospace,Consolas,monospace;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}</style>${modes.map(m => paletteCard(colors, m)).join('')}</body>`
 }
 
+// The animated preview is the scene itself, drawn at noon: GitHub plays an SVG's CSS
+// animation inside an <img>, so the README and the gallery show it moving.
+async function svgs(only) {
+  for (const id of only.length ? only : ids()) {
+    const svg = await scene(id, 12)
+
+    if (svg) {
+      writeFileSync(join(ROOT, 'docs', 'previews', id + '.svg'), svg)
+    }
+  }
+  console.log('svgs written')
+}
+
 async function previews(only) {
+  await svgs(only)
+
   const dir = mkdtempSync(join(tmpdir(), 'cct-'))
 
   for (const id of only.length ? only : ids()) {
@@ -120,14 +136,14 @@ async function gallery() {
   for (const id of ids()) {
     const svg = await scene(id, new Date().getHours())
     const m = manifest(id)
-    // A theme with no scene shows its preview image of its colors.
-    const art = svg ? fit(svg, 800, 450).replace(/style="width:800px;height:450px;display:block"/, 'class="scene"') : `<img class="scene" src="previews/${id}.png" alt="${id}" loading="lazy">`
+    // Each scene is its own image: scenes inlined in one page share class names and keyframes
+    // and would restyle each other. A theme with no scene shows its image of its colors.
+    const art = `<img class="scene" src="previews/${id}.${svg ? 'svg' : 'png'}" alt="${id}" loading="lazy">`
 
     cards += `<figure><div class="art">${art}</div><figcaption><strong>${id}</strong><span>${m.description.replace(/</g, '&lt;')}</span><code>/plugin install ${id} --marketplace PerspicaciousGuy/ClaudeCodeThemes</code></figcaption></figure>`
   }
 
-  writeFileSync(
-    join(ROOT, 'docs', 'gallery.html'),
+  const page =
     `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Claude Code Themes: gallery</title><style>
 body{margin:0;background:#0d0d12;color:#e8e8f0;font:16px/1.5 system-ui,sans-serif}
 header{padding:32px 24px 8px;max-width:1200px;margin:0 auto}h1{margin:0 0 4px;font-size:28px}p{margin:0;color:#a8a8bc}
@@ -135,10 +151,12 @@ main{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,520px),
 figure{margin:0;background:#15151d;border-radius:12px;overflow:hidden}
 .art{aspect-ratio:16/9;overflow:hidden;background:#000}.scene{width:100%;height:100%;display:block}
 figcaption{padding:14px 16px 16px;display:grid;gap:6px}figcaption span{color:#b4b4c8;font-size:14px}
-code{font:12px ui-monospace,monospace;color:#9fb4ff;overflow-wrap:anywhere}
-</style></head><body><header><h1>Claude Code Themes</h1><p>Every backdrop in the library, animated. The app also tints its panels to match; this page shows the scenes only.</p></header><main>${cards}</main></body></html>`,
-  )
-  console.log('gallery: docs/gallery.html')
+code{font:12px ui-monospace,monospace;color:#9fb4ff;overflow-wrap:anywhere}a{color:#9fb4ff}
+</style></head><body><header><h1>Claude Code Themes</h1><p>Every backdrop in the library, animated. The app also tints its panels to match; this page shows the scenes only (themes with colors only show their palette). <a href="https://github.com/PerspicaciousGuy/ClaudeCodeThemes">Install and make your own</a>.</p></header><main>${cards}</main></body></html>`
+
+  writeFileSync(join(ROOT, 'docs', 'gallery.html'), page)
+  writeFileSync(join(ROOT, 'docs', 'index.html'), page)
+  console.log('gallery: docs/index.html and docs/gallery.html')
 }
 
 // ---------- pack ----------
@@ -235,7 +253,7 @@ function index() {
   )
 
   const rows = list.map(({ id, m }) => `| [**${id}**](themes/${id}) | ${m.description} |`).join('\n')
-  const cells = list.map(({ id }) => `[<img src="docs/previews/${id}.png" width="300" alt="${id}"><br>**${id}**](themes/${id})`)
+  const cells = list.map(({ id }) => `[<img src="docs/previews/${id}.${existsSync(join(ROOT, 'docs', 'previews', id + '.svg')) ? 'svg' : 'png'}" width="300" alt="${id}"><br>**${id}**](themes/${id})`)
   const grid = []
 
   for (let i = 0; i < cells.length; i += 3) {
@@ -324,6 +342,9 @@ async function check() {
     if (!existsSync(join(ROOT, 'docs', 'previews', `${id}.png`))) {
       problems.push(`${id}: no docs/previews/${id}.png`)
     }
+    if (existsSync(join(dir, 'hooks', 'scene.js')) && !existsSync(join(ROOT, 'docs', 'previews', `${id}.svg`))) {
+      problems.push(`${id}: no docs/previews/${id}.svg (run: node scripts/library.mjs svgs ${id})`)
+    }
     if (!listed.has(id)) {
       problems.push(`${id}: not in marketplace.json (run: node scripts/library.mjs index)`)
     }
@@ -395,6 +416,8 @@ const [cmd, ...rest] = process.argv.slice(2)
 
 if (cmd === 'previews') {
   await previews(rest)
+} else if (cmd === 'svgs') {
+  await svgs(rest)
 } else if (cmd === 'gallery') {
   await gallery()
 } else if (cmd === 'pack') {
@@ -404,10 +427,11 @@ if (cmd === 'previews') {
 } else if (cmd === 'check') {
   await check()
 } else if (cmd === 'all') {
+  await svgs([])
   pack()
   index()
   await gallery()
   await check()
 } else {
-  console.log('usage: node scripts/library.mjs previews [theme ...] | gallery | pack | index | check | all')
+  console.log('usage: node scripts/library.mjs previews [theme ...] | svgs [theme ...] | gallery | pack | index | check | all')
 }
