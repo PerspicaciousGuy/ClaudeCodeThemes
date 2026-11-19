@@ -1,6 +1,6 @@
 {
   "name": "campfire",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A night camp whose fire follows your 5-hour usage window and whose woodpile follows your context window: a roaring fire when plenty is left, embers when you are near the limit. A live theme. Dark.",
   "author": {
     "name": "Perspicacious Guy"

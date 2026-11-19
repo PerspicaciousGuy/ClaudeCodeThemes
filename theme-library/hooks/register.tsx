@@ -2,6 +2,8 @@ import type { EngineInterface, Register, Timer } from 'claude-code'
 
 import { makeColors } from './make-colors.js'
 import { THEMES } from './registry.js'
+import { SKIN_NAMES, withWidgets } from './widgets.js'
+import type { WidgetSkin } from './widgets.js'
 import type { Theme } from './registry.js'
 
 const PLUGIN = 'theme-library'
@@ -11,6 +13,12 @@ const CARD = 'theme-card'
 // and whether day and night is on ('on' or 'off').
 const CHOICE_KEY = 'choice'
 const AUTO_KEY = 'auto'
+const WIDGETS_KEY = 'widgets'
+const SIDE_KEY = 'widgets-side'
+const LOOK_KEY = 'widgets-look'
+const MASCOT_KEY = 'mascot'
+// A scene may be at most this long once the widgets are in it.
+const SCENE_LIMIT = 131_000
 const PREVIEW_MS = 20_000
 // A scene that follows the clock, and day and night, are looked at this often.
 const REFRESH_MS = 10 * 60 * 1000
@@ -37,6 +45,24 @@ let current: string | undefined
 // What is drawn now: the applied theme, or its twin under day and night, or a preview.
 let shown: string | undefined
 let auto = false
+// The side widgets, and what they read.
+let widgets = false
+let percent: number | undefined
+// Where the widgets sit, and the look they take (auto: the one that suits the theme).
+let side: 'right' | 'left' | 'both' = 'right'
+// The critter: off, in a tile, strolling on the scene, or both. And what it is doing now.
+type MascotMode = 'off' | 'tile' | 'walk' | 'both'
+let mascot: MascotMode = 'off'
+let busy = false
+let justDone = false
+let doneTimer: Timer | undefined
+let lookChoice: WidgetSkin | undefined
+let five: number | undefined
+let week: number | undefined
+let fiveReset: string | undefined
+let weekReset: string | undefined
+let usd: number | undefined
+let unsure = false
 let previewing: string | undefined
 let previewEnding: Timer | undefined
 let cardOpen = false
@@ -136,6 +162,53 @@ async function quietly($: EngineInterface, step: () => Promise<void>): Promise<v
   }
 }
 
+// Which look the widgets take: a few families get their own, the rest follow the scene's style and mode.
+const LOOKS: Record<string, readonly string[]> = {
+  neon: ['neon-rain', 'neon-rain-calm', 'retro-grid', 'circuit-board', 'circuit-board-calm', 'arcade-hall', 'low-orbit'],
+  terminal: ['code-rain', 'code-rain-calm', 'oscilloscope', 'oscilloscope-calm'],
+  amber: ['cassette-futurism', 'torch-dungeon'],
+  blueprint: ['blueprint', 'contour-map', 'contour-map-night', 'constellations'],
+  deco: ['art-deco', 'stained-glass', 'lantern-festival', 'night-market', 'harvest-moon'],
+  spooky: ['halloween-night', 'haunted-manor', 'spooky-hollow'],
+  wood: ['hearth', 'reading-room', 'snow-cabin', 'snow-cabin-day', 'pixel-cafe', 'rainy-window', 'isometric-room', 'forest-trail', 'forest-floor', 'pirate-cove', 'pirate-cove-night'],
+  ink: ['ink-wash', 'ukiyo-e-wave', 'bamboo-grove', 'koi-pond', 'midnight-ink'],
+  riso: ['risograph', 'halftone-harbor', 'halftone-harbor-night', 'papercut-peaks', 'papercut-peaks-night', 'origami-bay'],
+  pastel: ['sakura-drift', 'spring-rain', 'rooftop-garden', 'rooftop-garden-night', 'meadow-hours', 'sunny-shore', 'summer-fireflies', 'cloud-sea'],
+}
+
+// A hat for the critter on some themes; the rest follow the widget look.
+const HATS: Record<string, readonly string[]> = {
+  pirate: ['pirate-cove', 'pirate-cove-night', 'beacon-cove', 'moonlit-shore'],
+  beanie: ['snow-cabin', 'snow-cabin-day', 'snow-station', 'winter-lights', 'fog-valley', 'fog-valley-night'],
+  straw: ['ink-wash', 'ukiyo-e-wave', 'bamboo-grove', 'koi-pond', 'lantern-festival'],
+  tophat: ['art-deco', 'stained-glass', 'night-market'],
+}
+const LOOK_HATS: Partial<Record<WidgetSkin, string>> = { spooky: 'witch', neon: 'shades', terminal: 'shades', amber: 'shades', blueprint: 'hardhat' }
+
+function hatFor(theme: Theme, look: WidgetSkin): string {
+  for (const [hat, ids] of Object.entries(HATS)) {
+    if (ids.includes(theme.id)) return hat
+  }
+
+  return LOOK_HATS[look] ?? 'none'
+}
+
+// Where the critter strolls, in scene units; the rest use the bottom edge.
+const STAGES: Record<string, { x0: number; x1: number; y: number; lantern?: boolean }> = {
+  'spooky-hollow': { x0: 120, x1: 1150, y: 872, lantern: true },
+  'halloween-night': { x0: 120, x1: 1100, y: 872, lantern: true },
+  'haunted-manor': { x0: 120, x1: 1100, y: 872, lantern: true },
+}
+
+function skinFor(theme: Theme): WidgetSkin {
+  for (const [look, ids] of Object.entries(LOOKS)) {
+    if (ids.includes(theme.id)) return look as WidgetSkin
+  }
+  if (theme.mode === 'light') return 'paper'
+
+  return theme.style === 'pixel' ? 'pixel' : 'frost'
+}
+
 /** The local hour to the nearest ten minutes, for scenes that follow the clock. */
 async function localHour($: EngineInterface): Promise<number> {
   const date = new Date(await $.clock.now())
@@ -182,6 +255,26 @@ async function showApplied($: EngineInterface, force = false): Promise<boolean |
   const target = forTheHour(chosen, await localHour($))
 
   return !force && shown === target.id ? true : setTheme($, target)
+}
+
+/** Turns the side widgets on or off and keeps the choice. */
+async function setWidgets($: EngineInterface, on: boolean): Promise<string> {
+  widgets = on
+  await $.store.set(WIDGETS_KEY, on ? 'on' : 'off')
+  $.ui.invalidate('ui.render')
+
+  return on ? 'Widgets on: context window, 5-hour and 7-day limits, time until each resets and session cost, over any theme with a scene.' : 'Widgets off.'
+}
+
+/** Sets where the critter appears and keeps the choice. */
+async function setMascot($: EngineInterface, mode: MascotMode): Promise<string> {
+  mascot = mode
+  await $.store.set(MASCOT_KEY, mode)
+  $.ui.invalidate('ui.render')
+
+  return mode === 'off'
+    ? 'The critter has gone home.'
+    : `The critter is ${mode === 'tile' ? 'in a tile beside the widgets' : mode === 'walk' ? 'out on the scene' : 'in a tile and out on the scene'}. It rests, works while Claude does, hops when a turn ends, looks worried when context is nearly full and naps when a limit is hit.`
 }
 
 /** Applies a theme (or none) and keeps the choice for later sessions. Answers one plain sentence. */
@@ -513,8 +606,8 @@ export const register: Register = on => {
     try {
       await $.command.register({
         name: COMMAND,
-        description: 'Switch themes: alone it opens the picker; a theme name applies it; dark, light, pixel, vector, still or clock filter the picker; "find <words>", "auto", "list", "random", "next", "prev" and "off" also work',
-        argumentHint: '[theme | dark | light | pixel | vector | still | clock | find <words> | auto | list | random | next | prev | off]',
+        description: 'Switch themes: alone it opens the picker; a theme name applies it; dark, light, pixel, vector, still or clock filter the picker; "find <words>", "auto", "list", "random", "next", "prev", "widgets", "mascot" and "off" also work',
+        argumentHint: '[widgets [on|off|left|right|both|look <name>] | mascot [on|off|tile|walk] | theme | dark | light | pixel | vector | still | clock | find <words> | auto | list | random | next | prev | off]',
       })
     } catch (error) {
       void $.ui.toast(`${PLUGIN}: /${COMMAND} is not available (${reasonOf(error)})`)
@@ -534,11 +627,75 @@ export const register: Register = on => {
       const theme = typeof saved === 'string' ? THEMES.find(one => one.id === saved) : undefined
 
       auto = (await $.store.get(AUTO_KEY)) === 'on'
+      widgets = (await $.store.get(WIDGETS_KEY)) === 'on'
+
+      const savedMascot = await $.store.get(MASCOT_KEY)
+
+      if (savedMascot === 'tile' || savedMascot === 'walk' || savedMascot === 'both') {
+        mascot = savedMascot
+      }
+
+      const savedSide = await $.store.get(SIDE_KEY)
+      const savedLook = await $.store.get(LOOK_KEY)
+
+      if (savedSide === 'left' || savedSide === 'both') {
+        side = savedSide
+      }
+      lookChoice = SKIN_NAMES.find(name => name === savedLook)
+
       if (theme !== undefined) {
         current = theme.id
         await showApplied($, true)
       }
     })
+
+    return next(e)
+  })
+
+  // The widgets read these: the context window, the usage limits and the cost.
+  on('session.measure', ($, e, next) => {
+    percent = e.context.percent
+    const fiveHour = e.rateLimits.find(limit => limit.kind === 'five_hour')
+    const sevenDay = e.rateLimits.find(limit => limit.kind === 'seven_day')
+
+    five = fiveHour?.percentUsed
+    week = sevenDay?.percentUsed
+    fiveReset = fiveHour?.resetsAt
+    weekReset = sevenDay?.resetsAt
+    usd = e.cost?.usd
+    unsure = (e.cost as { hasUnknownPrice?: boolean } | undefined)?.hasUnknownPrice === true
+    if (widgets || mascot !== 'off') {
+      $.ui.invalidate('ui.render')
+    }
+
+    return next(e)
+  })
+
+  // The critter works while Claude does, and hops for a moment when a turn ends.
+  on('turn.start', ($, e, next) => {
+    busy = true
+    justDone = false
+    doneTimer?.cancel()
+    if (mascot !== 'off') {
+      $.ui.invalidate('ui.render')
+    }
+
+    return next(e)
+  })
+
+  on('turn.complete', ($, e, next) => {
+    busy = false
+    justDone = true
+    doneTimer?.cancel()
+    doneTimer = $.clock.after(5000, () => {
+      justDone = false
+      if (mascot !== 'off') {
+        $.ui.invalidate('ui.render')
+      }
+    })
+    if (mascot !== 'off') {
+      $.ui.invalidate('ui.render')
+    }
 
     return next(e)
   })
@@ -559,6 +716,41 @@ export const register: Register = on => {
       }
       if (first === 'find' || first === 'search') {
         return { text: rest === '' ? `Say what to look for: /${COMMAND} find beach, or /${COMMAND} find pixel night.` : await openCard($, 'all', rest) }
+      }
+      if (first === 'mascot' || first === 'critter') {
+        const modes: Record<string, MascotMode> = { on: 'both', both: 'both', tile: 'tile', walk: 'walk', off: 'off' }
+        const mode = rest === '' ? (mascot === 'off' ? 'both' : 'off') : modes[rest]
+
+        return { text: mode === undefined ? `Use /${COMMAND} mascot on, tile, walk or off.` : await setMascot($, mode) }
+      }
+      if ((first === 'widgets' || first === 'widget') && (rest === 'left' || rest === 'right' || rest === 'both')) {
+        side = rest
+        await $.store.set(SIDE_KEY, side)
+
+        return { text: `${await setWidgets($, true)} They sit on the ${side === 'both' ? 'left and the right' : side}.` }
+      }
+      if ((first === 'widgets' || first === 'widget') && (rest === 'look' || rest.startsWith('look '))) {
+        const name = rest.slice(4).trim()
+        const found = SKIN_NAMES.find(skin => skin === name)
+
+        if (name === 'auto') {
+          lookChoice = undefined
+          await $.store.delete(LOOK_KEY)
+          $.ui.invalidate('ui.render')
+
+          return { text: 'The widgets take the look that suits each theme.' }
+        }
+        if (found === undefined) {
+          return { text: `Pick a look for the widgets: auto, ${SKIN_NAMES.join(', ')}. Example: /${COMMAND} widgets look neon.` }
+        }
+        lookChoice = found
+        await $.store.set(LOOK_KEY, found)
+        $.ui.invalidate('ui.render')
+
+        return { text: `${await setWidgets($, true)} The look is ${found} on every theme. /${COMMAND} widgets look auto goes back to matching each theme.` }
+      }
+      if (first === 'widgets' || first === 'widget') {
+        return { text: await setWidgets($, rest === 'on' ? true : rest === 'off' ? false : !widgets) }
       }
       if (first === 'off' || first === 'none') {
         return { text: await apply($, undefined) }
@@ -622,6 +814,38 @@ export const register: Register = on => {
       source = theme.build(hour)
       sceneOf.clear()
       sceneOf.set(key, source)
+    }
+
+    if (widgets || mascot !== 'off') {
+      const look = lookChoice ?? skinFor(theme)
+      const full = {
+        percent,
+        five,
+        week,
+        fiveReset,
+        weekReset,
+        usd,
+        unsure,
+        side,
+        showWidgets: widgets,
+        mascot,
+        accessory: hatFor(theme, look),
+        stage: STAGES[theme.id],
+        // Asleep when a limit is used up, then the rest in order of how much they matter.
+        mood: (five ?? 0) >= 100 || (week ?? 0) >= 100 ? 'sleep' : justDone ? 'done' : busy ? 'work' : (percent ?? 0) >= 90 ? 'worry' : 'idle',
+        now: await $.clock.now(),
+      } as const
+      // A big scene may not have room for all of it: drop the walking critter, then the tile, then the widgets.
+      const attempts = [full, { ...full, mascot: mascot === 'both' ? 'tile' : mascot === 'walk' ? 'off' : mascot }, { ...full, mascot: 'off' }] as const
+
+      for (const attempt of attempts) {
+        const withThem = withWidgets(source, attempt, look)
+
+        if (withThem.length <= SCENE_LIMIT) {
+          source = withThem
+          break
+        }
+      }
     }
 
     return <Svg isInteractive alt={`${theme.title}: ${theme.blurb}`} source={source} />

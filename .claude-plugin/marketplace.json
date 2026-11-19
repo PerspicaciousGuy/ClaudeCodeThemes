@@ -373,6 +373,11 @@
       "description": "A pixel-art train station in a night snowfall: snow drifting past warm lamps, a slow night train on the far track, a glowing clock on the gable and a bench under the canopy. Dark."
     },
     {
+      "name": "spooky-hollow",
+      "source": "./themes/spooky-hollow",
+      "description": "A haunted graveyard under a full moon: a dead tree with a swinging green lantern and a blinking owl, tilted tombstones, drifting ghosts and wisps, bats crossing the sky, a crooked house with a flickering window and a glowing pumpkin. Dark."
+    },
+    {
       "name": "spring-rain",
       "source": "./themes/spring-rain",
       "description": "A soft spring rain over pale green hills: blossoming trees shedding petals, rain streaking through, puddles rippling under a pastel sky. Light."

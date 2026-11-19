@@ -24,6 +24,10 @@ Everything on the card also works from the prompt:
 | `/ccthemes list [filter or words]` | Names the themes in the transcript, with their twins |
 | `/ccthemes random [filter]`, `next [filter]`, `prev [filter]` | Applies a random, the next or the previous theme, optionally within a filter (`/ccthemes random pixel`) |
 | `/ccthemes auto [on or off]` | Turns day and night on or off |
+| `/ccthemes widgets [on or off]` | Lays four widgets over your theme: context window fill, 5-hour and 7-day limits used, the time until each limit resets and session cost, in a shape and look that match the theme (13 in all, from tombstones to scrolls and taped notes: paper, neon, pixel, blueprint, deco, frost, wood, ink, riso, terminal, amber, pastel and spooky). Off by default; works over any theme with a scene |
+| `/ccthemes widgets left`, `right` or `both` | Moves the widgets to the left, the right (the default) or one column on each edge |
+| `/ccthemes widgets look neon` | Uses one look on every theme instead of matching each; `look auto` goes back. The looks are paper, neon, pixel, blueprint, deco, frost, wood, ink, riso, terminal, amber, pastel and spooky |
+| `/ccthemes mascot [on, tile, walk or off]` | Adds a small orange critter, in the spirit of the Claude Code mascot. It rests, works at a laptop while Claude does, hops when a turn ends, looks worried when context is nearly full and naps when a limit is hit. `tile` puts it beside the widgets, `walk` lets it stroll along the bottom of the scene, `on` does both. It wears a hat that suits the theme (pirate, witch, shades, straw hat, beanie and more) |
 | `/ccthemes off` | Clears the theme |
 
 The theme you apply, and whether day and night is on, are kept for later sessions, in every project. In a new session no theme shows until you send a first message.

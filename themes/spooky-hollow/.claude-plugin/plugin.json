@@ -1,0 +1,22 @@
+{
+  "name": "spooky-hollow",
+  "version": "0.1.0",
+  "description": "A haunted graveyard under a full moon: a dead tree with a swinging green lantern and a blinking owl, tilted tombstones, drifting ghosts and wisps, bats crossing the sky, a crooked house with a flickering window and a glowing pumpkin. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "spooky",
+    "halloween",
+    "graveyard",
+    "ghost",
+    "bats",
+    "moon",
+    "night",
+    "dark"
+  ]
+}

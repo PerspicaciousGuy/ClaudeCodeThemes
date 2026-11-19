@@ -78,11 +78,7 @@ export const register: Register = on => {
       $.ui.toast(unpainted)
     }
 
-    const set = await $.theme.set(LOOK)
-
-    if (!set.isDrawn) {
-      $.ui.status(set.reason)
-    }
+    await $.theme.set(LOOK)
 
     await $.command.register({ name: 'weeksky', description: 'Apply the Weekly Sky look. /weeksky 0 to 11 holds a stage to try it, /weeksky auto follows your 7-day usage' })
 

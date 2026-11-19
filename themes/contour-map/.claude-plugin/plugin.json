@@ -1,6 +1,6 @@
 {
   "name": "contour-map",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A topographic survey on warm paper: elevation lines draw themselves one height at a time around a flat basin. Light.",
   "author": {
     "name": "Perspicacious Guy"

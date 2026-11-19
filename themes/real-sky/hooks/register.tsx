@@ -86,11 +86,7 @@ export const register: Register = on => {
       $.ui.toast(unpainted)
     }
 
-    const set = await $.theme.set(LOOK)
-
-    if (!set.isDrawn) {
-      $.ui.status(set.reason)
-    }
+    await $.theme.set(LOOK)
 
     await $.command.register({ name: 'realsky', description: 'Apply the Real Sky look. /realsky 0 to 23 shows an hour to try it, /realsky auto follows your clock' })
 

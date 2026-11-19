@@ -4,6 +4,27 @@ What changed in the library, by release. Releases follow the `theme-library` plu
 
 Update this file when you add themes or change the tools, and bump `theme-library`'s version in `theme-library/.claude-plugin/plugin.json` when its behavior changes.
 
+## 0.6.0: 2026-11-19 (84 themes)
+
+**New theme (1) in `theme-library`**
+- `spooky-hollow` (dark): a haunted graveyard under a full moon, with a dead tree, a swinging green lantern and a blinking owl, tilted tombstones, three drifting ghosts and wisps, bats, a crooked house with a flickering window and a glowing pumpkin.
+
+**Widgets: `/ccthemes widgets`** (off by default)
+- Four widgets laid over any theme with a scene: context window fill, the 5-hour and 7-day limits used, the time until each limit resets, and the session cost.
+- Thirteen looks, each with its own shape, matched to the theme: paper notes, neon rings, pixel tiles, blueprint frames, deco gold frames, frosted glass, wood planks, ink scrolls, riso tickets, terminal windows, amber panels, pastel stickers and spooky tombstones.
+- `/ccthemes widgets left`, `right` or `both` moves them to either edge, or one column on each; `/ccthemes widgets look <name>` forces one look on every theme.
+- They only read figures the app already has, so they cost no usage.
+
+**Mascot: `/ccthemes mascot`** (off by default)
+- A small orange pixel critter, in a tile beside the widgets (`tile`), strolling along the bottom of the scene (`walk`), or both (`on`). It rests, works at a laptop while Claude does, hops when a turn ends, looks worried when context is nearly full and naps when a limit is hit. It wears a hat that suits the theme, and carries a lantern in the spooky themes.
+
+**Fixes**
+- Themes no longer pin the app's "no client draws themes yet" message as a status line, and clear any left by an earlier version. This was in every theme and the template.
+
+**theme-library**
+- Now holds 79 themes, up from 78. The 5 live themes are still left out of it.
+- Single-theme plugins are at 0.1.1 for the status-line fix.
+
 ## 0.5.0: 2026-11-19 (83 themes)
 
 **New themes (3) in `theme-library`**

@@ -1,6 +1,6 @@
 {
   "name": "weather-mood",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A lighthouse on a rocky headland whose weather follows Claude: a clear calm night while it is idle, clouds and rain while it works (harder as the context window fills) and a flash of lightning when a tool call fails. A live theme. Dark.",
   "author": {
     "name": "Perspicacious Guy"

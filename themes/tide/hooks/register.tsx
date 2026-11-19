@@ -86,11 +86,7 @@ export const register: Register = on => {
       $.ui.toast(unpainted)
     }
 
-    const set = await $.theme.set(LOOK)
-
-    if (!set.isDrawn) {
-      $.ui.status(set.reason)
-    }
+    await $.theme.set(LOOK)
 
     await $.command.register({ name: 'tide', description: 'Apply the Tide look. /tide 0 to 5 holds a level to try it, /tide auto follows your usage' })
 

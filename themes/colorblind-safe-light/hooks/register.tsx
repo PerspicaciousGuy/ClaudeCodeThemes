@@ -47,11 +47,10 @@ export const register: Register = on => {
     if (unpainted !== undefined) {
       $.ui.toast(unpainted)
     }
-    const set = await $.theme.set(LOOK)
+    // A status line an earlier version pinned stays on screen until it is replaced, so clear it.
+    $.ui.status(undefined)
 
-    if (!set.isDrawn) {
-      $.ui.status(set.reason)
-    }
+    await $.theme.set(LOOK)
 
     return next(e)
   })

@@ -1,6 +1,6 @@
 {
   "name": "oscilloscope",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An oscilloscope screen: a glowing green graticule with a sine, a two-tone, a square and a triangle wave scrolling across and a cursor sweeping the display. Dark.",
   "author": {
     "name": "Perspicacious Guy"

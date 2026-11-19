@@ -1,6 +1,6 @@
 {
   "name": "tide",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A beach at dusk whose tide follows your 5-hour usage window: high water while plenty is left, then the sea draws back and leaves wet sand, rocks, tide pools and a stranded boat. A live theme. Dark.",
   "author": {
     "name": "Perspicacious Guy"

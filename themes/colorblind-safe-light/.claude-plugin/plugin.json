@@ -1,6 +1,6 @@
 {
   "name": "colorblind-safe-light",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A light theme whose colors stay apart for red-green and blue-yellow color blindness: blue and orange for added and removed, and a different lightness for each status. Colors only.",
   "author": {
     "name": "Perspicacious Guy"

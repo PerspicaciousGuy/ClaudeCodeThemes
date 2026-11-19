@@ -61,14 +61,15 @@ import * as s66 from './scenes/sakura-drift.js'
 import * as s67 from './scenes/snow-cabin.js'
 import * as s68 from './scenes/snow-cabin-day.js'
 import * as s69 from './scenes/snow-station.js'
-import * as s70 from './scenes/spring-rain.js'
-import * as s71 from './scenes/stained-glass.js'
-import * as s72 from './scenes/summer-fireflies.js'
-import * as s73 from './scenes/sunny-shore.js'
-import * as s74 from './scenes/tide-pool.js'
-import * as s75 from './scenes/torch-dungeon.js'
-import * as s76 from './scenes/ukiyo-e-wave.js'
-import * as s77 from './scenes/winter-lights.js'
+import * as s70 from './scenes/spooky-hollow.js'
+import * as s71 from './scenes/spring-rain.js'
+import * as s72 from './scenes/stained-glass.js'
+import * as s73 from './scenes/summer-fireflies.js'
+import * as s74 from './scenes/sunny-shore.js'
+import * as s75 from './scenes/tide-pool.js'
+import * as s76 from './scenes/torch-dungeon.js'
+import * as s77 from './scenes/ukiyo-e-wave.js'
+import * as s78 from './scenes/winter-lights.js'
 
 const data = [
   {
@@ -3205,6 +3206,52 @@ const data = [
     }
   },
   {
+    "id": "spooky-hollow",
+    "title": "Spooky Hollow",
+    "blurb": "A haunted graveyard under a full moon: a dead tree with a swinging green lantern and a blinking owl, tilted tombstones, drifting ghosts and wisps, bats crossing the sky, a crooked house with a flickering window and a glowing pumpkin. Dark.",
+    "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "spooky",
+      "halloween",
+      "graveyard",
+      "ghost",
+      "bats",
+      "moon",
+      "night",
+      "dark"
+    ],
+    "glass": {
+      "blur": 10,
+      "opacity": 0.5,
+      "tint": "#120b22"
+    },
+    "colors": {
+      "label": "Spooky Hollow",
+      "only": "dark",
+      "roles": {
+        "accent": "#7fe6a0",
+        "danger": "#ef6a7a",
+        "success": "#7fe6a0",
+        "warning": "#f0c24a",
+        "pro": "#b79af0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#0a0614",
+            "surface-1": "#120b22",
+            "surface-2": "#1b1230",
+            "surface-3": "#251a40",
+            "text-primary": "#efe8ff",
+            "text-secondary": "#cfc4ea",
+            "text-muted": "#a094c0"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "spring-rain",
     "title": "Spring Rain",
     "blurb": "A soft spring rain over pale green hills: blossoming trees shedding petals, rain streaking through, puddles rippling under a pastel sky. Light.",
@@ -3564,6 +3611,6 @@ const data = [
     }
   }
 ]
-const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, null, null, s16, s17, s18, s19, s20, s21, s22, s23, s24, null, s26, null, s28, s29, s30, s31, s32, s33, s34, null, null, s37, s38, s39, s40, s41, s42, null, s44, s45, s46, s47, s48, s49, s50, s51, s52, s53, null, s55, s56, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77]
+const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, null, null, s16, s17, s18, s19, s20, s21, s22, s23, s24, null, s26, null, s28, s29, s30, s31, s32, s33, s34, null, null, s37, s38, s39, s40, s41, s42, null, s44, s45, s46, s47, s48, s49, s50, s51, s52, s53, null, s55, s56, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77, s78]
 
 export const THEMES = data.map((d, i) => ({ ...d, build: scenes[i] === null ? null : scenes[i].buildScene }))

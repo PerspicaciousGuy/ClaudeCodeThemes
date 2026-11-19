@@ -94,11 +94,7 @@ export const register: Register = on => {
       $.ui.toast(unpainted)
     }
 
-    const set = await $.theme.set(LOOK)
-
-    if (!set.isDrawn) {
-      $.ui.status(set.reason)
-    }
+    await $.theme.set(LOOK)
 
     await $.command.register({ name: 'fire', description: 'Try the campfire: /fire 0 to 5 sets a level, /fire auto follows your usage' })
 
