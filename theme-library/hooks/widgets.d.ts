@@ -29,8 +29,8 @@ export type WidgetState = {
   now: number
 }
 
-/** The looks the widgets come in: paper, neon, pixel, blueprint, deco, frost, wood, ink, riso, terminal, amber, pastel and spooky. */
-export type WidgetSkin = 'paper' | 'neon' | 'pixel' | 'blueprint' | 'deco' | 'frost' | 'wood' | 'ink' | 'riso' | 'terminal' | 'amber' | 'pastel' | 'spooky'
+/** The looks the widgets come in: paper, neon, pixel, blueprint, deco, frost, wood, ink, riso, terminal, amber, pastel, spooky, reef, dune, ice, festive, porthole and leaf. */
+export type WidgetSkin = 'paper' | 'neon' | 'pixel' | 'blueprint' | 'deco' | 'frost' | 'wood' | 'ink' | 'riso' | 'terminal' | 'amber' | 'pastel' | 'spooky' | 'reef' | 'dune' | 'ice' | 'festive' | 'porthole' | 'leaf'
 
 export const SKIN_NAMES: readonly WidgetSkin[]
 

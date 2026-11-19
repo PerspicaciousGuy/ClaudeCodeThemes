@@ -34,6 +34,18 @@ const SKINS = {
   // Soft rounded candy tiles with a pink edge.
   pastel: { frame: 'scallop', tilt: true, fill: '#fff8fb', fillOpacity: 0.95, stroke: '#f7b6cf', strokeWidth: 4.5, light: true, ink: '#6a4a5e', accent: '#f48fb1', hot: '#6fbf9e', shadow: 0.2, shadowColor: '#a06a88', font: SANS, weight: 700 },
   // Dusk purple with pumpkin orange.
+  // Teal glass pebbles with coral rims and rising bubbles, for reefs and tide pools.
+  reef: { frame: 'pebble', fill: '#06323f', fillOpacity: 0.88, stroke: '#ff8f6b', strokeWidth: 3, inner: '#5fe0d0', ink: '#d6fff6', accent: '#4fe0c8', hot: '#ff8f6b', shadow: 0.2, font: SANS, weight: 700 },
+  // Baked adobe with a stepped roofline and a zigzag band, for deserts.
+  dune: { frame: 'pueblo', fill: '#6b3a22', fillOpacity: 0.92, stroke: '#e6b873', strokeWidth: 3.2, inner: '#e6b873', ink: '#ffe9c4', accent: '#f0a050', hot: '#ff6a3a', shadow: 0.3, font: SANS, weight: 800 },
+  // Cut ice crystals with a cold glow, for fog, frost and aurora.
+  ice: { frame: 'hex', fill: '#0c2238', fillOpacity: 0.72, stroke: '#bfeaff', strokeOpacity: 0.85, strokeWidth: 2, glow: '#7fd8ff', ink: '#eaf8ff', accent: '#7fe0ff', hot: '#ffcf7a', shadow: 0, font: SANS, weight: 600 },
+  // A gold starburst on midnight blue, for fireworks.
+  festive: { frame: 'burst', fill: '#1a1040', fillOpacity: 0.9, stroke: '#ffd24a', strokeWidth: 2.6, glow: '#ff4fa0', ink: '#fff3c8', accent: '#ffd24a', hot: '#ff4fa0', shadow: 0.25, font: SANS, weight: 800 },
+  // A bolted brass porthole, for harbours and night trains.
+  porthole: { frame: 'porthole', fill: '#0f2a3c', fillOpacity: 0.9, stroke: '#c9a45a', strokeWidth: 6, inner: '#c9a45a', ink: '#e8f2f6', accent: '#6fc4d8', hot: '#ffb25a', shadow: 0.3, font: SERIF, weight: 700 },
+  // A green leaf with a stem, for greenhouses and autumn woods.
+  leaf: { frame: 'leaf', fill: '#12301e', fillOpacity: 0.9, stroke: '#8fcf6a', strokeWidth: 3, ink: '#e6f7d4', accent: '#b5e36a', hot: '#ff9a3a', shadow: 0.25, font: SERIF, weight: 700 },
   spooky: { frame: 'tomb', fill: '#1a0f24', fillOpacity: 0.9, stroke: '#ff8a1f', strokeWidth: 3, glow: '#ff8a1f', ink: '#ffd9a0', accent: '#ff8a1f', hot: '#b27cff', shadow: 0.3, font: SERIF, weight: 700 },
 }
 
@@ -101,6 +113,35 @@ function pathOf(frame, cx, cy, g) {
 
       return `M${pts.map(([x, y]) => `${x} ${y}`).join(' L')} Z`
     }
+    case 'pebble': {
+      const k = 0.8 * r
+
+      return `M${cx} ${y0} C${cx + k} ${y0} ${x1} ${cy - k} ${x1} ${cy} C${x1} ${cy + k} ${cx + k} ${y1} ${cx} ${y1} C${cx - k} ${y1} ${x0} ${cy + k} ${x0} ${cy} C${x0} ${cy - k} ${cx - k} ${y0} ${cx} ${y0} Z`
+    }
+    case 'pueblo':
+      return `M${x0} ${y1} V${y0 + 22} H${x0 + 26} V${y0} H${x1 - 26} V${y0 + 22} H${x1} V${y1} Z`
+    case 'hex': {
+      const pts = [[x0 + 14, y0], [x1 - 14, y0], [x1, cy], [x1 - 14, y1], [x0 + 14, y1], [x0, cy]]
+
+      return `M${pts.map(([x, y]) => `${x} ${y}`).join(' L')} Z`
+    }
+    case 'burst': {
+      const pts = []
+
+      for (let i = 0; i < 24; i++) {
+        const a = (Math.PI * i) / 12 - Math.PI / 2
+        const d = i % 2 === 0 ? r : r * 0.86
+
+        pts.push(`${(cx + d * Math.cos(a)).toFixed(1)} ${(cy + d * Math.sin(a)).toFixed(1)}`)
+      }
+
+      return `M${pts.join(' L')} Z`
+    }
+    case 'leaf': {
+      const c = 30
+
+      return `M${x0} ${y0} H${x1 - c} A${c} ${c} 0 0 1 ${x1} ${y0 + c} V${y1} H${x0 + c} A${c} ${c} 0 0 1 ${x0} ${y1 - c} Z`
+    }
     case 'scallop': {
       const n = 14
       const r0 = 47 - g
@@ -163,6 +204,20 @@ function decor(skin, cx, cy) {
 
       return `${b(1, 1)}${b(-1, 1)}${b(1, -1)}${b(-1, -1)}<path d="M${cx} ${y0 - 4} v6 M${cx} ${y1 - 2} v6 M${x0 - 4} ${cy} h6 M${x1 - 2} ${cy} h6" stroke="${skin.stroke}" stroke-width="1.2"/>`
     }
+    case 'pebble':
+      return `<g fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="1.4"><circle cx="${x0 + 16}" cy="${y0 + 18}" r="4.5"/><circle cx="${x0 + 29}" cy="${y0 + 9}" r="2.6"/><circle cx="${x1 - 15}" cy="${y1 - 16}" r="3.4"/></g>`
+    case 'pueblo':
+      return `<path d="M${x0 + 12} ${y1 - 9} l6 -7 l6 7 l6 -7 l6 7 l6 -7 l6 7 l6 -7 l6 7 l6 -7 l6 7 l6 -7 l6 7" fill="none" stroke="${skin.inner}" stroke-opacity=".6" stroke-width="1.6"/>`
+    case 'hex':
+      return `<path d="M${x1 - 24} ${y0 + 12} l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 l5 -2 Z" fill="#fff" fill-opacity=".75"/><path d="M${x0 + 18} ${y1 - 12} l1.5 3.5 l3.5 1.5 l-3.5 1.5 l-1.5 3.5 l-1.5 -3.5 l-3.5 -1.5 l3.5 -1.5 Z" fill="#fff" fill-opacity=".5"/>`
+    case 'porthole':
+      return Array.from({ length: 8 }, (_, i) => {
+        const a = (Math.PI * i) / 4 + Math.PI / 8
+
+        return `<circle cx="${(cx + (R - 4.5) * Math.cos(a)).toFixed(1)}" cy="${(cy + (R - 4.5) * Math.sin(a)).toFixed(1)}" r="2.3" fill="#3a2a10" fill-opacity=".85"/>`
+      }).join('')
+    case 'leaf':
+      return `<path d="M${x1 - 2} ${y1 - 2} l11 11" stroke="${skin.stroke}" stroke-width="3.4" stroke-linecap="round"/><path d="M${x0 + 10} ${y1 - 22} Q${cx - 10} ${cy + 10} ${x1 - 22} ${y0 + 10}" fill="none" stroke="${skin.stroke}" stroke-opacity=".18" stroke-width="1.4"/>`
     case 'glass':
       return `<path d="M${x0 + 10} ${y0 + 32} Q${x0 + 14} ${y0 + 12} ${x0 + 36} ${y0 + 8} Q${x0 + 22} ${y0 + 20} ${x0 + 10} ${y0 + 32} Z" fill="#fff" fill-opacity=".28"/>`
     default:

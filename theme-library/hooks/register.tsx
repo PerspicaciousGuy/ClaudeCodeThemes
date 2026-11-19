@@ -173,6 +173,12 @@ const LOOKS: Record<string, readonly string[]> = {
   wood: ['hearth', 'reading-room', 'snow-cabin', 'snow-cabin-day', 'pixel-cafe', 'rainy-window', 'isometric-room', 'forest-trail', 'forest-floor', 'pirate-cove', 'pirate-cove-night'],
   ink: ['ink-wash', 'ukiyo-e-wave', 'bamboo-grove', 'koi-pond', 'midnight-ink'],
   riso: ['risograph', 'halftone-harbor', 'halftone-harbor-night', 'papercut-peaks', 'papercut-peaks-night', 'origami-bay'],
+  reef: ['abyss-lantern', 'coral-reef', 'coral-reef-calm', 'tide-pool'],
+  dune: ['desert-night', 'desert-noon'],
+  ice: ['aurora-field', 'fog-valley', 'fog-valley-night', 'winter-lights', 'snow-station'],
+  festive: ['new-year-fireworks', 'new-year-fireworks-calm'],
+  porthole: ['beacon-cove', 'moonlit-shore', 'night-train'],
+  leaf: ['greenhouse-rain', 'autumn-forest'],
   pastel: ['sakura-drift', 'spring-rain', 'rooftop-garden', 'rooftop-garden-night', 'meadow-hours', 'sunny-shore', 'summer-fireflies', 'cloud-sea'],
 }
 

@@ -4,6 +4,11 @@ What changed in the library, by release. Releases follow the `theme-library` plu
 
 Update this file when you add themes or change the tools, and bump `theme-library`'s version in `theme-library/.claude-plugin/plugin.json` when its behavior changes.
 
+## 0.6.2: 2026-11-19 (84 themes)
+
+**Changed in `theme-library`**
+- Six new widget looks, so every scene theme now has one of its own: `reef` (coral-rimmed glass pebbles), `dune` (adobe tiles), `ice` (cut crystals), `festive` (gold starbursts), `porthole` (bolted brass) and `leaf` (green leaves with a stem). They go to the 18 themes that had only a generic look, and `/ccthemes widgets look <name>` takes them like the rest (19 looks in all).
+
 ## 0.6.1: 2026-11-19 (84 themes)
 
 **Changed in `theme-library`**
