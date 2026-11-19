@@ -24,7 +24,7 @@ Themes for the **Claude Code desktop app**: custom colors, and animated backdrop
 [<img src="docs/previews/sunny-shore.svg" width="300" alt="sunny-shore"><br>**sunny-shore**](themes/sunny-shore) | [<img src="docs/previews/tide-pool.svg" width="300" alt="tide-pool"><br>**tide-pool**](themes/tide-pool) | [<img src="docs/previews/torch-dungeon.svg" width="300" alt="torch-dungeon"><br>**torch-dungeon**](themes/torch-dungeon)
 <!-- previews:end -->
 
-*Previews show each theme's backdrop alone, not the app, and they move (a theme with colors only shows its palette). [`docs/index.html`](docs/index.html) is the same as one page with the install line under each.*
+*Previews show each theme's backdrop alone, not the app, and they move (a theme with colors only shows its palette). The [live gallery](https://perspicaciousguy.github.io/ClaudeCodeThemes/) shows them as one page with the install line under each.*
 
 <!-- themes:start -->
 | Theme | What it is |
