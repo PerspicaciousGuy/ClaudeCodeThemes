@@ -1,0 +1,19 @@
+{
+  "name": "bamboo-grove",
+  "version": "0.1.0",
+  "description": "A bamboo grove in morning mist: tall green stalks in layers fading into haze, leaves swaying, slow light shafts and a few leaves falling. Light.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "bamboo",
+    "mist",
+    "zen",
+    "green",
+    "light"
+  ]
+}

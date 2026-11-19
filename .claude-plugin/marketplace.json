@@ -28,9 +28,19 @@
       "description": "Northern lights over a frozen lake ringed by pines, with twinkling stars and the odd shooting star. Dark."
     },
     {
+      "name": "bamboo-grove",
+      "source": "./themes/bamboo-grove",
+      "description": "A bamboo grove in morning mist: tall green stalks in layers fading into haze, leaves swaying, slow light shafts and a few leaves falling. Light."
+    },
+    {
       "name": "beacon-cove",
       "source": "./themes/beacon-cove",
       "description": "An animated pixel-art theme that follows your clock: a lighthouse cape and sea from night through dawn, day and dusk, with a moving sun and moon, drifting clouds, a small boat and fireflies."
+    },
+    {
+      "name": "cloud-sea",
+      "source": "./themes/cloud-sea",
+      "description": "Sunrise above a sea of clouds: rolling banks of cloud drifting between dark peaks, a low sun, birds and a pastel sky from peach to blue. Light."
     },
     {
       "name": "code-rain",
@@ -56,6 +66,11 @@
       "name": "contour-map-night",
       "source": "./themes/contour-map-night",
       "description": "The topographic survey in pale ink on blue-black paper, with the contours drawing themselves. Dark."
+    },
+    {
+      "name": "coral-reef",
+      "source": "./themes/coral-reef",
+      "description": "A sunlit coral reef: caustic light rippling over branching corals and sea fans, schools of bright fish, a clownfish in an anemone, a turtle gliding by and rising bubbles. Dark."
     },
     {
       "name": "desert-night",
@@ -93,6 +108,11 @@
       "description": "Neutral graphite grays with one steel-blue accent. Quiet and tool-like, light and dark, colors only."
     },
     {
+      "name": "greenhouse-rain",
+      "source": "./themes/greenhouse-rain",
+      "description": "A glass greenhouse at dusk in the rain: streaks and drops running down the panes, big leaves and ferns swaying inside, warm hanging lamps and a drifting mist. Dark."
+    },
+    {
       "name": "halftone-harbor",
       "source": "./themes/halftone-harbor",
       "description": "A two-ink halftone print of a harbor at sunset: a coral sun and its wake, blue water, a headland with a lighthouse, two boats. Light."
@@ -121,6 +141,16 @@
       "name": "high-contrast-light",
       "source": "./themes/high-contrast-light",
       "description": "Black on white with deep, saturated colors: text well past the AA bar on every surface, and strong borders. Light, colors only."
+    },
+    {
+      "name": "koi-pond",
+      "source": "./themes/koi-pond",
+      "description": "A koi pond seen from above at dusk: orange and white koi gliding in slow loops, lily pads with pink flowers, ripples spreading and petals drifting on dark water. Dark."
+    },
+    {
+      "name": "lantern-festival",
+      "source": "./themes/lantern-festival",
+      "description": "A lantern festival on a lake at night: paper lanterns rising into a starry sky, their warm light shimmering on the water, a pagoda and hills in silhouette. Dark."
     },
     {
       "name": "low-orbit",

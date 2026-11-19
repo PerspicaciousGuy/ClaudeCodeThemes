@@ -1,0 +1,20 @@
+{
+  "name": "lantern-festival",
+  "version": "0.1.0",
+  "description": "A lantern festival on a lake at night: paper lanterns rising into a starry sky, their warm light shimmering on the water, a pagoda and hills in silhouette. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "lanterns",
+    "festival",
+    "lake",
+    "stars",
+    "night",
+    "dark"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "greenhouse-rain",
+  "version": "0.1.0",
+  "description": "A glass greenhouse at dusk in the rain: streaks and drops running down the panes, big leaves and ferns swaying inside, warm hanging lamps and a drifting mist. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "greenhouse",
+    "rain",
+    "plants",
+    "cozy",
+    "dark"
+  ]
+}

@@ -2,40 +2,46 @@
 import * as s0 from './scenes/abyss-lantern.js'
 import * as s1 from './scenes/arcade-hall.js'
 import * as s2 from './scenes/aurora-field.js'
-import * as s3 from './scenes/beacon-cove.js'
-import * as s4 from './scenes/code-rain.js'
-import * as s7 from './scenes/contour-map.js'
-import * as s8 from './scenes/contour-map-night.js'
-import * as s9 from './scenes/desert-night.js'
-import * as s10 from './scenes/desert-noon.js'
-import * as s11 from './scenes/fog-valley.js'
-import * as s12 from './scenes/fog-valley-night.js'
-import * as s14 from './scenes/forest-trail.js'
-import * as s16 from './scenes/halftone-harbor.js'
-import * as s17 from './scenes/halftone-harbor-night.js'
-import * as s18 from './scenes/haunted-manor.js'
-import * as s19 from './scenes/hearth.js'
-import * as s22 from './scenes/low-orbit.js'
-import * as s23 from './scenes/meadow-hours.js'
-import * as s25 from './scenes/moonlit-shore.js'
-import * as s26 from './scenes/neon-rain.js'
-import * as s27 from './scenes/night-market.js'
-import * as s28 from './scenes/night-train.js'
-import * as s30 from './scenes/papercut-peaks.js'
-import * as s31 from './scenes/papercut-peaks-night.js'
-import * as s32 from './scenes/pixel-cafe.js'
-import * as s33 from './scenes/rainy-window.js'
-import * as s34 from './scenes/reading-room.js'
-import * as s35 from './scenes/retro-grid.js'
-import * as s36 from './scenes/rooftop-garden.js'
-import * as s37 from './scenes/rooftop-garden-night.js'
-import * as s38 from './scenes/sakura-drift.js'
-import * as s39 from './scenes/snow-cabin.js'
-import * as s40 from './scenes/snow-cabin-day.js'
-import * as s41 from './scenes/snow-station.js'
-import * as s42 from './scenes/sunny-shore.js'
-import * as s43 from './scenes/tide-pool.js'
-import * as s44 from './scenes/torch-dungeon.js'
+import * as s3 from './scenes/bamboo-grove.js'
+import * as s4 from './scenes/beacon-cove.js'
+import * as s5 from './scenes/cloud-sea.js'
+import * as s6 from './scenes/code-rain.js'
+import * as s9 from './scenes/contour-map.js'
+import * as s10 from './scenes/contour-map-night.js'
+import * as s11 from './scenes/coral-reef.js'
+import * as s12 from './scenes/desert-night.js'
+import * as s13 from './scenes/desert-noon.js'
+import * as s14 from './scenes/fog-valley.js'
+import * as s15 from './scenes/fog-valley-night.js'
+import * as s17 from './scenes/forest-trail.js'
+import * as s19 from './scenes/greenhouse-rain.js'
+import * as s20 from './scenes/halftone-harbor.js'
+import * as s21 from './scenes/halftone-harbor-night.js'
+import * as s22 from './scenes/haunted-manor.js'
+import * as s23 from './scenes/hearth.js'
+import * as s26 from './scenes/koi-pond.js'
+import * as s27 from './scenes/lantern-festival.js'
+import * as s28 from './scenes/low-orbit.js'
+import * as s29 from './scenes/meadow-hours.js'
+import * as s31 from './scenes/moonlit-shore.js'
+import * as s32 from './scenes/neon-rain.js'
+import * as s33 from './scenes/night-market.js'
+import * as s34 from './scenes/night-train.js'
+import * as s36 from './scenes/papercut-peaks.js'
+import * as s37 from './scenes/papercut-peaks-night.js'
+import * as s38 from './scenes/pixel-cafe.js'
+import * as s39 from './scenes/rainy-window.js'
+import * as s40 from './scenes/reading-room.js'
+import * as s41 from './scenes/retro-grid.js'
+import * as s42 from './scenes/rooftop-garden.js'
+import * as s43 from './scenes/rooftop-garden-night.js'
+import * as s44 from './scenes/sakura-drift.js'
+import * as s45 from './scenes/snow-cabin.js'
+import * as s46 from './scenes/snow-cabin-day.js'
+import * as s47 from './scenes/snow-station.js'
+import * as s48 from './scenes/sunny-shore.js'
+import * as s49 from './scenes/tide-pool.js'
+import * as s50 from './scenes/torch-dungeon.js'
 
 const data = [
   {
@@ -162,6 +168,57 @@ const data = [
     }
   },
   {
+    "id": "bamboo-grove",
+    "title": "Bamboo Grove",
+    "blurb": "A bamboo grove in morning mist: tall green stalks in layers fading into haze, leaves swaying, slow light shafts and a few leaves falling. Light.",
+    "mode": "light",
+    "style": "vector",
+    "tags": [
+      "bamboo",
+      "mist",
+      "zen",
+      "green",
+      "light"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.55,
+      "tint": "#eef4e2"
+    },
+    "colors": {
+      "label": "Bamboo Grove",
+      "only": "light",
+      "roles": {
+        "accent": "#5b7f2a",
+        "danger": "#a8392c",
+        "success": "#2a7a52",
+        "warning": "#8a6410",
+        "pro": "#6b4a96"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#dfe8d2",
+            "surface-1": "#e9f0dd",
+            "surface-2": "#f4f8ea",
+            "text-primary": "#1b2a1a",
+            "text-secondary": "#394a35",
+            "text-muted": "#54664d"
+          }
+        },
+        "git": {
+          "added": "#1f6b34",
+          "removed": "#a8322a",
+          "modified": "#6e5208",
+          "merged": "#6a4a9a",
+          "closed": "#505660",
+          "conflicting": "#85440c",
+          "draft": "#505660"
+        }
+      }
+    }
+  },
+  {
     "id": "beacon-cove",
     "title": "Beacon Cove",
     "blurb": "An animated pixel-art theme that follows your clock: a lighthouse cape and sea from night through dawn, day and dusk, with a moving sun and moon, drifting clouds, a small boat and fireflies.",
@@ -196,6 +253,57 @@ const data = [
             "text-secondary": "#bcc4de",
             "text-muted": "#8e98ba"
           }
+        }
+      }
+    }
+  },
+  {
+    "id": "cloud-sea",
+    "title": "Cloud Sea",
+    "blurb": "Sunrise above a sea of clouds: rolling banks of cloud drifting between dark peaks, a low sun, birds and a pastel sky from peach to blue. Light.",
+    "mode": "light",
+    "style": "vector",
+    "tags": [
+      "clouds",
+      "sunrise",
+      "mountains",
+      "sky",
+      "light"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.55,
+      "tint": "#eef0f6"
+    },
+    "colors": {
+      "label": "Cloud Sea",
+      "only": "light",
+      "roles": {
+        "accent": "#b4502c",
+        "danger": "#b03a3a",
+        "success": "#2c7a58",
+        "warning": "#8a6410",
+        "pro": "#6a4fa8"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#e3e6ee",
+            "surface-1": "#edeff5",
+            "surface-2": "#f7f8fb",
+            "text-primary": "#1f2433",
+            "text-secondary": "#3d4660",
+            "text-muted": "#566080"
+          }
+        },
+        "git": {
+          "added": "#1f6b34",
+          "removed": "#a8322a",
+          "modified": "#6e5208",
+          "merged": "#6a4a9a",
+          "closed": "#505660",
+          "conflicting": "#85440c",
+          "draft": "#505660"
         }
       }
     }
@@ -416,6 +524,49 @@ const data = [
       }
     },
     "twin": "contour-map"
+  },
+  {
+    "id": "coral-reef",
+    "title": "Coral Reef",
+    "blurb": "A sunlit coral reef: caustic light rippling over branching corals and sea fans, schools of bright fish, a clownfish in an anemone, a turtle gliding by and rising bubbles. Dark.",
+    "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "reef",
+      "ocean",
+      "fish",
+      "colorful",
+      "dark"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#0a1f2a"
+    },
+    "colors": {
+      "label": "Coral Reef",
+      "only": "dark",
+      "roles": {
+        "accent": "#ff9466",
+        "danger": "#f0606a",
+        "success": "#62d99a",
+        "warning": "#f2c14e",
+        "pro": "#b79af0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#04141c",
+            "surface-1": "#0a1f2a",
+            "surface-2": "#112a37",
+            "surface-3": "#193546",
+            "text-primary": "#e8f4f6",
+            "text-secondary": "#bcd8dc",
+            "text-muted": "#8fb0b8"
+          }
+        }
+      }
+    }
   },
   {
     "id": "desert-night",
@@ -763,6 +914,49 @@ const data = [
     }
   },
   {
+    "id": "greenhouse-rain",
+    "title": "Greenhouse Rain",
+    "blurb": "A glass greenhouse at dusk in the rain: streaks and drops running down the panes, big leaves and ferns swaying inside, warm hanging lamps and a drifting mist. Dark.",
+    "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "greenhouse",
+      "rain",
+      "plants",
+      "cozy",
+      "dark"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#0d1b17"
+    },
+    "colors": {
+      "label": "Greenhouse Rain",
+      "only": "dark",
+      "roles": {
+        "accent": "#f0a95a",
+        "danger": "#ee7068",
+        "success": "#6fcf8f",
+        "warning": "#e6cc5c",
+        "pro": "#b99be6"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#07120f",
+            "surface-1": "#0d1b17",
+            "surface-2": "#142520",
+            "surface-3": "#1c302a",
+            "text-primary": "#e6f2ea",
+            "text-secondary": "#bdd3c6",
+            "text-muted": "#90ab9c"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "halftone-harbor",
     "title": "Halftone Harbor",
     "blurb": "A two-ink halftone print of a harbor at sunset: a coral sun and its wake, blue water, a headland with a lighthouse, two boats. Light.",
@@ -1032,6 +1226,93 @@ const data = [
       }
     },
     "twin": "high-contrast-dark"
+  },
+  {
+    "id": "koi-pond",
+    "title": "Koi Pond",
+    "blurb": "A koi pond seen from above at dusk: orange and white koi gliding in slow loops, lily pads with pink flowers, ripples spreading and petals drifting on dark water. Dark.",
+    "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "koi",
+      "pond",
+      "water",
+      "calm",
+      "dark"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#0c1e25"
+    },
+    "colors": {
+      "label": "Koi Pond",
+      "only": "dark",
+      "roles": {
+        "accent": "#ff8a4a",
+        "danger": "#ef6a6a",
+        "success": "#5fd1a4",
+        "warning": "#e8c55a",
+        "pro": "#b79af0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#06141a",
+            "surface-1": "#0c1e25",
+            "surface-2": "#13292f",
+            "surface-3": "#1b343b",
+            "text-primary": "#e6f2f2",
+            "text-secondary": "#bcd5d6",
+            "text-muted": "#8fadb0"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "lantern-festival",
+    "title": "Lantern Festival",
+    "blurb": "A lantern festival on a lake at night: paper lanterns rising into a starry sky, their warm light shimmering on the water, a pagoda and hills in silhouette. Dark.",
+    "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "lanterns",
+      "festival",
+      "lake",
+      "stars",
+      "night",
+      "dark"
+    ],
+    "glass": {
+      "blur": 12,
+      "opacity": 0.5,
+      "tint": "#0f1330"
+    },
+    "colors": {
+      "label": "Lantern Festival",
+      "only": "dark",
+      "roles": {
+        "accent": "#ff9a3a",
+        "danger": "#ef6a7a",
+        "success": "#6fd1a0",
+        "warning": "#f0c24a",
+        "pro": "#c08be0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#080b1c",
+            "surface-1": "#0f1330",
+            "surface-2": "#171c42",
+            "surface-3": "#202654",
+            "text-primary": "#eef0fa",
+            "text-secondary": "#c8cee8",
+            "text-muted": "#98a2cc"
+          }
+        }
+      }
+    }
   },
   {
     "id": "low-orbit",
@@ -2005,6 +2286,6 @@ const data = [
     }
   }
 ]
-const scenes = [s0, s1, s2, s3, s4, null, null, s7, s8, s9, s10, s11, s12, null, s14, null, s16, s17, s18, s19, null, null, s22, s23, null, s25, s26, s27, s28, null, s30, s31, s32, s33, s34, s35, s36, s37, s38, s39, s40, s41, s42, s43, s44]
+const scenes = [s0, s1, s2, s3, s4, s5, s6, null, null, s9, s10, s11, s12, s13, s14, s15, null, s17, null, s19, s20, s21, s22, s23, null, null, s26, s27, s28, s29, null, s31, s32, s33, s34, null, s36, s37, s38, s39, s40, s41, s42, s43, s44, s45, s46, s47, s48, s49, s50]
 
 export const THEMES = data.map((d, i) => ({ ...d, build: scenes[i] === null ? null : scenes[i].buildScene }))

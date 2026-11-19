@@ -4,6 +4,11 @@ What changed in the library, by release. Releases follow the `theme-library` plu
 
 Update this file when you add themes or change the tools, and bump `theme-library`'s version in `theme-library/.claude-plugin/plugin.json` when its behavior changes.
 
+## Unreleased (51 themes)
+
+**New themes (6), vector scenes (batch D)**
+- `greenhouse-rain`, `koi-pond` (seen from above), `bamboo-grove` (light, misty), `lantern-festival`, `cloud-sea` (light) and `coral-reef`.
+
 ## 0.3.0: 2026-11-19 (45 themes)
 
 **New themes (13)**
