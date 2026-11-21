@@ -431,6 +431,11 @@
       "name": "winter-lights",
       "source": "./themes/winter-lights",
       "description": "A snowy night dressed for the holidays: strings of colored lights twinkling in three phases, lit fir trees and a cottage, falling snow and a bright moon. Dark."
+    },
+    {
+      "name": "woodcut-cabin",
+      "source": "./themes/woodcut-cabin",
+      "description": "A winter print in two inks: a cut-line sky, hatched hills, black pines, a log cabin with one orange window, smoke and falling snow. Light."
     }
   ]
 }

@@ -70,6 +70,7 @@ import * as s75 from './scenes/tide-pool.js'
 import * as s76 from './scenes/torch-dungeon.js'
 import * as s77 from './scenes/ukiyo-e-wave.js'
 import * as s78 from './scenes/winter-lights.js'
+import * as s79 from './scenes/woodcut-cabin.js'
 
 const data = [
   {
@@ -3609,8 +3610,49 @@ const data = [
         }
       }
     }
+  },
+  {
+    "id": "woodcut-cabin",
+    "title": "Woodcut Cabin",
+    "blurb": "A winter print in two inks: a cut-line sky, hatched hills, black pines, a log cabin with one orange window, smoke and falling snow. Light.",
+    "mode": "light",
+    "style": "vector",
+    "tags": [
+      "woodcut",
+      "print",
+      "winter",
+      "light"
+    ],
+    "glass": {
+      "blur": 6,
+      "opacity": 0.62,
+      "tint": "#f1e8d3"
+    },
+    "colors": {
+      "label": "Woodcut Cabin",
+      "only": "light",
+      "roles": {
+        "accent": "#b4421c",
+        "danger": "#a8281f",
+        "success": "#3a6e3a",
+        "warning": "#8f5a00",
+        "pro": "#5e4a8f"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#e6dcc4",
+            "surface-1": "#eee5d0",
+            "surface-2": "#f6efdf",
+            "text-primary": "#1b1712",
+            "text-secondary": "#463c30",
+            "text-muted": "#5a4e40"
+          }
+        }
+      }
+    }
   }
 ]
-const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, null, null, s16, s17, s18, s19, s20, s21, s22, s23, s24, null, s26, null, s28, s29, s30, s31, s32, s33, s34, null, null, s37, s38, s39, s40, s41, s42, null, s44, s45, s46, s47, s48, s49, s50, s51, s52, s53, null, s55, s56, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77, s78]
+const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, null, null, s16, s17, s18, s19, s20, s21, s22, s23, s24, null, s26, null, s28, s29, s30, s31, s32, s33, s34, null, null, s37, s38, s39, s40, s41, s42, null, s44, s45, s46, s47, s48, s49, s50, s51, s52, s53, null, s55, s56, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77, s78, s79]
 
 export const THEMES = data.map((d, i) => ({ ...d, build: scenes[i] === null ? null : scenes[i].buildScene }))

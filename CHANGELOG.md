@@ -4,6 +4,11 @@ What changed in the library, by release. Releases follow the `theme-library` plu
 
 Update this file when you add themes or change the tools, and bump `theme-library`'s version in `theme-library/.claude-plugin/plugin.json` when its behavior changes.
 
+## Unreleased (85 themes)
+
+**New theme (1) in `theme-library`**
+- `woodcut-cabin` (light): a winter print in two inks, a sky of cut lines, hatched hills, black pines and a log cabin with one orange window, with smoke and snow in motion.
+
 ## 0.6.2: 2026-11-19 (84 themes)
 
 **Changed in `theme-library`**

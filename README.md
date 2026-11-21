@@ -35,6 +35,7 @@ Themes for the **Claude Code desktop app**: custom colors, and animated backdrop
 [<img src="docs/previews/summer-fireflies.svg" width="300" alt="summer-fireflies"><br>**summer-fireflies**](themes/summer-fireflies) | [<img src="docs/previews/sunny-shore.svg" width="300" alt="sunny-shore"><br>**sunny-shore**](themes/sunny-shore) | [<img src="docs/previews/tide.svg" width="300" alt="tide"><br>**tide**](themes/tide)
 [<img src="docs/previews/tide-pool.svg" width="300" alt="tide-pool"><br>**tide-pool**](themes/tide-pool) | [<img src="docs/previews/torch-dungeon.svg" width="300" alt="torch-dungeon"><br>**torch-dungeon**](themes/torch-dungeon) | [<img src="docs/previews/ukiyo-e-wave.svg" width="300" alt="ukiyo-e-wave"><br>**ukiyo-e-wave**](themes/ukiyo-e-wave)
 [<img src="docs/previews/weather-mood.svg" width="300" alt="weather-mood"><br>**weather-mood**](themes/weather-mood) | [<img src="docs/previews/weekly-sky.svg" width="300" alt="weekly-sky"><br>**weekly-sky**](themes/weekly-sky) | [<img src="docs/previews/winter-lights.svg" width="300" alt="winter-lights"><br>**winter-lights**](themes/winter-lights)
+[<img src="docs/previews/woodcut-cabin.svg" width="300" alt="woodcut-cabin"><br>**woodcut-cabin**](themes/woodcut-cabin) | |
 <!-- previews:end -->
 
 *Previews show each theme's backdrop alone (real screenshots are below), and they move (a theme with colors only shows its palette). The [live gallery](https://perspicaciousguy.github.io/ClaudeCodeThemes/) shows them as one page with the install line under each.*
@@ -136,6 +137,7 @@ The same themes in the desktop app, with the `/ccthemes` picker open over them: 
 | [**weather-mood**](themes/weather-mood) | A lighthouse on a rocky headland whose weather follows Claude: a clear calm night while it is idle, clouds and rain while it works (harder as the context window fills) and a flash of lightning when a tool call fails. A live theme. Dark. |
 | [**weekly-sky**](themes/weekly-sky) | A lakeside cabin under a sky that crosses a whole day as your 7-day usage window is used: sunrise at the start of the week, noon in the middle, sunset as you near the limit and night when you reach it. A live theme. Dark. |
 | [**winter-lights**](themes/winter-lights) | A snowy night dressed for the holidays: strings of colored lights twinkling in three phases, lit fir trees and a cottage, falling snow and a bright moon. Dark. |
+| [**woodcut-cabin**](themes/woodcut-cabin) | A winter print in two inks: a cut-line sky, hatched hills, black pines, a log cabin with one orange window, smoke and falling snow. Light. |
 <!-- themes:end -->
 
 ## Install

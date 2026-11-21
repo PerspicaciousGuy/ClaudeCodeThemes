@@ -1,0 +1,18 @@
+{
+  "name": "woodcut-cabin",
+  "version": "0.1.0",
+  "description": "A winter print in two inks: a cut-line sky, hatched hills, black pines, a log cabin with one orange window, smoke and falling snow. Light.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "woodcut",
+    "print",
+    "winter",
+    "light"
+  ]
+}
