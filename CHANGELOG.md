@@ -4,7 +4,12 @@ What changed in the library, by release. Releases follow the `theme-library` plu
 
 Update this file when you add themes or change the tools, and bump `theme-library`'s version in `theme-library/.claude-plugin/plugin.json` when its behavior changes.
 
-## Unreleased (91 themes)
+## Unreleased (94 themes)
+
+**New themes (3) in `theme-library`**: more new scenes
+- `station-window` (dark): a bolted space-station window over a sunlit Earth with drifting cloud bands, a sunrise on the limb, a passing satellite and a console strip of blinking lights.
+- `forge-glow` (dark): a blacksmith forge with a breathing furnace, an anvil with a glowing bar, hanging tools, sparks and rising embers.
+- `rice-terraces` (light): a misty morning over stepped rice paddies, with drifting mist, a small hut and egrets in flight.
 
 **New themes (3) in `theme-library`**: new scenes
 - `chalk-observatory` (dark): a slate board with a chalk observatory, a sweeping telescope, a crescent moon, twinkling stars, a constellation that draws itself and a shooting star.

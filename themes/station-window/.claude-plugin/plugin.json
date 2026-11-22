@@ -1,0 +1,19 @@
+{
+  "name": "station-window",
+  "version": "0.1.0",
+  "description": "A view from a space station: a thick bolted window frame, the curve of a sunlit Earth with drifting cloud bands, a sunrise on the limb, a passing satellite and a console strip of blinking lights. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "space",
+    "station",
+    "earth",
+    "window",
+    "dark"
+  ]
+}

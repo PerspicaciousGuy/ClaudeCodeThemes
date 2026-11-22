@@ -1,0 +1,19 @@
+{
+  "name": "rice-terraces",
+  "version": "0.1.0",
+  "description": "A misty morning over stepped rice terraces: pale mountains, a low sun, green steps alternating with sky-colored water, drifting mist, a small hut and egrets in flight. Light.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "rice",
+    "terraces",
+    "mist",
+    "morning",
+    "light"
+  ]
+}

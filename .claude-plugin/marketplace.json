@@ -158,6 +158,11 @@
       "description": "A pixel-art forest trail on a bright morning: sunbeams through layered trees, a winding dirt path, drifting mist, butterflies and falling leaves. Light."
     },
     {
+      "name": "forge-glow",
+      "source": "./themes/forge-glow",
+      "description": "A blacksmith forge at night: a stone wall, a furnace breathing orange light, an anvil with a glowing bar, hanging tools, sparks bursting off the anvil and embers rising. Dark."
+    },
+    {
       "name": "glow-grove",
       "source": "./themes/glow-grove",
       "description": "A forest at night: giant mushrooms glowing teal, violet and pink at the edges, small ones lighting the floor, spores and fireflies drifting up through slow fog. Dark."
@@ -348,6 +353,11 @@
       "description": "A neon horizon: a slatted sun, wireframe mountains and a perspective grid that rolls toward you. Dark."
     },
     {
+      "name": "rice-terraces",
+      "source": "./themes/rice-terraces",
+      "description": "A misty morning over stepped rice terraces: pale mountains, a low sun, green steps alternating with sky-colored water, drifting mist, a small hut and egrets in flight. Light."
+    },
+    {
       "name": "risograph",
       "source": "./themes/risograph",
       "description": "A risograph print: fluorescent pink, teal and yellow shapes overprinting on warm paper with halftone dots and slight misregistration, drifting as if the ink were still wet. Light."
@@ -396,6 +406,11 @@
       "name": "stained-glass",
       "source": "./themes/stained-glass",
       "description": "A cathedral window at night: four arched lancets of jewel-colored panes in dark lead, a slowly turning rose window and light drifting across the glass. Dark."
+    },
+    {
+      "name": "station-window",
+      "source": "./themes/station-window",
+      "description": "A view from a space station: a thick bolted window frame, the curve of a sunlit Earth with drifting cloud bands, a sunrise on the limb, a passing satellite and a console strip of blinking lights. Dark."
     },
     {
       "name": "summer-fireflies",

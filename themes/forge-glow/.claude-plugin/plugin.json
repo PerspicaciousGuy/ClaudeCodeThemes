@@ -1,0 +1,19 @@
+{
+  "name": "forge-glow",
+  "version": "0.1.0",
+  "description": "A blacksmith forge at night: a stone wall, a furnace breathing orange light, an anvil with a glowing bar, hanging tools, sparks bursting off the anvil and embers rising. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "forge",
+    "blacksmith",
+    "embers",
+    "fire",
+    "dark"
+  ]
+}

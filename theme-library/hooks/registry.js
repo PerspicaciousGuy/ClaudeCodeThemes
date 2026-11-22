@@ -24,59 +24,62 @@ import * as s23 from './scenes/desert-noon.js'
 import * as s24 from './scenes/fog-valley.js'
 import * as s25 from './scenes/fog-valley-night.js'
 import * as s27 from './scenes/forest-trail.js'
-import * as s28 from './scenes/glow-grove.js'
-import * as s30 from './scenes/greenhouse-rain.js'
-import * as s31 from './scenes/halftone-harbor.js'
-import * as s32 from './scenes/halftone-harbor-night.js'
-import * as s33 from './scenes/halloween-night.js'
-import * as s34 from './scenes/harvest-moon.js'
-import * as s35 from './scenes/haunted-manor.js'
-import * as s36 from './scenes/hearth.js'
-import * as s39 from './scenes/ink-wash.js'
-import * as s40 from './scenes/isometric-room.js'
-import * as s41 from './scenes/koi-pond.js'
-import * as s42 from './scenes/lantern-festival.js'
-import * as s43 from './scenes/low-orbit.js'
-import * as s44 from './scenes/meadow-hours.js'
-import * as s46 from './scenes/moonlit-shore.js'
-import * as s47 from './scenes/neon-rain.js'
-import * as s48 from './scenes/neon-rain-calm.js'
-import * as s49 from './scenes/new-year-fireworks.js'
-import * as s50 from './scenes/new-year-fireworks-calm.js'
-import * as s51 from './scenes/night-market.js'
-import * as s52 from './scenes/night-train.js'
-import * as s53 from './scenes/origami-bay.js'
-import * as s54 from './scenes/oscilloscope.js'
-import * as s55 from './scenes/oscilloscope-calm.js'
-import * as s57 from './scenes/papercut-peaks.js'
-import * as s58 from './scenes/papercut-peaks-night.js'
-import * as s59 from './scenes/pirate-cove.js'
-import * as s60 from './scenes/pirate-cove-night.js'
-import * as s61 from './scenes/pixel-cafe.js'
-import * as s62 from './scenes/rainy-window.js'
-import * as s63 from './scenes/reading-room.js'
-import * as s64 from './scenes/retro-grid.js'
-import * as s65 from './scenes/risograph.js'
-import * as s66 from './scenes/rooftop-garden.js'
-import * as s67 from './scenes/rooftop-garden-night.js'
-import * as s68 from './scenes/sakura-drift.js'
-import * as s69 from './scenes/snow-cabin.js'
-import * as s70 from './scenes/snow-cabin-day.js'
-import * as s71 from './scenes/snow-station.js'
-import * as s72 from './scenes/spooky-hollow.js'
-import * as s73 from './scenes/spring-rain.js'
-import * as s74 from './scenes/stained-glass.js'
-import * as s75 from './scenes/summer-fireflies.js'
-import * as s76 from './scenes/sunny-shore.js'
-import * as s77 from './scenes/tide-pool.js'
-import * as s78 from './scenes/torch-dungeon.js'
-import * as s79 from './scenes/ukiyo-e-wave.js'
-import * as s80 from './scenes/windfarm-dusk.js'
-import * as s81 from './scenes/winter-lights.js'
-import * as s82 from './scenes/woodcut-cabin.js'
-import * as s83 from './scenes/woodcut-cabin-night.js'
-import * as s84 from './scenes/woodcut-harbor.js'
-import * as s85 from './scenes/woodcut-rain-city.js'
+import * as s28 from './scenes/forge-glow.js'
+import * as s29 from './scenes/glow-grove.js'
+import * as s31 from './scenes/greenhouse-rain.js'
+import * as s32 from './scenes/halftone-harbor.js'
+import * as s33 from './scenes/halftone-harbor-night.js'
+import * as s34 from './scenes/halloween-night.js'
+import * as s35 from './scenes/harvest-moon.js'
+import * as s36 from './scenes/haunted-manor.js'
+import * as s37 from './scenes/hearth.js'
+import * as s40 from './scenes/ink-wash.js'
+import * as s41 from './scenes/isometric-room.js'
+import * as s42 from './scenes/koi-pond.js'
+import * as s43 from './scenes/lantern-festival.js'
+import * as s44 from './scenes/low-orbit.js'
+import * as s45 from './scenes/meadow-hours.js'
+import * as s47 from './scenes/moonlit-shore.js'
+import * as s48 from './scenes/neon-rain.js'
+import * as s49 from './scenes/neon-rain-calm.js'
+import * as s50 from './scenes/new-year-fireworks.js'
+import * as s51 from './scenes/new-year-fireworks-calm.js'
+import * as s52 from './scenes/night-market.js'
+import * as s53 from './scenes/night-train.js'
+import * as s54 from './scenes/origami-bay.js'
+import * as s55 from './scenes/oscilloscope.js'
+import * as s56 from './scenes/oscilloscope-calm.js'
+import * as s58 from './scenes/papercut-peaks.js'
+import * as s59 from './scenes/papercut-peaks-night.js'
+import * as s60 from './scenes/pirate-cove.js'
+import * as s61 from './scenes/pirate-cove-night.js'
+import * as s62 from './scenes/pixel-cafe.js'
+import * as s63 from './scenes/rainy-window.js'
+import * as s64 from './scenes/reading-room.js'
+import * as s65 from './scenes/retro-grid.js'
+import * as s66 from './scenes/rice-terraces.js'
+import * as s67 from './scenes/risograph.js'
+import * as s68 from './scenes/rooftop-garden.js'
+import * as s69 from './scenes/rooftop-garden-night.js'
+import * as s70 from './scenes/sakura-drift.js'
+import * as s71 from './scenes/snow-cabin.js'
+import * as s72 from './scenes/snow-cabin-day.js'
+import * as s73 from './scenes/snow-station.js'
+import * as s74 from './scenes/spooky-hollow.js'
+import * as s75 from './scenes/spring-rain.js'
+import * as s76 from './scenes/stained-glass.js'
+import * as s77 from './scenes/station-window.js'
+import * as s78 from './scenes/summer-fireflies.js'
+import * as s79 from './scenes/sunny-shore.js'
+import * as s80 from './scenes/tide-pool.js'
+import * as s81 from './scenes/torch-dungeon.js'
+import * as s82 from './scenes/ukiyo-e-wave.js'
+import * as s83 from './scenes/windfarm-dusk.js'
+import * as s84 from './scenes/winter-lights.js'
+import * as s85 from './scenes/woodcut-cabin.js'
+import * as s86 from './scenes/woodcut-cabin-night.js'
+import * as s87 from './scenes/woodcut-harbor.js'
+import * as s88 from './scenes/woodcut-rain-city.js'
 
 const data = [
   {
@@ -1322,6 +1325,49 @@ const data = [
           "closed": "#505660",
           "conflicting": "#85440c",
           "draft": "#505660"
+        }
+      }
+    }
+  },
+  {
+    "id": "forge-glow",
+    "title": "Forge Glow",
+    "blurb": "A blacksmith forge at night: a stone wall, a furnace breathing orange light, an anvil with a glowing bar, hanging tools, sparks bursting off the anvil and embers rising. Dark.",
+    "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "forge",
+      "blacksmith",
+      "embers",
+      "fire",
+      "dark"
+    ],
+    "glass": {
+      "blur": 8,
+      "opacity": 0.6,
+      "tint": "#140d0b"
+    },
+    "colors": {
+      "label": "Forge Glow",
+      "only": "dark",
+      "roles": {
+        "accent": "#ff9a4d",
+        "danger": "#ff8a7a",
+        "success": "#8fcf8a",
+        "warning": "#f0c45a",
+        "pro": "#b9a4f0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#120c0a",
+            "surface-1": "#1a1210",
+            "surface-2": "#251a16",
+            "surface-3": "#30231e",
+            "text-primary": "#f6ebdf",
+            "text-secondary": "#d4c4b4",
+            "text-muted": "#a8998b"
+          }
         }
       }
     }
@@ -2984,6 +3030,48 @@ const data = [
     }
   },
   {
+    "id": "rice-terraces",
+    "title": "Rice Terraces",
+    "blurb": "A misty morning over stepped rice terraces: pale mountains, a low sun, green steps alternating with sky-colored water, drifting mist, a small hut and egrets in flight. Light.",
+    "mode": "light",
+    "style": "vector",
+    "tags": [
+      "rice",
+      "terraces",
+      "mist",
+      "morning",
+      "light"
+    ],
+    "glass": {
+      "blur": 8,
+      "opacity": 0.55,
+      "tint": "#eef4e4"
+    },
+    "colors": {
+      "label": "Rice Terraces",
+      "only": "light",
+      "roles": {
+        "accent": "#2a6a46",
+        "danger": "#a8281f",
+        "success": "#2f6f48",
+        "warning": "#865400",
+        "pro": "#5e4a9f"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#dfe8d4",
+            "surface-1": "#e9f0df",
+            "surface-2": "#f3f8ec",
+            "text-primary": "#1d2a1c",
+            "text-secondary": "#3e4f3b",
+            "text-muted": "#54664f"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "risograph",
     "title": "Risograph",
     "blurb": "A risograph print: fluorescent pink, teal and yellow shapes overprinting on warm paper with halftone dots and slight misregistration, drifting as if the ink were still wet. Light.",
@@ -3435,6 +3523,49 @@ const data = [
             "text-primary": "#f2ecf6",
             "text-secondary": "#d0c6dc",
             "text-muted": "#a498b6"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "station-window",
+    "title": "Station Window",
+    "blurb": "A view from a space station: a thick bolted window frame, the curve of a sunlit Earth with drifting cloud bands, a sunrise on the limb, a passing satellite and a console strip of blinking lights. Dark.",
+    "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "space",
+      "station",
+      "earth",
+      "window",
+      "dark"
+    ],
+    "glass": {
+      "blur": 8,
+      "opacity": 0.58,
+      "tint": "#0b1019"
+    },
+    "colors": {
+      "label": "Station Window",
+      "only": "dark",
+      "roles": {
+        "accent": "#5fb4ff",
+        "danger": "#ff8a7a",
+        "success": "#8fcf8a",
+        "warning": "#f0c45a",
+        "pro": "#b9a4f0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#0b0f18",
+            "surface-1": "#121824",
+            "surface-2": "#1b2332",
+            "surface-3": "#252f42",
+            "text-primary": "#eaf0fb",
+            "text-secondary": "#c1cbdd",
+            "text-muted": "#97a3ba"
           }
         }
       }
@@ -3917,6 +4048,6 @@ const data = [
     }
   }
 ]
-const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, null, null, s17, s18, s19, s20, s21, s22, s23, s24, s25, null, s27, s28, null, s30, s31, s32, s33, s34, s35, s36, null, null, s39, s40, s41, s42, s43, s44, null, s46, s47, s48, s49, s50, s51, s52, s53, s54, s55, null, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77, s78, s79, s80, s81, s82, s83, s84, s85]
+const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, null, null, s17, s18, s19, s20, s21, s22, s23, s24, s25, null, s27, s28, s29, null, s31, s32, s33, s34, s35, s36, s37, null, null, s40, s41, s42, s43, s44, s45, null, s47, s48, s49, s50, s51, s52, s53, s54, s55, s56, null, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77, s78, s79, s80, s81, s82, s83, s84, s85, s86, s87, s88]
 
 export const THEMES = data.map((d, i) => ({ ...d, build: scenes[i] === null ? null : scenes[i].buildScene }))
