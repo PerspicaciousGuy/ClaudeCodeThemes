@@ -1,0 +1,19 @@
+{
+  "name": "chalk-observatory",
+  "version": "0.1.0",
+  "description": "A night sky in chalk on a slate board: a hilltop observatory whose telescope sweeps the sky, a crescent moon, twinkling stars, a constellation that draws itself and a shooting star. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "chalk",
+    "night",
+    "stars",
+    "observatory",
+    "dark"
+  ]
+}

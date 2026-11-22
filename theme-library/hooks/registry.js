@@ -8,72 +8,75 @@ import * as s5 from './scenes/bamboo-grove.js'
 import * as s6 from './scenes/beacon-cove.js'
 import * as s7 from './scenes/blueprint.js'
 import * as s8 from './scenes/cassette-futurism.js'
-import * as s9 from './scenes/circuit-board.js'
-import * as s10 from './scenes/circuit-board-calm.js'
-import * as s11 from './scenes/cloud-sea.js'
-import * as s12 from './scenes/code-rain.js'
-import * as s13 from './scenes/code-rain-calm.js'
-import * as s16 from './scenes/constellations.js'
-import * as s17 from './scenes/contour-map.js'
-import * as s18 from './scenes/contour-map-night.js'
-import * as s19 from './scenes/coral-reef.js'
-import * as s20 from './scenes/coral-reef-calm.js'
-import * as s21 from './scenes/desert-night.js'
-import * as s22 from './scenes/desert-noon.js'
-import * as s23 from './scenes/fog-valley.js'
-import * as s24 from './scenes/fog-valley-night.js'
-import * as s26 from './scenes/forest-trail.js'
-import * as s28 from './scenes/greenhouse-rain.js'
-import * as s29 from './scenes/halftone-harbor.js'
-import * as s30 from './scenes/halftone-harbor-night.js'
-import * as s31 from './scenes/halloween-night.js'
-import * as s32 from './scenes/harvest-moon.js'
-import * as s33 from './scenes/haunted-manor.js'
-import * as s34 from './scenes/hearth.js'
-import * as s37 from './scenes/ink-wash.js'
-import * as s38 from './scenes/isometric-room.js'
-import * as s39 from './scenes/koi-pond.js'
-import * as s40 from './scenes/lantern-festival.js'
-import * as s41 from './scenes/low-orbit.js'
-import * as s42 from './scenes/meadow-hours.js'
-import * as s44 from './scenes/moonlit-shore.js'
-import * as s45 from './scenes/neon-rain.js'
-import * as s46 from './scenes/neon-rain-calm.js'
-import * as s47 from './scenes/new-year-fireworks.js'
-import * as s48 from './scenes/new-year-fireworks-calm.js'
-import * as s49 from './scenes/night-market.js'
-import * as s50 from './scenes/night-train.js'
-import * as s51 from './scenes/origami-bay.js'
-import * as s52 from './scenes/oscilloscope.js'
-import * as s53 from './scenes/oscilloscope-calm.js'
-import * as s55 from './scenes/papercut-peaks.js'
-import * as s56 from './scenes/papercut-peaks-night.js'
-import * as s57 from './scenes/pirate-cove.js'
-import * as s58 from './scenes/pirate-cove-night.js'
-import * as s59 from './scenes/pixel-cafe.js'
-import * as s60 from './scenes/rainy-window.js'
-import * as s61 from './scenes/reading-room.js'
-import * as s62 from './scenes/retro-grid.js'
-import * as s63 from './scenes/risograph.js'
-import * as s64 from './scenes/rooftop-garden.js'
-import * as s65 from './scenes/rooftop-garden-night.js'
-import * as s66 from './scenes/sakura-drift.js'
-import * as s67 from './scenes/snow-cabin.js'
-import * as s68 from './scenes/snow-cabin-day.js'
-import * as s69 from './scenes/snow-station.js'
-import * as s70 from './scenes/spooky-hollow.js'
-import * as s71 from './scenes/spring-rain.js'
-import * as s72 from './scenes/stained-glass.js'
-import * as s73 from './scenes/summer-fireflies.js'
-import * as s74 from './scenes/sunny-shore.js'
-import * as s75 from './scenes/tide-pool.js'
-import * as s76 from './scenes/torch-dungeon.js'
-import * as s77 from './scenes/ukiyo-e-wave.js'
-import * as s78 from './scenes/winter-lights.js'
-import * as s79 from './scenes/woodcut-cabin.js'
-import * as s80 from './scenes/woodcut-cabin-night.js'
-import * as s81 from './scenes/woodcut-harbor.js'
-import * as s82 from './scenes/woodcut-rain-city.js'
+import * as s9 from './scenes/chalk-observatory.js'
+import * as s10 from './scenes/circuit-board.js'
+import * as s11 from './scenes/circuit-board-calm.js'
+import * as s12 from './scenes/cloud-sea.js'
+import * as s13 from './scenes/code-rain.js'
+import * as s14 from './scenes/code-rain-calm.js'
+import * as s17 from './scenes/constellations.js'
+import * as s18 from './scenes/contour-map.js'
+import * as s19 from './scenes/contour-map-night.js'
+import * as s20 from './scenes/coral-reef.js'
+import * as s21 from './scenes/coral-reef-calm.js'
+import * as s22 from './scenes/desert-night.js'
+import * as s23 from './scenes/desert-noon.js'
+import * as s24 from './scenes/fog-valley.js'
+import * as s25 from './scenes/fog-valley-night.js'
+import * as s27 from './scenes/forest-trail.js'
+import * as s28 from './scenes/glow-grove.js'
+import * as s30 from './scenes/greenhouse-rain.js'
+import * as s31 from './scenes/halftone-harbor.js'
+import * as s32 from './scenes/halftone-harbor-night.js'
+import * as s33 from './scenes/halloween-night.js'
+import * as s34 from './scenes/harvest-moon.js'
+import * as s35 from './scenes/haunted-manor.js'
+import * as s36 from './scenes/hearth.js'
+import * as s39 from './scenes/ink-wash.js'
+import * as s40 from './scenes/isometric-room.js'
+import * as s41 from './scenes/koi-pond.js'
+import * as s42 from './scenes/lantern-festival.js'
+import * as s43 from './scenes/low-orbit.js'
+import * as s44 from './scenes/meadow-hours.js'
+import * as s46 from './scenes/moonlit-shore.js'
+import * as s47 from './scenes/neon-rain.js'
+import * as s48 from './scenes/neon-rain-calm.js'
+import * as s49 from './scenes/new-year-fireworks.js'
+import * as s50 from './scenes/new-year-fireworks-calm.js'
+import * as s51 from './scenes/night-market.js'
+import * as s52 from './scenes/night-train.js'
+import * as s53 from './scenes/origami-bay.js'
+import * as s54 from './scenes/oscilloscope.js'
+import * as s55 from './scenes/oscilloscope-calm.js'
+import * as s57 from './scenes/papercut-peaks.js'
+import * as s58 from './scenes/papercut-peaks-night.js'
+import * as s59 from './scenes/pirate-cove.js'
+import * as s60 from './scenes/pirate-cove-night.js'
+import * as s61 from './scenes/pixel-cafe.js'
+import * as s62 from './scenes/rainy-window.js'
+import * as s63 from './scenes/reading-room.js'
+import * as s64 from './scenes/retro-grid.js'
+import * as s65 from './scenes/risograph.js'
+import * as s66 from './scenes/rooftop-garden.js'
+import * as s67 from './scenes/rooftop-garden-night.js'
+import * as s68 from './scenes/sakura-drift.js'
+import * as s69 from './scenes/snow-cabin.js'
+import * as s70 from './scenes/snow-cabin-day.js'
+import * as s71 from './scenes/snow-station.js'
+import * as s72 from './scenes/spooky-hollow.js'
+import * as s73 from './scenes/spring-rain.js'
+import * as s74 from './scenes/stained-glass.js'
+import * as s75 from './scenes/summer-fireflies.js'
+import * as s76 from './scenes/sunny-shore.js'
+import * as s77 from './scenes/tide-pool.js'
+import * as s78 from './scenes/torch-dungeon.js'
+import * as s79 from './scenes/ukiyo-e-wave.js'
+import * as s80 from './scenes/windfarm-dusk.js'
+import * as s81 from './scenes/winter-lights.js'
+import * as s82 from './scenes/woodcut-cabin.js'
+import * as s83 from './scenes/woodcut-cabin-night.js'
+import * as s84 from './scenes/woodcut-harbor.js'
+import * as s85 from './scenes/woodcut-rain-city.js'
 
 const data = [
   {
@@ -460,6 +463,49 @@ const data = [
             "text-primary": "#ffe8c0",
             "text-secondary": "#e0c490",
             "text-muted": "#b09868"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "chalk-observatory",
+    "title": "Chalk Observatory",
+    "blurb": "A night sky in chalk on a slate board: a hilltop observatory whose telescope sweeps the sky, a crescent moon, twinkling stars, a constellation that draws itself and a shooting star. Dark.",
+    "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "chalk",
+      "night",
+      "stars",
+      "observatory",
+      "dark"
+    ],
+    "glass": {
+      "blur": 6,
+      "opacity": 0.6,
+      "tint": "#182021"
+    },
+    "colors": {
+      "label": "Chalk Observatory",
+      "only": "dark",
+      "roles": {
+        "accent": "#f2c94c",
+        "danger": "#ff8a7a",
+        "success": "#8fcf8a",
+        "warning": "#f0c45a",
+        "pro": "#b9a4f0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#161d1e",
+            "surface-1": "#1d2627",
+            "surface-2": "#273233",
+            "surface-3": "#313e40",
+            "text-primary": "#f1efe3",
+            "text-secondary": "#cfcdbd",
+            "text-muted": "#a8a696"
           }
         }
       }
@@ -1276,6 +1322,49 @@ const data = [
           "closed": "#505660",
           "conflicting": "#85440c",
           "draft": "#505660"
+        }
+      }
+    }
+  },
+  {
+    "id": "glow-grove",
+    "title": "Glow Grove",
+    "blurb": "A forest at night: giant mushrooms glowing teal, violet and pink at the edges, small ones lighting the floor, spores and fireflies drifting up through slow fog. Dark.",
+    "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "mushrooms",
+      "forest",
+      "glow",
+      "night",
+      "dark"
+    ],
+    "glass": {
+      "blur": 8,
+      "opacity": 0.58,
+      "tint": "#0d1519"
+    },
+    "colors": {
+      "label": "Glow Grove",
+      "only": "dark",
+      "roles": {
+        "accent": "#5fe3c4",
+        "danger": "#ff8a7a",
+        "success": "#8fcf8a",
+        "warning": "#f0c45a",
+        "pro": "#b9a4f0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#0d1316",
+            "surface-1": "#131b20",
+            "surface-2": "#1b252c",
+            "surface-3": "#243039",
+            "text-primary": "#e6f1ee",
+            "text-secondary": "#bfd0cc",
+            "text-muted": "#93a8a4"
+          }
         }
       }
     }
@@ -3571,6 +3660,48 @@ const data = [
     }
   },
   {
+    "id": "windfarm-dusk",
+    "title": "Windfarm Dusk",
+    "blurb": "A peach and lilac evening over plum hills, with a low sun, drifting clouds, birds and a field of wind turbines turning at different speeds. Light.",
+    "mode": "light",
+    "style": "vector",
+    "tags": [
+      "dusk",
+      "turbines",
+      "landscape",
+      "vector",
+      "light"
+    ],
+    "glass": {
+      "blur": 8,
+      "opacity": 0.55,
+      "tint": "#f6e6e0"
+    },
+    "colors": {
+      "label": "Windfarm Dusk",
+      "only": "light",
+      "roles": {
+        "accent": "#a8325e",
+        "danger": "#a8281f",
+        "success": "#2f6f48",
+        "warning": "#8a5200",
+        "pro": "#5e4a9f"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#ecd6d0",
+            "surface-1": "#f3e3de",
+            "surface-2": "#faf0ec",
+            "text-primary": "#2a1d2e",
+            "text-secondary": "#4f3d54",
+            "text-muted": "#644f6a"
+          }
+        }
+      }
+    }
+  },
+  {
     "id": "winter-lights",
     "title": "Winter Lights",
     "blurb": "A snowy night dressed for the holidays: strings of colored lights twinkling in three phases, lit fir trees and a cottage, falling snow and a bright moon. Dark.",
@@ -3786,6 +3917,6 @@ const data = [
     }
   }
 ]
-const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, null, null, s16, s17, s18, s19, s20, s21, s22, s23, s24, null, s26, null, s28, s29, s30, s31, s32, s33, s34, null, null, s37, s38, s39, s40, s41, s42, null, s44, s45, s46, s47, s48, s49, s50, s51, s52, s53, null, s55, s56, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77, s78, s79, s80, s81, s82]
+const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, null, null, s17, s18, s19, s20, s21, s22, s23, s24, s25, null, s27, s28, null, s30, s31, s32, s33, s34, s35, s36, null, null, s39, s40, s41, s42, s43, s44, null, s46, s47, s48, s49, s50, s51, s52, s53, s54, s55, null, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77, s78, s79, s80, s81, s82, s83, s84, s85]
 
 export const THEMES = data.map((d, i) => ({ ...d, build: scenes[i] === null ? null : scenes[i].buildScene }))

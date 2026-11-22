@@ -1,0 +1,19 @@
+{
+  "name": "glow-grove",
+  "version": "0.1.0",
+  "description": "A forest at night: giant mushrooms glowing teal, violet and pink at the edges, small ones lighting the floor, spores and fireflies drifting up through slow fog. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "mushrooms",
+    "forest",
+    "glow",
+    "night",
+    "dark"
+  ]
+}

@@ -4,7 +4,12 @@ What changed in the library, by release. Releases follow the `theme-library` plu
 
 Update this file when you add themes or change the tools, and bump `theme-library`'s version in `theme-library/.claude-plugin/plugin.json` when its behavior changes.
 
-## Unreleased (88 themes)
+## Unreleased (91 themes)
+
+**New themes (3) in `theme-library`**: new scenes
+- `chalk-observatory` (dark): a slate board with a chalk observatory, a sweeping telescope, a crescent moon, twinkling stars, a constellation that draws itself and a shooting star.
+- `windfarm-dusk` (light): a lilac and peach evening, plum hills and a field of turbines turning at different speeds, with clouds and birds.
+- `glow-grove` (dark): a night forest lit by giant glowing mushrooms, with fog, rising spores and fireflies.
 
 **New themes (4) in `theme-library`**: a woodcut print style
 - `woodcut-cabin` (light): a winter print in two inks, a sky of cut lines, hatched hills, black pines and a log cabin with one orange window, with smoke and snow in motion.

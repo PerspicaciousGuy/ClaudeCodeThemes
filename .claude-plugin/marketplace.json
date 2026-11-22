@@ -63,6 +63,11 @@
       "description": "A 1980s vision of the future: an amber monochrome console with a sweeping radar, a spectrum, scrolling data, turning cassette reels, blinking lights and scanlines. Dark."
     },
     {
+      "name": "chalk-observatory",
+      "source": "./themes/chalk-observatory",
+      "description": "A night sky in chalk on a slate board: a hilltop observatory whose telescope sweeps the sky, a crescent moon, twinkling stars, a constellation that draws itself and a shooting star. Dark."
+    },
+    {
       "name": "circuit-board",
       "source": "./themes/circuit-board",
       "description": "A green circuit board: traces between pads and chips, bright pulses of light running along them and small LEDs blinking on their own beats. Dark."
@@ -151,6 +156,11 @@
       "name": "forest-trail",
       "source": "./themes/forest-trail",
       "description": "A pixel-art forest trail on a bright morning: sunbeams through layered trees, a winding dirt path, drifting mist, butterflies and falling leaves. Light."
+    },
+    {
+      "name": "glow-grove",
+      "source": "./themes/glow-grove",
+      "description": "A forest at night: giant mushrooms glowing teal, violet and pink at the edges, small ones lighting the floor, spores and fireflies drifting up through slow fog. Dark."
     },
     {
       "name": "graphite",
@@ -426,6 +436,11 @@
       "name": "weekly-sky",
       "source": "./themes/weekly-sky",
       "description": "A lakeside cabin under a sky that crosses a whole day as your 7-day usage window is used: sunrise at the start of the week, noon in the middle, sunset as you near the limit and night when you reach it. A live theme. Dark."
+    },
+    {
+      "name": "windfarm-dusk",
+      "source": "./themes/windfarm-dusk",
+      "description": "A peach and lilac evening over plum hills, with a low sun, drifting clouds, birds and a field of wind turbines turning at different speeds. Light."
     },
     {
       "name": "winter-lights",
