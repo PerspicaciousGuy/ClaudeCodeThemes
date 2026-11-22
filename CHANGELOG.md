@@ -4,7 +4,7 @@ What changed in the library, by release. Releases follow the `theme-library` plu
 
 Update this file when you add themes or change the tools, and bump `theme-library`'s version in `theme-library/.claude-plugin/plugin.json` when its behavior changes.
 
-## Unreleased (94 themes)
+## 0.6.3: 2026-11-22 (94 themes)
 
 **New themes (3) in `theme-library`**: more new scenes
 - `station-window` (dark): a bolted space-station window over a sunlit Earth with drifting cloud bands, a sunrise on the limb, a passing satellite and a console strip of blinking lights.
@@ -21,6 +21,9 @@ Update this file when you add themes or change the tools, and bump `theme-librar
 - `woodcut-cabin-night` (dark): its night twin, on night-blue stock with a cream moon and stars.
 - `woodcut-harbor` (light): wavy cut-line sea that drifts, a striped lighthouse with a pulsing orange lamp, a sailboat and gulls.
 - `woodcut-rain-city` (dark): black towers with flickering cream and orange windows under rain and a hatched moon.
+
+**theme-library**
+- Now holds 89 themes, up from 79. The 5 live themes are still left out of it.
 
 ## 0.6.2: 2026-11-19 (84 themes)
 
