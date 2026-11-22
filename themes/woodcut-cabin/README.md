@@ -4,6 +4,6 @@ A winter print in two inks. Cream paper and near-black ink, with one orange wind
 
 ![Woodcut Cabin backdrop](../../docs/previews/woodcut-cabin.png)
 
-It is a light theme and keeps the app light. The panels are frosted over the print so text stays readable. Animations stop if your system asks for reduced motion.
+It is a light theme and keeps the app light. The panels are frosted over the print so text stays readable. Animations stop if your system asks for reduced motion. Its night twin is `woodcut-cabin-night`.
 
 Install: `/plugin install woodcut-cabin --marketplace PerspicaciousGuy/ClaudeCodeThemes` (see the [repository README](../../README.md#install) for the desktop app and shell steps).

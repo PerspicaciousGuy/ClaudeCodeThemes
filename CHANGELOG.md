@@ -4,10 +4,13 @@ What changed in the library, by release. Releases follow the `theme-library` plu
 
 Update this file when you add themes or change the tools, and bump `theme-library`'s version in `theme-library/.claude-plugin/plugin.json` when its behavior changes.
 
-## Unreleased (85 themes)
+## Unreleased (88 themes)
 
-**New theme (1) in `theme-library`**
+**New themes (4) in `theme-library`**: a woodcut print style
 - `woodcut-cabin` (light): a winter print in two inks, a sky of cut lines, hatched hills, black pines and a log cabin with one orange window, with smoke and snow in motion.
+- `woodcut-cabin-night` (dark): its night twin, on night-blue stock with a cream moon and stars.
+- `woodcut-harbor` (light): wavy cut-line sea that drifts, a striped lighthouse with a pulsing orange lamp, a sailboat and gulls.
+- `woodcut-rain-city` (dark): black towers with flickering cream and orange windows under rain and a hatched moon.
 
 ## 0.6.2: 2026-11-19 (84 themes)
 

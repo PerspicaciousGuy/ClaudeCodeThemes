@@ -1,0 +1,19 @@
+{
+  "name": "woodcut-cabin-night",
+  "version": "0.1.0",
+  "description": "A winter print on night stock: cut-line sky, a moon, black pines edged in cream, a log cabin with one orange window, smoke and falling snow. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "woodcut",
+    "print",
+    "night",
+    "winter",
+    "dark"
+  ]
+}

@@ -436,6 +436,21 @@
       "name": "woodcut-cabin",
       "source": "./themes/woodcut-cabin",
       "description": "A winter print in two inks: a cut-line sky, hatched hills, black pines, a log cabin with one orange window, smoke and falling snow. Light."
+    },
+    {
+      "name": "woodcut-cabin-night",
+      "source": "./themes/woodcut-cabin-night",
+      "description": "A winter print on night stock: cut-line sky, a moon, black pines edged in cream, a log cabin with one orange window, smoke and falling snow. Dark."
+    },
+    {
+      "name": "woodcut-harbor",
+      "source": "./themes/woodcut-harbor",
+      "description": "A harbor in two inks: wavy cut-line water, a black headland with a striped lighthouse and orange lamp, a sailboat, gulls and a paper sun. Light."
+    },
+    {
+      "name": "woodcut-rain-city",
+      "source": "./themes/woodcut-rain-city",
+      "description": "A night city in the rain, cut in two inks on dark stock: black towers with cream windows, a hatched moon behind cloud, rain streaks and a wet street. Dark."
     }
   ]
 }

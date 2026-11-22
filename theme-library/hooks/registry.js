@@ -71,6 +71,9 @@ import * as s76 from './scenes/torch-dungeon.js'
 import * as s77 from './scenes/ukiyo-e-wave.js'
 import * as s78 from './scenes/winter-lights.js'
 import * as s79 from './scenes/woodcut-cabin.js'
+import * as s80 from './scenes/woodcut-cabin-night.js'
+import * as s81 from './scenes/woodcut-harbor.js'
+import * as s82 from './scenes/woodcut-rain-city.js'
 
 const data = [
   {
@@ -3650,9 +3653,139 @@ const data = [
           }
         }
       }
+    },
+    "twin": "woodcut-cabin-night"
+  },
+  {
+    "id": "woodcut-cabin-night",
+    "title": "Woodcut Cabin Night",
+    "blurb": "A winter print on night stock: cut-line sky, a moon, black pines edged in cream, a log cabin with one orange window, smoke and falling snow. Dark.",
+    "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "woodcut",
+      "print",
+      "night",
+      "winter",
+      "dark"
+    ],
+    "glass": {
+      "blur": 6,
+      "opacity": 0.6,
+      "tint": "#141820"
+    },
+    "colors": {
+      "label": "Woodcut Cabin Night",
+      "only": "dark",
+      "roles": {
+        "accent": "#ee8a55",
+        "danger": "#ff8a7a",
+        "success": "#8fcf8a",
+        "warning": "#f0c45a",
+        "pro": "#b9a4f0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#12151c",
+            "surface-1": "#191d27",
+            "surface-2": "#222836",
+            "surface-3": "#2b3242",
+            "text-primary": "#f1e9d4",
+            "text-secondary": "#cfc6af",
+            "text-muted": "#a49b86"
+          }
+        }
+      }
+    },
+    "twin": "woodcut-cabin"
+  },
+  {
+    "id": "woodcut-harbor",
+    "title": "Woodcut Harbor",
+    "blurb": "A harbor in two inks: wavy cut-line water, a black headland with a striped lighthouse and orange lamp, a sailboat, gulls and a paper sun. Light.",
+    "mode": "light",
+    "style": "vector",
+    "tags": [
+      "woodcut",
+      "print",
+      "harbor",
+      "sea",
+      "light"
+    ],
+    "glass": {
+      "blur": 6,
+      "opacity": 0.62,
+      "tint": "#f1e8d3"
+    },
+    "colors": {
+      "label": "Woodcut Harbor",
+      "only": "light",
+      "roles": {
+        "accent": "#b4421c",
+        "danger": "#a8281f",
+        "success": "#3a6e3a",
+        "warning": "#8f5a00",
+        "pro": "#5e4a8f"
+      },
+      "light": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#e6dcc4",
+            "surface-1": "#eee5d0",
+            "surface-2": "#f6efdf",
+            "text-primary": "#1b1712",
+            "text-secondary": "#463c30",
+            "text-muted": "#5a4e40"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "woodcut-rain-city",
+    "title": "Woodcut Rain City",
+    "blurb": "A night city in the rain, cut in two inks on dark stock: black towers with cream windows, a hatched moon behind cloud, rain streaks and a wet street. Dark.",
+    "mode": "dark",
+    "style": "vector",
+    "tags": [
+      "woodcut",
+      "print",
+      "city",
+      "rain",
+      "dark"
+    ],
+    "glass": {
+      "blur": 6,
+      "opacity": 0.6,
+      "tint": "#14171e"
+    },
+    "colors": {
+      "label": "Woodcut Rain City",
+      "only": "dark",
+      "roles": {
+        "accent": "#ee8a55",
+        "danger": "#ff8a7a",
+        "success": "#8fcf8a",
+        "warning": "#f0c45a",
+        "pro": "#b9a4f0"
+      },
+      "dark": {
+        "gray": {
+          "anchors": {
+            "surface-0": "#13151b",
+            "surface-1": "#1a1d25",
+            "surface-2": "#232733",
+            "surface-3": "#2c3140",
+            "text-primary": "#f1e9d4",
+            "text-secondary": "#cfc6af",
+            "text-muted": "#a49b86"
+          }
+        }
+      }
     }
   }
 ]
-const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, null, null, s16, s17, s18, s19, s20, s21, s22, s23, s24, null, s26, null, s28, s29, s30, s31, s32, s33, s34, null, null, s37, s38, s39, s40, s41, s42, null, s44, s45, s46, s47, s48, s49, s50, s51, s52, s53, null, s55, s56, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77, s78, s79]
+const scenes = [s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, null, null, s16, s17, s18, s19, s20, s21, s22, s23, s24, null, s26, null, s28, s29, s30, s31, s32, s33, s34, null, null, s37, s38, s39, s40, s41, s42, null, s44, s45, s46, s47, s48, s49, s50, s51, s52, s53, null, s55, s56, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77, s78, s79, s80, s81, s82]
 
 export const THEMES = data.map((d, i) => ({ ...d, build: scenes[i] === null ? null : scenes[i].buildScene }))

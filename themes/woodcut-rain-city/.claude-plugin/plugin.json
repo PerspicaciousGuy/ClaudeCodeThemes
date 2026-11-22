@@ -1,0 +1,19 @@
+{
+  "name": "woodcut-rain-city",
+  "version": "0.1.0",
+  "description": "A night city in the rain, cut in two inks on dark stock: black towers with cream windows, a hatched moon behind cloud, rain streaks and a wet street. Dark.",
+  "author": {
+    "name": "Perspicacious Guy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "theme",
+    "animated",
+    "woodcut",
+    "print",
+    "city",
+    "rain",
+    "dark"
+  ]
+}
